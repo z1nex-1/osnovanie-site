@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Как работает — Основание</title>
+<meta name="description" content="Как «Основание» превращает вопрос руководителя в стратегию, где у каждого числа есть опора: этапы, утверждения, точки человека, защита источников и устройство папки агента.">
+<meta property="og:title" content="Как работает — Основание">
+<meta property="og:image" content="/img/og.png">
+<meta name="theme-color" content="#07100c">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/Reper-Regular.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+<!--nav:how-->
+<main id="main" class="hw">
+  <section class="hw-hero wrap">
+    <p class="kicker">Как работает</p>
+    <h1 class="hw-h">Вопрос входит.<br>Решение выходит<br><span>с опорой под каждым числом.</span></h1>
+    <div class="pipe-wrap" data-lenis-prevent><svg class="pipe" id="pipe" viewBox="0 0 1200 210" role="img" aria-label="Путь: вопрос руководителя, пять этапов с точками человека, решение">
+      <path class="pipe-line" d="M40 105 H1160"/>
+      <g class="pipe-in"><rect x="0" y="70" width="150" height="70"/><text x="16" y="100">вопрос</text><text x="16" y="122" class="s">руководителя</text></g>
+      <g class="pipe-st" transform="translate(205 0)"><rect y="78" width="150" height="54"/><text x="14" y="110">Постановка</text><g class="gt"><rect x="112" y="150" width="38" height="24"/><text x="119" y="167">G1</text></g></g>
+      <g class="pipe-st" transform="translate(385 0)"><rect y="78" width="150" height="54"/><text x="14" y="110">Источники</text><g class="gt"><rect x="112" y="150" width="38" height="24"/><text x="119" y="167">G2</text></g></g>
+      <g class="pipe-st" transform="translate(565 0)"><rect y="78" width="150" height="54"/><text x="14" y="110">Исследование</text></g>
+      <g class="pipe-st" transform="translate(745 0)"><rect y="78" width="150" height="54"/><text x="14" y="110">Варианты</text><g class="gt"><rect x="112" y="150" width="38" height="24"/><text x="119" y="167">G3</text></g></g>
+      <g class="pipe-st" transform="translate(925 0)"><rect y="78" width="150" height="54"/><text x="14" y="110">Стратегия</text><g class="gt"><rect x="112" y="150" width="38" height="24"/><text x="119" y="167">G4</text></g></g>
+      <g class="pipe-out" transform="translate(1100 0)"><polygon points="50,62 100,105 50,148 0,105"/><text x="50" y="110" text-anchor="middle">решение</text></g>
+      <path class="pipe-r" d="M1150 150 C1150 200 640 200 640 132"/><g class="gt r"><rect x="880" y="182" width="38" height="24"/><text x="891" y="199">R</text></g>
+      <text class="cap" x="40" y="30">агент идёт сам, но на каждой точке Gn останавливается и ждёт слова человека в чате</text>
+      <text class="cap red" x="680" y="204">новые данные → пересмотр</text>
+    </svg></div>
+    <p class="pipe-hint mono">листайте схему →</p>
+  </section>
+
+  <section class="an paper sec" aria-labelledby="anH">
+    <div class="wrap an-grid">
+      <div class="an-text">
+        <p class="kicker">Единица работы</p>
+        <h2 id="anH">Утверждение,<br>а не абзац</h2>
+        <p>Агент не пишет текст сразу. Сначала каждое предложение, на которое опирается вывод, становится записью в реестре: что утверждается, какого это типа, откуда и насколько надёжно. Стратегия потом собирается только из таких записей.</p>
+        <ol class="an-keys" id="anKeys">
+          <li data-pin="1"><b>Тип.</b> Факт, расчёт, допущение, гипотеза, прогноз, мнение. Называется прямо в тексте стратегии.</li>
+          <li data-pin="2"><b>Цитата.</b> Дословно из источника. Команда <code>verify</code> сверяет её с текстом страницы, иначе это не факт.</li>
+          <li data-pin="3"><b>Снимок.</b> Адрес, дата снятия и sha256 файла. Страница может измениться — снимок нет.</li>
+          <li data-pin="4"><b>Срок годности.</b> Цены и тарифы стареют. После даты факт помечается устаревшим, и агент просит свежий источник.</li>
+          <li data-pin="5"><b>Число и единица.</b> Модель берёт значение отсюда, а не из головы. Единицы сверяются перед расчётом.</li>
+        </ol>
+      </div>
+      <figure class="an-card" id="anCard" aria-label="Пример утверждения из эталонного проекта"></figure>
+    </div>
+  </section>
+
+  <section class="ty wrap sec" aria-labelledby="tyH">
+    <div class="ty-head"><h2 id="tyH">Три цвета знания</h2><p>Факт с цитатой не спорит с допущением на равных. Поэтому они выглядят по-разному везде: в реестре, в графе, в записке и в модели.</p></div>
+    <div class="ty-cols" id="tyCols"></div>
+  </section>
+
+  <section class="ch wrap sec" aria-labelledby="chH">
+    <div class="ch-head">
+      <h2 id="chH">Нажмите на ссылку в записке</h2>
+      <p>Это настоящая записка «Что делать в понедельник» из эталонного проекта. У каждого пункта есть ссылка. Нажмите её — и увидите, на чём он стоит, вплоть до страницы источника.</p>
+    </div>
+    <div class="ch-stage" id="chStage">
+      <article class="ch-memo" id="chMemo"></article>
+      <div class="ch-col" id="chC1"><span class="ch-lab mono">утверждение</span></div>
+      <div class="ch-col" id="chC2"><span class="ch-lab mono">держится на</span></div>
+      <div class="ch-col" id="chC3"><span class="ch-lab mono">источник</span></div>
+      <svg class="ch-wires" id="chWires" aria-hidden="true"></svg>
+    </div>
+  </section>
+
+  <section class="gt-sec paper sec" aria-labelledby="gtH">
+    <div class="wrap gt-grid">
+      <div>
+        <p class="kicker">Точки человека</p>
+        <h2 id="gtH">Агент не может<br>сказать «да» за вас</h2>
+        <p>В точке агент собирает пакет: что сделано, сколько потрачено, что предлагает и чем рискует. И останавливается. Ответ пишет человек обычным сообщением. Если агент попробует закрыть точку командой, хук остановит вызов ещё до запуска.</p>
+        <ul class="gt-words mono">
+          <li><b>G3 да O1 O3</b> — развивать два варианта</li>
+          <li><b>G2 правка: добавь отзывы из App Store</b> — вернуться и доделать</li>
+          <li><b>стоп</b> / <b>продолжить</b> — пауза в любой момент</li>
+        </ul>
+      </div>
+      <div class="gt-chat" id="gtChat" aria-label="Пример диалога в точке G3">
+        <div class="cm ag"><span class="mono">агент</span><p>Варианты готовы. Пакет точки G3: четыре направления, у каждого сильное возражение, модель в диапазонах. Лидер по базе — O3, но 89% модели держится на допущениях.</p></div>
+        <div class="cm tool mono"><span>агент пытается</span><code>bin/osnovanie gate approve G3</code></div>
+        <div class="cm deny mono"><span>хук PreToolUse</span>Это решение принимает только человек: в терминале или сообщением в чате.</div>
+        <div class="cm hu"><span class="mono">руководитель</span><p>G3 да O1 O3</p></div>
+        <div class="cm ok mono">G3 закрыта человеком · варианты O1, O3 идут в стратегию</div>
+        <p class="gt-cap mono">реплики — пример; текст отказа дословно из tools/osn/guard.py</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sf wrap sec" aria-labelledby="sfH">
+    <div class="sf-head"><h2 id="sfH">Источник — это данные,<br>а не команды</h2><p>Страница может прятать текст для модели: белым по белому, в комментарии, в атрибуте. Основной агент не читает сырой текст вообще.</p></div>
+    <ol class="sf-flow">
+      <li><span class="mono">materials/raw</span><h3>Снять</h3><p>Страница сохраняется в <code>materials/raw</code> с датой и sha256.</p></li>
+      <li><span class="mono">parsed</span><h3>Очистить</h3><p>Скрытые элементы, комментарии и атрибуты вырезаются, текст разбирается в <code>parsed</code>.</p></li>
+      <li class="bad"><span class="mono">quarantine</span><h3>Карантин</h3><p>Если детектор видит инструкцию модели, источник уходит в <code>quarantine</code>, чтение запрещено правилами доступа.</p></li>
+      <li><span class="mono">субагент</span><h3>Прочитать субагентом</h3><p>Текст видит только субагент <code>source-sanitizer</code> или <code>researcher</code> и возвращает утверждения с цитатами.</p></li>
+      <li class="okk"><span class="mono">verify</span><h3>Сверить</h3><p><code>verify</code> ищет цитату в тексте. Не нашлась — утверждение не становится фактом.</p></li>
+    </ol>
+    <p class="sf-more"><a href="/proof/#security" class="btn ghost sm">Цифры защиты <span class="arr">→</span></a></p>
+  </section>
+
+  <section class="tr wrap sec" aria-labelledby="trH">
+    <div class="tr-head"><h2 id="trH">Вся работа — папка</h2><p>Никакого сервера и базы. Агент Claude Code открывает папку, читает правила и продолжает с того места, где остановился: состояние лежит на диске, а не в истории чата.</p></div>
+    <div class="tr-grid">
+      <ul class="tree mono" id="tree">
+        <li data-t="AGENTS.md"><b>AGENTS.md</b><span>правила агента</span></li>
+        <li data-t="skills"><b>.agents/skills/</b><span>10 навыков этапов</span></li>
+        <li data-t="sub" class="in"><b>.claude/agents/</b><span>6 субагентов</span></li>
+        <li data-t="hooks" class="in"><b>.claude/settings.json</b><span>хуки и доступы</span></li>
+        <li data-t="cli"><b>bin/osnovanie</b><span>единый инструмент</span></li>
+        <li data-t="methods"><b>methods/</b><span>21 методика</span></li>
+        <li data-t="kb"><b>kb/</b><span>знания между проектами</span></li>
+        <li data-t="proj"><b>projects/&lt;проект&gt;/</b><span></span></li>
+        <li data-t="mat" class="in"><b>materials/</b><span>raw · parsed · quarantine</span></li>
+        <li data-t="state" class="in"><b>state/</b><span>журналы *.jsonl</span></li>
+        <li data-t="out" class="in"><b>outputs/</b><span>то, что читает человек</span></li>
+      </ul>
+      <div class="tree-note" id="treeNote" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="nx wrap sec">
+    <h2>Посмотрите, как это выглядит в работе</h2>
+    <div class="nx-row">
+      <a class="nx-card" href="/replay/"><span class="mono">реплей</span><b>Весь прогон по шагам</b><i>лента, граф, точки, пересмотр →</i></a>
+      <a class="nx-card" href="/pult/"><span class="mono">пульт</span><b>Двигайте допущения</b><i>когда меняется лидер →</i></a>
+      <a class="nx-card" href="/guide/"><span class="mono">инструкция</span><b>Запустить у себя</b><i>что писать агенту →</i></a>
+    </div>
+  </section>
+</main>
+<!--foot-->
+<script type="module" src="/src/js/how.js"></script>
+</body>
+</html>

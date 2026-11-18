@@ -1,0 +1,171 @@
+{
+  "$schema_note": "Числа сайта. stub=true — заглушка до демо-прогона, сайт показывает её серым «не измерено». Разделы agent и evals при сборке берутся из osnovanie/docs/facts.json (команда bin/osnovanie facts build) и здесь не хранятся.",
+  "version": "draft-2",
+  "built_at": null,
+  "run": {
+    "case": "МегаНейросети",
+    "question": {
+      "value": "Продолжать ли МегаНейросети, кому и как их продавать, не став перепродавцом чужих API?",
+      "stub": true,
+      "src": "osnovanie/projects/<id>/state.json → question"
+    },
+    "sources_count": {
+      "value": 27,
+      "stub": false,
+      "src": "osnovanie/demo/meganeuroseti-sources.md, таблица",
+      "date": "14.11.2026",
+      "note": "цитат в списке источников демо; после прогона — число из sources/ проекта"
+    },
+    "claims_count": {
+      "value": null,
+      "stub": true,
+      "src": "claims.jsonl, строк"
+    },
+    "claims_by_type": {
+      "value": {
+        "fact": null,
+        "hypothesis": null,
+        "assumption": null,
+        "forecast": null,
+        "conclusion": null
+      },
+      "stub": true
+    },
+    "options_count": {
+      "value": null,
+      "stub": true
+    },
+    "objections_count": {
+      "value": null,
+      "stub": true
+    },
+    "gates": {
+      "value": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "R"
+      ],
+      "stub": false,
+      "src": "osnovanie/docs/MANAGER.md"
+    },
+    "cost_rub": {
+      "value": null,
+      "stub": true,
+      "src": "log.jsonl × config/prices.toml, сверка ccusage"
+    },
+    "cost_usd": {
+      "value": null,
+      "stub": true
+    },
+    "human_minutes": {
+      "value": null,
+      "stub": true,
+      "src": "сумма пауз на G1–G4 и R"
+    },
+    "agent_minutes": {
+      "value": null,
+      "stub": true
+    },
+    "resumes": {
+      "value": 2,
+      "stub": true,
+      "note": "план: два перерыва с resume"
+    },
+    "review_event": {
+      "value": null,
+      "stub": true,
+      "src": "событие review: новый факт и затронутые утверждения"
+    },
+    "leader_before": {
+      "value": null,
+      "stub": true
+    },
+    "leader_after": {
+      "value": null,
+      "stub": true
+    },
+    "pages_count": {
+      "value": 18,
+      "stub": false,
+      "src": "osnovanie/demo/meganeuroseti-sources.md, разные URL",
+      "date": "14.11.2026"
+    }
+  },
+  "discrepancies": {
+    "value": [
+      "Релиз: «25 нейросетей»; страница продукта: «20+», Лайт 6, Про 10, 23 премиум за токены",
+      "FAQ страницы упоминает тариф «Стандарт», в таблице тарифов его нет",
+      "Релиз: «корпоративные абоненты»; список сегментов включает студентов и энтузиастов"
+    ],
+    "stub": false,
+    "src": "osnovanie/demo/meganeuroseti-sources.md, «Расхождения»"
+  },
+  "security": {
+    "leaks": {
+      "value": "0/48",
+      "stub": false,
+      "src": "evals/report.md, прогон 14.11, test2",
+      "date": "14.11.2026"
+    },
+    "defects_blocked": {
+      "value": "15/15",
+      "stub": false,
+      "src": "evals/report.md",
+      "date": "14.11.2026"
+    },
+    "detector_caught": {
+      "value": "19/48",
+      "stub": false,
+      "src": "evals/report.md",
+      "date": "14.11.2026"
+    },
+    "detector_false": {
+      "value": "7/40",
+      "stub": false,
+      "src": "evals/report.md",
+      "date": "14.11.2026"
+    }
+  },
+  "d13": {
+    "tasks": {
+      "value": 3,
+      "stub": true
+    },
+    "rows": {
+      "value": [],
+      "stub": true,
+      "note": "строки: метрика, чат, Основание, кто выиграл, судьи"
+    },
+    "facts_checked": {
+      "value": 20,
+      "stub": true
+    }
+  },
+  "price": {
+    "pro_rub": {
+      "value": 299,
+      "stub": false,
+      "src": "moscow.megafon.ru/corporate/services/mega_ai",
+      "date": "снято 14.11.2026",
+      "quote": "Про 10 моделей нейросети для работы с текстом и изображениями. До 50 запросов в сутки. 299 ₽ в месяц",
+      "q": 2
+    },
+    "tokens_per_rub": {
+      "value": 6,
+      "stub": false,
+      "src": "moscow.megafon.ru/corporate/services/mega_ai",
+      "date": "снято 14.11.2026",
+      "quote": "6 токенов стоят 1 ₽",
+      "q": 3
+    }
+  },
+  "repo": {
+    "url": {
+      "value": null,
+      "stub": true,
+      "note": "публикует z1nex; до команды адреса нет"
+    }
+  }
+}

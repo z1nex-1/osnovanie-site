@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Нет основания — Основание</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Такой страницы нет. Вернитесь на главную «Основания» или откройте реплей прогона.">
+<meta name="theme-color" content="#07100c">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<style>
+  .e4 { min-height: calc(100svh - 120px); display: grid; align-content: center; padding-top: var(--nav-h); padding-bottom: 64px; }
+  .e4 h1 { font: clamp(44px, 8vw, 128px)/.9 var(--display); color: var(--head); margin: 10px 0 28px; }
+  .e4 h1 span { color: var(--obj); }
+  .e4-term { max-width: 760px; background: var(--bg2); border: 1px solid var(--rule); padding: 20px 22px; font: 14px/1.7 var(--mono); color: var(--ink); overflow-wrap: anywhere; }
+  .e4-term .p { color: var(--ok); }
+  .e4-term .r { color: var(--obj); }
+  .e4-term .m { color: var(--mute); }
+  .e4-go { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+</style>
+</head>
+<body>
+<!--nav:none-->
+<main id="main" class="e4 wrap">
+  <p class="kicker">404</p>
+  <h1>У этой страницы<br><span>нет основания.</span></h1>
+  <div class="e4-term" aria-label="Ответ инструмента">
+    <div><span class="p">$</span> bin/osnovanie verify <span id="e4path">/…</span></div>
+    <div class="r">не найдено: адреса нет ни в одном источнике</div>
+    <div class="m">утверждение не становится фактом · записан пробел</div>
+  </div>
+  <div class="e4-go">
+    <a class="btn" href="/">На главную <span class="arr">→</span></a>
+    <a class="btn ghost" href="/replay/">Реплей прогона</a>
+    <a class="btn ghost" href="/how/">Как работает</a>
+  </div>
+</main>
+<!--foot-->
+<script type="module">
+  import { boot } from "/src/js/common.js";
+  boot();
+  document.getElementById("e4path").textContent = location.pathname;
+</script>
+</body>
+</html>

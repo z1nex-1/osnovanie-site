@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Реплей прогона — Основание</title>
+<meta name="description" content="Как агент «Основание» идёт от вопроса руководителя к решению: лента, граф утверждений, точки человека и пересмотр на одной шкале времени.">
+<meta property="og:title" content="Реплей прогона — Основание">
+<meta property="og:image" content="/img/og.png">
+<meta name="theme-color" content="#07100c">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/Reper-Regular.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body class="rp-page">
+<!--nav:replay-->
+<main id="main" class="rp">
+<div class="rp-app">
+  <header class="rp-head wrap">
+    <div class="rp-title">
+      <p class="kicker">Реплей</p>
+      <h1 class="rp-h" id="rpTitle">Прогон</h1>
+      <p class="rp-q" id="rpQ"></p>
+    </div>
+    <div class="rp-badges">
+      <span class="badge ref" id="rpMode" data-hot tabindex="0">эталонный проект · не прогон модели</span>
+      <div class="rp-modes" role="group" aria-label="Режим просмотра">
+        <button type="button" class="seg on" data-mode="full">Весь прогон</button>
+        <button type="button" class="seg" data-mode="sixty">За 60 секунд</button>
+      </div>
+      <button type="button" class="btn ghost sm" id="memoBtn" disabled>Записка <span class="arr">↗</span></button>
+    </div>
+    <p class="rp-note mono" id="rpNote" hidden></p>
+  </header>
+
+  <section class="rp-stage" aria-label="Реплей">
+    <div class="rp-feed" id="feed" data-lenis-prevent aria-live="polite" aria-label="Лента прогона"></div>
+    <div class="rp-graph">
+      <div class="rp-stats mono" id="stats"></div>
+      <svg id="rpSvg" role="img" aria-label="Граф утверждений, растущий по ходу прогона"></svg>
+      <div class="rp-legend mono"><span class="lg src">источник</span><span class="lg fact">факт</span><span class="lg hyp">допущение / гипотеза</span><span class="lg opt">вариант</span><span class="lg dec">решение</span></div>
+    </div>
+    <aside class="rp-insp" id="insp" data-lenis-prevent aria-label="Подробности">
+      <div class="insp-empty mono" id="inspEmpty">
+        <p>Нажмите на узел графа или на утверждение в ленте — здесь откроется цитата, источник и связи.</p>
+        <p class="keys"><kbd>Пробел</kbd> пуск · <kbd>←</kbd><kbd>→</kbd> шаг · <kbd>⇧←</kbd><kbd>⇧→</kbd> глава · <kbd>G</kbd> следующая точка · <kbd>1</kbd>–<kbd>4</kbd> скорость</p>
+      </div>
+      <div class="insp-body" id="inspBody" hidden></div>
+    </aside>
+  </section>
+
+  <section class="rp-time" aria-label="Шкала времени">
+    <div class="rp-ctrl">
+      <button type="button" class="play" id="play" aria-label="Пуск"><svg viewBox="0 0 20 20" width="20" height="20"><path id="playIcon" d="M5 3l12 7-12 7z" fill="currentColor"/></svg></button>
+      <div class="speeds" role="group" aria-label="Скорость">
+        <button type="button" data-speed="1" class="on">1×</button><button type="button" data-speed="2">2×</button><button type="button" data-speed="4">4×</button><button type="button" data-speed="0">Сразу</button>
+      </div>
+      <label class="stopg mono"><input type="checkbox" id="stopGates" checked> останавливаться на точках</label>
+      <span class="clock mono" id="clock">0 / 0</span>
+      <div class="msgnav" role="group" aria-label="По сообщениям"><button type="button" id="msgPrev" class="mono">← Сообщение</button><span class="mono" id="msgCnt"></span><button type="button" id="msgNext" class="mono">Сообщение →</button></div>
+      <button type="button" class="share mono" id="share" title="Ссылка на этот момент">ссылка на момент</button>
+    </div>
+    <div class="tracks" id="tracks">
+      <div class="trk lab-stage"><span class="mono">этапы</span><div class="lane" id="lnStage"></div></div>
+      <div class="trk"><span class="mono">точки</span><div class="lane" id="lnGate"></div></div>
+      <div class="trk"><span class="mono">утверждения</span><div class="lane" id="lnClaim"></div></div>
+      <div class="trk"><span class="mono">источники</span><div class="lane" id="lnSrc"></div></div>
+      <div class="scrub" id="scrub" role="slider" tabindex="0" aria-label="Позиция реплея" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="head"></i></div>
+    </div>
+    <ol class="chapters" id="chapters" aria-label="Главы"></ol>
+  </section>
+</div>
+
+  <section class="rp-how wrap sec">
+    <div class="rp-how-grid">
+      <div>
+        <p class="kicker">Как устроен реплей</p>
+        <h2>Тот же формат,<br>что у живого прогона</h2>
+      </div>
+      <div>
+        <p>Команда <code>osnovanie replay build</code> читает журналы Claude Code и состояние проекта и собирает файл схемы <code>osnovanie-replay/1</code>: реплики, вызовы инструментов, утверждения, точки человека и деньги. Рассуждения модели, системные вставки и тексты из карантина в файл не попадают, похожие на секреты фрагменты вычищаются — иначе файл не пишется.</p>
+        <p>На этой странице сейчас — эталонный проект. Его собрал детерминированный движок «Основания» из 27 открытых цитат, чтобы показать механику, а ответы в точках дала демо-команда. Шкала — порядок событий, а не секунды. Когда появится живой прогон, он встанет сюда тем же файлом, и вверху будет написано, чей он.</p>
+        <p class="mono mute" id="rpHash"></p>
+      </div>
+    </div>
+  </section>
+
+  <dialog class="memo" id="memo" aria-label="Записка">
+    <form method="dialog"><button class="memo-x mono" aria-label="Закрыть">закрыть ✕</button></form>
+    <div class="memo-tabs" role="tablist"></div>
+    <article class="memo-doc" id="memoDoc" data-lenis-prevent></article>
+  </dialog>
+</main>
+<!--foot-->
+<script type="module" src="/src/js/replay.js"></script>
+</body>
+</html>

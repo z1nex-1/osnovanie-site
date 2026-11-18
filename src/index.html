@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Основание — у каждого вывода есть основание</title>
+<meta name="description" content="Агент для руководителя продукта: читает открытые источники, раскладывает их на факты и гипотезы и строит стратегию, где любое число нажимается до цитаты. Неофициальный концепт для MGIMO AI Challenge 2026.">
+<meta property="og:title" content="Основание — у каждого вывода есть основание">
+<meta property="og:description" content="Стратегия, где любое число нажимается до цитаты источника. Неофициальный концепт для MGIMO AI Challenge 2026, это не материал ПАО «МегаФон».">
+<meta property="og:image" content="img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#07100C">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" href="fonts/Reper-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+<script>try{if(localStorage.getItem("osn-motion")==="off")document.documentElement.dataset.motion="off"}catch(e){}document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<div class="progress" aria-hidden="true"><i></i></div>
+
+<header class="top">
+  <a class="brand" href="#" aria-label="Основание — в начало">
+    <svg viewBox="0 0 904 174" aria-hidden="true"><path fill="currentColor" d="{{logo}}"/></svg>
+  </a>
+  <nav aria-label="Разделы">
+    <a href="#graph">Прогон</a><a href="#memo">Стратегия</a><a href="#check">Проверка</a><a href="#install">Инструкция</a>
+  </nav>
+  <button class="motion" type="button" aria-pressed="false" data-motion-toggle>Без анимации</button>
+  <a class="run" href="#graph">Смотреть прогон</a>
+</header>
+
+<main id="main">
+
+<!-- 1. Сканер -->
+<section class="scan" aria-labelledby="h1">
+  <div class="doc" aria-label="Сырой текст страницы moscow.megafon.ru/corporate/services/mega_ai, строки 241–284">
+    <div class="raw" aria-hidden="true"><ol>{{rows}}</ol></div>
+    <div class="read" aria-hidden="true"><ol>{{rows}}</ol></div>
+    <div class="beam" aria-hidden="true"><b>чтение · строка 255</b></div>
+  </div>
+  <span class="wire" aria-hidden="true"></span>
+  <article class="claim" aria-label="Утверждение из цитаты 02">
+    <div class="row"><span class="tag fact">ФАКТ</span><a href="#q02" data-q="q02">цитата #02</a><span>прямая цитата</span></div>
+    <q>Про 10 моделей нейросети для работы с текстом и изображениями. До 50 запросов в сутки. … {{n:price.pro_rub|@ ₽}} в месяц</q>
+    <dl>
+      <dt>источник</dt><dd>moscow.megafon.ru/corporate/services/mega_ai</dd>
+      <dt>снято</dt><dd>17.11.2026 23:15 · строки 250–255</dd>
+      <dt>sha256</dt><dd>cd4e7ef2…64be43</dd>
+      <dt>держит</dt><dd>{{n:run.claims_count|не измерено: появится после прогона}}</dd>
+    </dl>
+  </article>
+  <div class="say">
+    <h1 id="h1">Каждое число нажимается до цитаты</h1>
+    <p class="lead">Агент для руководителя продукта. Он читает открытые источники, раскладывает их на факты и гипотезы и строит стратегию, где у каждого вывода есть основание: цитата, дата снятия и отпечаток страницы.</p>
+    <div class="acts"><a class="btn" href="#graph">Смотреть прогон</a><a class="link" href="#check">Проверить за 3 минуты</a></div>
+  </div>
+  <p class="note">Источник: открытая страница МегаФона о «МегаНейросетях», сырой текст без вёрстки. Прогон на открытых данных, без внутренней информации компании. <button class="again" type="button" data-rescan>Прочитать ещё раз</button></p>
+</section>
+
+<!-- 2. Одна цифра -->
+<section class="one" aria-labelledby="h-one">
+  <img class="seam" src="img/seam-paper.svg" alt="" width="1440" height="56">
+  <p class="one-k">Расхождение в источниках самого МегаФона</p>
+  <div class="one-n"><a class="num" href="#q06" data-q="q06">25</a><span>или</span>{{n:discrepancies|20+}}</div>
+  <h2 id="h-one" class="one-t">Сколько нейросетей в продукте? Релиз на запуске называет 25, страница продукта говорит о двадцати с лишним.</h2>
+  <p class="one-s">Агент не выбирает удобное число. Он ставит оба в граф как расхождение, показывает обе цитаты и не строит вывод, который держится только на одном из них.</p>
+  <p class="one-c">Стоимость всего прогона: {{n:run.cost_rub|не измерено}}</p>
+</section>
+
+<!-- 3. Граф -->
+<section class="graph" id="graph" aria-labelledby="h-graph">
+  <img class="seam" src="img/seam-dark.svg" alt="" width="1440" height="56">
+  <div class="g-steps">
+    <h2 id="h-graph">Стратегия держится на утверждениях, а не на тексте</h2>
+    <ol>
+      <li data-step="1"><img src="img/src-page.svg" alt="" width="48" height="48"><h3>Источники</h3><p>{{n:run.pages_count}} страниц: МегаФон, пресса, тарифы МТС и Билайна, агрегаторы, опросы ВЦИОМ и ВШЭ. У каждой — дата снятия и отпечаток.</p></li>
+      <li data-step="2"><img src="img/kind-fact.svg" alt="" width="48" height="48"><h3>Утверждения</h3><p>Каждое предложение, на которое опирается вывод, становится узлом: факт, гипотеза, допущение, прогноз. Факт — сплошной, прогноз — контур: «планируем расширять» в <a href="#q07" data-q="q07">#07</a> ещё не случилось.</p></li>
+      <li data-step="3"><img src="img/kind-hyp.svg" alt="" width="48" height="48"><h3>Расхождения</h3><p>В источниках самого МегаФона три противоречия: «25 нейросетей» в релизе против «двадцати с лишним» на странице продукта, тариф «Стандарт» без цены, «корпоративные абоненты» против студентов в списке сегментов.</p></li>
+      <li data-step="4"><img src="img/kind-concl.svg" alt="" width="48" height="48"><h3>Варианты</h3><p>Оставить как есть, сместиться в малый бизнес, продавать вместе с тарифом связи, закрыть направление. Каждый держится на своих узлах; уберите узел — вариант покачнётся. Связи посчитает прогон, до него они пунктиром.</p></li>
+      <li data-step="5"><img src="img/kind-forecast.svg" alt="" width="48" height="48"><h3>Точки человека</h3><p>Агент останавливается четыре раза: понял ли он задачу (G1), план и бюджет (G2), какие варианты развивать (G3), принять стратегию (G4). Схема ниже, в следующем блоке.</p></li>
+    </ol>
+  </div>
+  <figure class="g-fig" data-step="0" data-only="all">
+    <div class="g-bar" role="group" aria-label="Что показать на графе">
+      <button type="button" aria-pressed="false" data-only-btn="facts">Только факты</button>
+      <button type="button" aria-pressed="true" data-only-btn="all">Всё</button>
+      <span class="g-hint">наведите на узел — откроется цитата</span>
+    </div>
+    <div class="g-svg">{{svg:graph}}</div>
+    <figcaption>Разметка по списку источников демо (<code>osnovanie/demo/meganeuroseti-sources.md</code>, 14.11.2026). Типы и связи с вариантами заменит прогон.</figcaption>
+  </figure>
+</section>
+
+<!-- 4. Новый факт -->
+<section class="wave" id="review" aria-labelledby="h-wave">
+  <div class="w-head">
+    <h2 id="h-wave">Что будет, если мир изменится завтра</h2>
+    <p>Нажмите кнопку — в прогон придёт факт, которого не было на момент решения. Агент найдёт все выводы, которые на нём стояли, и пересчитает только их, а потом остановится в точке R и подождёт человека.</p>
+  </div>
+  <div class="w-fig" data-wave="0">{{svg:pipeline}}</div>
+  <div class="w-ctl">
+    <button class="btn" type="button" disabled aria-describedby="w-why">Добавить новый факт</button>
+    <button class="btn ghost" type="button" data-wave-play>Показать механизм на схеме</button>
+    <button class="link" type="button" data-wave-reset hidden>Вернуть как было</button>
+    <p id="w-why" class="w-why">Здесь будет настоящее событие из прогона: {{n:run.review_event}}. Пока прогона нет, кнопка неактивна: мы не выдумываем событие. Механизм пересмотра проверен тестом <code>test_end_to_end_gates_resume_review_map</code>.</p>
+    <p class="w-out" aria-live="polite" data-wave-out></p>
+  </div>
+</section>
+
+<!-- 5. Чат против Основания -->
+<section class="vs" aria-labelledby="h-vs">
+  <h2 id="h-vs">Мы сравним, и не везде выиграем</h2>
+  <p class="vs-lead">Методика записана до прогона: обычный чат и агент получают одни и те же источники, ответы оценивают слепые судьи, факты сверяются руками. Где выиграет чат, так и напишем: словом «чат».</p>
+  <ol class="vs-how">
+    <li><b>{{n:d13.tasks|3}}</b><span>задачи по плану, одни и те же источники для чата и агента</span></li>
+    <li><b>2</b><span>слепых судьи из разных семейств моделей</span></li>
+    <li><b>{{n:d13.facts_checked|20}}</b><span>фактов по плану сверяем руками с источником</span></li>
+    <li><b>4</b><span>метрики: оценка судей, сошедшиеся факты, время до записки, стоимость</span></li>
+  </ol>
+  <p class="vs-res">Результат сравнения: {{n:d13.rows|не измерено, появится после прогона}}</p>
+  <p class="vs-note">Статус в матрице требований: D13 — «не сделано: нужен прогон модели». Судьи не будут знать, где чей ответ. Как мерили: <code>evals/tasks.toml</code>.</p>
+</section>
+
+<!-- 6. Записка на бумаге -->
+<section class="memo" id="memo" aria-labelledby="h-memo">
+  <img class="seam" src="img/seam-paper.svg" alt="" width="1440" height="56">
+  <div class="m-side">
+    <h2 id="h-memo">Записка на один лист</h2>
+    <p>Агент пишет руководителю одну страницу: вопрос, рекомендация, три числа, срок проверки и условие остановки. Каждое число подчёркнуто и открывает цитату.</p>
+    <p class="m-links"><a class="link" href="#check">Как это проверить</a></p>
+  </div>
+  <article class="sheet" aria-label="Записка руководителю, форма до прогона">
+    <header><span>Кому</span>Руководителю направления «МегаНейросети»<span>От</span>Агент «Основание» · форма до прогона</header>
+    <h3>Продолжать ли МегаНейросети, кому и как их продавать, не став перепродавцом чужих API?</h3>
+    <dl>
+      <dt>Рекомендация</dt><dd class="blank">появится после точки G4 — её принимает человек</dd>
+      <dt>Три числа</dt>
+      <dd><ul>
+        <li>Подписка «Про» стоит <a class="num" href="#q02" data-q="q02">299 ₽</a> в месяц.</li>
+        <li><a class="num" href="#q03" data-q="q03">6 токенов</a> стоят 1 ₽ — допродажа сверх подписки.</li>
+        <li>Число моделей расходится: <a class="num" href="#q06" data-q="q06">«25»</a> в прессе против <a class="num" href="#q02" data-q="q02">«20+»</a> на странице.</li>
+      </ul></dd>
+      <dt>Проверить до</dt><dd class="blank">дата и метрика — из плана проверки (M5c)</dd>
+      <dt>Остановиться, если</dt><dd class="blank">порог — из плана проверки</dd>
+    </dl>
+    <aside class="obj"><b>Возражение</b> К каждому варианту агент обязан записать сильнейшее возражение и ответ на него (требование M4). Они встанут здесь, на поле.</aside>
+  </article>
+</section>
+
+<!-- 7. Защита -->
+<section class="guard" aria-labelledby="h-guard">
+  <img class="seam" src="img/seam-back.svg" alt="" width="1440" height="56">
+  <h2 id="h-guard">Текст источника не становится командой</h2>
+  <div class="n1"><div class="big">{{n:security.leaks}}</div><p class="cap">скрытых инструкций из страниц утекло в стратегию. Корпус атак писал отдельный агент, не видевший кода защиты.<span class="src">evals/report.md · 14.11.2026 · <code>make eval</code></span></p></div>
+  <div class="n2"><div class="mid">{{n:security.defects_blocked}}</div><p class="cap">подложенных дефектов стратегии заблокировали проверки.<span class="src">evals/report.md · 14.11.2026</span></p></div>
+  <div class="n3"><div class="sm">{{n:security.detector_caught}}<span class="weak">СЛАБЫЙ</span></div><p class="cap">атак ловит детектор слов, ложных срабатываний {{n:security.detector_false}}. Держит не он, а архитектура: текст страницы попадает в карантин и читается как данные.<span class="src">evals/report.md · 14.11.2026</span></p></div>
+  <figure class="q-fig" data-reveal>{{svg:quarantine}}<figcaption>Путь строки источника: в утверждение — с цитатой, датой и отпечатком; в команду агенту — никогда.</figcaption></figure>
+</section>
+
+<!-- 8. Калькулятор допущений -->
+<section class="calc" aria-labelledby="h-calc">
+  <div class="c-head">
+    <h2 id="h-calc">Двигайте допущения и смотрите, что держится</h2>
+    <p>Цена «Про» взята со страницы продукта. Переход из бесплатной версии и отток остаются допущениями: МегаФон их не публикует, это честный пробел в источниках. Ниже простая арифметика страницы, а не модель агента: модель с порогами смены лидера появится после прогона.</p>
+  </div>
+  <form class="c-form" data-calc onsubmit="return false">
+    <label><span>Цена «Про», ₽ <a class="num" href="#q02" data-q="q02">факт: 299</a></span><input type="range" min="99" max="999" step="10" value="299" name="price"><output name="po">299</output></label>
+    <label><span>Переход Лайт → Про, % <em class="as">допущение</em></span><input type="range" min="0.5" max="20" step="0.5" value="5" name="conv"><output name="co">5</output></label>
+    <label><span>Отток в месяц, % <em class="as">допущение</em></span><input type="range" min="1" max="30" step="1" value="8" name="churn"><output name="ch">8</output></label>
+  </form>
+  <div class="c-out" aria-live="polite">
+    <div><b data-out="rev">14 950 ₽</b><span>в месяц с 1000 подключений «Лайт»</span></div>
+    <div><b data-out="life">12,5 мес.</b><span>живёт подписчик «Про» в среднем</span></div>
+    <div><b data-out="ltv">3 738 ₽</b><span>приносит подписчик за жизнь, без токенов</span></div>
+  </div>
+  <p class="c-note">Формулы: выручка = 1000 × переход × цена; срок = 1 ÷ отток; за жизнь = цена × срок. Без JS калькулятор не считает, значения выше — для 299 ₽, 5 % и 8 %.</p>
+</section>
+
+<!-- 9. Внедрение -->
+<section class="install" id="install" aria-labelledby="h-inst">
+  <h2 id="h-inst">Работает там, где у вас уже есть терминал</h2>
+  <ul class="entries">
+    <li><img src="img/entry-cli.svg" alt="" width="72" height="72"><h3>Командная строка</h3><p><code>osnovanie</code>: {{n:agent.cli_commands}} команд: от <code>new</code> до <code>review</code> и <code>resume</code>.</p></li>
+    <li><img src="img/entry-mcp.svg" alt="" width="72" height="72"><h3>MCP-сервер</h3><p>Для Claude Code и других сред: агент видит базу знаний и состояние проекта. {{n:agent.skills}} навыков, {{n:agent.subagents}} субагентов.</p></li>
+    <li><img src="img/entry-http.svg" alt="" width="72" height="72"><h3>HTTP только для чтения</h3><p>Для дашбордов: данные наружу, команды внутрь — нет.</p></li>
+  </ul>
+  <div class="cmds">
+    <div class="cmd"><code>git clone {{n:repo.url|адрес репозитория — после публикации}}</code></div>
+    <div class="cmd"><code>cd osnovanie &amp;&amp; make doctor</code><button type="button" data-copy="cd osnovanie && make doctor">Копировать</button></div>
+    <div class="cmd"><code>osnovanie new "Продолжать ли МегаНейросети?"</code><button type="button" data-copy='osnovanie new "Продолжать ли МегаНейросети?"'>Копировать</button></div>
+  </div>
+  <p class="i-note">Все данные лежат файлами в папке проекта. Остановить можно в любой момент, продолжить командой <code>resume</code>.</p>
+</section>
+
+<!-- 10. Проверить за 3 минуты -->
+<section class="check" id="check" aria-labelledby="h-check">
+  <h2 id="h-check">Для эксперта: где доказано каждое требование</h2>
+  <p class="ck-lead">Таблица собрана из <code>osnovanie/docs/CRITERIA.md</code>. Красным отмечено то, что ещё не сделано. Мы пишем это сами, до вопроса.</p>
+  <div class="ck-sum">{{matrix_sum}}</div>
+  <details class="ck-more"><summary>Показать все требования</summary>
+  <div class="tbl"><table class="matrix">
+    <thead><tr><th scope="col">#</th><th scope="col">Требование</th><th scope="col">Где</th><th scope="col">Чем проверить · статус</th></tr></thead>
+    <tbody>{{matrix}}</tbody>
+  </table></div>
+  </details>
+</section>
+
+<!-- 11. Реестр -->
+<section class="reg" id="registry" aria-labelledby="h-reg">
+  <h2 id="h-reg">Откуда каждое число</h2>
+  <div class="r-cols">
+    <div>
+      <h3>Числа страницы</h3>
+      <ul class="facts">{{factlist}}</ul>
+    </div>
+    <div>
+      <h3>Цитаты источников</h3>
+      <ol class="quotes">{{registry}}</ol>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <svg class="foot-mark" data-reveal viewBox="0 0 904 174" aria-hidden="true"><path fill="currentColor" d="{{logo}}"/></svg>
+  <p><b>Неофициальный концепт для MGIMO AI Challenge 2026. Это не материал ПАО «МегаФон».</b> Цитаты взяты из открытых источников, ссылки и даты в реестре выше.</p>
+  <p>Шрифт «Репер» нарисован для этого проекта. Остальные компоненты и их лицензии перечислены в THIRD_PARTY.md.</p>
+  <p>Илья Григорьев, РТУ МИРЭА · 2026</p>
+</footer>
+
+<div class="pop" role="dialog" aria-modal="false" aria-labelledby="pop-h" hidden data-pop>
+  <p class="pop-h" id="pop-h"></p>
+  <q class="pop-q"></q>
+  <p class="pop-m"></p>
+  <button type="button" class="pop-x" data-pop-close aria-label="Закрыть">×</button>
+</div>
+
+<script type="application/json" id="data">{{data}}</script>
+<script src="js/site.js" defer></script>
+</body>
+</html>

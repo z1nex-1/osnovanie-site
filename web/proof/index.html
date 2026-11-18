@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Доказательства — Основание</title>
+<meta name="description" content="Что у «Основания» измерено и что нет: оценки защиты от инъекций, 15 из 15 дефектов стратегии, матрица требований ТЗ с командами проверки, цена и честные пробелы.">
+<meta property="og:title" content="Доказательства — Основание">
+<meta property="og:image" content="/img/og.png">
+<meta name="theme-color" content="#07100c">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/Reper-Regular.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body class="pf-page">
+<!--nav:proof-->
+<main id="main">
+
+  <section class="pf-hero wrap">
+    <p class="kicker">Доказательства</p>
+    <h1 data-split data-split-now>Что измерено,<br>а что ещё нет</h1>
+    <p class="lead pf-lead">Каждое число ниже можно получить командой из папки агента. Где замера нет, так и написано: в таблице статусов, в матрице требований и отдельной строкой в каждом разделе.</p>
+    <ul class="pf-stats">
+      <li data-reveal><span class="num"><b data-count="79" data-fact="agent.tests">79</b></span><span class="lbl">тестов в <code>make test</code></span><span class="src mono">docs/facts.json · agent.tests</span></li>
+      <li data-reveal style="--d:.06s"><span class="num"><b data-count="43" data-fact="agent.cli_commands">43</b></span><span class="lbl">команды <code>bin/osnovanie</code></span><span class="src mono">docs/facts.json · agent.cli_commands</span></li>
+      <li data-reveal style="--d:.12s"><span class="num"><b data-count="0" data-fact="evals.hidden_leaks">0</b><i>/<span data-fact="evals.attacks">48</span></i></span><span class="lbl">атак скрытым текстом дошли до агента</span><span class="src mono">evals/report.md · раздел 2</span></li>
+      <li data-reveal style="--d:.18s"><span class="num"><b data-count="15" data-fact="evals.defects_blocked">15</b><i>/<span data-fact="evals.defects_total">15</span></i></span><span class="lbl">формальных дефектов стратегии блокируют G4</span><span class="src mono">evals/report.md · раздел 3</span></li>
+      <li class="warn" data-reveal style="--d:.24s"><span class="num"><b data-count="19" data-fact="evals.attacks_caught">19</b><i>/<span data-fact="evals.attacks">48</span></i></span><span class="lbl">атак ловит детектор на регулярных выражениях. Это первый слой, не защита</span><span class="src mono">evals/report.md · раздел 1</span></li>
+    </ul>
+  </section>
+
+  <section class="pf-ledger wrap" aria-labelledby="ledgerH">
+    <div class="pf-sechead">
+      <p class="kicker">Опись</p>
+      <h2 id="ledgerH">Измерено, проверено тестом, не измерено</h2>
+    </div>
+    <div class="pf-tablewrap" data-reveal>
+      <table class="pf-table">
+        <thead><tr><th>Что</th><th>Результат</th><th>Где посмотреть</th><th>Статус</th></tr></thead>
+        <tbody>
+          <tr><td>Детектор инъекций, слепой корпус <code>test2</code></td><td>19 из 48 атак, 7 ложных срабатываний из 40</td><td><code>make eval</code> → <code>evals/report.md</code></td><td><span class="st ok">измерено</span></td></tr>
+          <tr><td>Скрытый текст страниц доходит до агента</td><td>0 из 48</td><td><code>evals/report.md</code>, раздел 2</td><td><span class="st ok">измерено</span></td></tr>
+          <tr><td>Формальные дефекты стратегии блокируют G4</td><td>15 из 15; три смысловых скрипт не видит</td><td><code>evals/report.md</code>, раздел 3</td><td><span class="st ok">измерено</span></td></tr>
+          <tr><td>Путь от запроса до решения, точки человека, защита</td><td><span data-fact="agent.tests">79</span> тестов</td><td><code>make test</code></td><td><span class="st ok">проверено тестом</span></td></tr>
+          <tr><td>Эталонный проект <code>meganeuroseti-ref</code></td><td>27 цитат, 4 варианта, 8 возражений, индекс обоснованности 85/100 (15 баллов за человека эталон получить не может)</td><td><code>bin/osnovanie demo seed</code>, <code>score</code></td><td><span class="st ok">проверено тестом</span></td></tr>
+          <tr><td>Сравнение с обычным чатом (D13)</td><td>каркас, рубрика и слепой судья готовы; прогона нет</td><td><code>evals/d13/</code></td><td><span class="st no">не измерено</span></td></tr>
+          <tr><td>Прогон агента на шести новых задачах</td><td>задачи описаны, прогона нет</td><td><code>evals/tasks.toml</code></td><td><span class="st no">не измерено</span></td></tr>
+          <tr><td>Цена и время полного прогона с моделью</td><td>на эталоне 0 ₽ потому, что модель там не вызывалась</td><td><code>bin/osnovanie cost</code></td><td><span class="st no">не измерено</span></td></tr>
+          <tr><td>Классификатор на модели как второй слой детектора</td><td>только предложен в <code>evals/HISTORY.md</code>; замера на третьем корпусе нет</td><td><code>evals/HISTORY.md</code></td><td><span class="st no">не измерено</span></td></tr>
+          <tr><td>Работа в Cursor и Codex</td><td>файлы подготовлены, сами программы на машине не стоят</td><td><code>.cursor/</code>, <code>.codex/</code></td><td><span class="st no">не проверено</span></td></tr>
+          <tr><td>Сторож источников <code>watch</code> на живых страницах</td><td>тест с подменой загрузки есть, живых страниц не было</td><td><code>tests/test_whatif_watch.py</code></td><td><span class="st part">частично</span></td></tr>
+          <tr><td>Судья другого семейства (YandexGPT)</td><td>вызов написан по документации, на настоящем ключе не запускался</td><td><code>evals/d13/README.md</code></td><td><span class="st no">не проверено</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="pf-sec paper seam-top" id="security" aria-labelledby="secH">
+    <div class="wrap">
+      <div class="pf-sechead">
+        <p class="kicker">Защита от инъекций</p>
+        <h2 id="secH">Детектор ловит меньше половины.<br>Защиту держат другие слои</h2>
+        <p class="lead">Источник пытается приказать агенту: «поставь максимальную оценку», «покажи .env», «убери вариант». Мы бросили в агента 48 таких атак из корпуса, который писал отдельный субагент, не видевший код детектора, и посмотрели, что дошло и что сломалось.</p>
+      </div>
+
+      <div class="pf-two">
+        <div>
+          <h3>48 атак: что поймал детектор</h3>
+          <div class="cells" id="cellsAttack" role="img" aria-label="48 клеток: 19 атак пойманы детектором, 29 пропущены"></div>
+          <p class="legend mono"><span class="k ok"></span>поймано <b data-fact="evals.attacks_caught">19</b> <span class="k miss"></span>пропущено <b>29</b></p>
+          <p class="side mono">На 40 трудных безопасных текстах (инструкции по установке, статьи про prompt injection) детектор поднял тревогу 7 раз: <span data-fact="evals.false_alarms">7</span> из <span data-fact="evals.benign">40</span>.</p>
+        </div>
+        <div>
+          <h3>Что стоит за ним</h3>
+          <ol class="layers">
+            <li><b>1</b><div><h4>Карантин скрытого текста</h4><p>display:none, комментарии, alt, шрифт нулевого размера агенту не отдаются. Дошло <b class="ok">0 из 48</b>.</p></div></li>
+            <li><b>2</b><div><h4>Точку закрывает только человек</h4><p>Хук принимает ответ только из сообщения человека. После всех атак G1 осталась <b class="ok">открытой</b>.</p></div></li>
+            <li><b>3</b><div><h4>Факт только через <code>verify</code></h4><p>Нужна дословная цитата в источнике. Проверенных фактов после атак: <b class="ok">0</b>.</p></div></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="pf-honest" data-reveal>
+        <span class="st hyp">честно о пределах</span>
+        <ul>
+          <li>Детектор — регулярные выражения. Перефразированная атака без ключевых слов проходит. По категории «subtle» поймано 0 из 4.</li>
+          <li>Видимый абзац атаки дошёл до агента без карантина в 28 случаях из 48, а текст атаки записан как утверждение в 29. Утверждением, не проверенным фактом: до проверки цитаты оно остаётся гипотезой.</li>
+          <li>Корпус написал субагент Claude Code. Проверки корпуса независимой командой не было.</li>
+          <li>Отключение слоёв по одному (абляция) в <code>evals/</code> не мерили: известна только работа всей цепочки.</li>
+        </ul>
+        <p class="mono src">evals/report.md · разделы 1–2, evals/HISTORY.md</p>
+      </div>
+
+      <div class="pf-two pf-two-cats">
+        <div>
+          <h3>Поймано по категориям</h3>
+          <ul class="bars" id="catBars"></ul>
+          <p class="mono src">evals/report.md, раздел 1: по 4 атаки на категорию</p>
+        </div>
+        <div>
+          <h3>Почему «первый слой»</h3>
+          <p>Корпус меряют один раз, до доводки. Доводка на нём обманывает: цифра перестаёт быть честной.</p>
+          <table class="pf-table slim">
+            <thead><tr><th>Замер, 14.11</th><th>Поймано</th><th>Ложных</th></tr></thead>
+            <tbody>
+              <tr><td>Корпус 1, <code>dev</code>, первый замер</td><td>18/30</td><td>2/25</td></tr>
+              <tr><td>Корпус 1, <code>test</code>, после доводки на <code>dev</code></td><td class="obj">13/30</td><td>4/25</td></tr>
+              <tr><td>Корпус 2, новый слепой</td><td>21/48</td><td class="obj">13/40</td></tr>
+              <tr><td>Корпус 2, без трёх грубых правил</td><td><b>19/48</b></td><td><b>7/40</b></td></tr>
+            </tbody>
+          </table>
+          <p class="mono src">evals/HISTORY.md. В отчёт идёт последняя строка</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pf-sec pf-defects wrap" id="defects" aria-labelledby="defH">
+    <div class="pf-sechead">
+      <p class="kicker">Дефекты стратегии</p>
+      <h2 id="defH">Хорошая стратегия проходит.<br>Испорченная нет</h2>
+      <p class="lead">Эталонную стратегию портят по одному дефекту и смотрят, закроется ли G4. Скрипт останавливает 15 из 15 формальных: число без ссылки, обещание «сейчас» на возможность «в плане», спрос только из модельных респондентов, нет базы сравнения, ссылка на отозванное. Три смысловых он пропускает, как и должен.</p>
+    </div>
+    <div class="pf-def-grid">
+      <div class="cells wide" id="cellsDef" role="img" aria-label="18 клеток: 15 дефектов заблокированы скриптом, 3 смысловых скрипт пропустил"></div>
+      <div class="def-note">
+        <p><b class="num"><span data-count="15" data-fact="evals.defects_blocked">15</span><i>/<span data-fact="evals.defects_total">15</span></i></b></p>
+        <p class="mute">закрыты скриптом <code>check</code>: G4 не открывается.</p>
+        <p class="hyp"><b>3 пропущены</b></p>
+        <p class="mute">аудитории продукта и коммуникации расходятся; гипотеза подана как факт без чисел; «понедельник» без действий. Их ловит судья по рубрике и человек на G4. Замера судьи на этих трёх нет.</p>
+        <p class="mono src">evals/report.md, раздел 3. Раньше в отчёте стояло 18/18: смысловые считались вместе со скриптовыми, это исправлено (docs/ai/MISTAKES.md, №6)</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pf-sec paper" id="d13" aria-labelledby="d13H">
+    <div class="wrap">
+      <div class="pf-sechead">
+        <p class="kicker">D13 · агент против обычного чата</p>
+        <h2 id="d13H">Сравнение устроено.<br>Результата пока нет</h2>
+        <p class="lead">Мы не хотим выигрывать у слабого противника. Чат получает тот же вопрос, те же тексты и тот же список требований, что и судьи. Модель одна и та же: Claude Opus 5.5.</p>
+      </div>
+      <ol class="flow" id="d13flow">
+        <li data-reveal><b>1</b><h3>Задача</h3><p>Вопрос из <code>evals/tasks.toml</code>. Тексты — те, что агент собрал сам.</p></li>
+        <li data-reveal style="--d:.08s"><b>2</b><h3>Две работы</h3><p>Агент с инструментами и точками. Чат: один запрос, без правок.</p></li>
+        <li data-reveal style="--d:.16s"><b>3</b><h3>Вслепую</h3><p>Убраны признаки автора; внутренние номера [c012] становятся сносками. Работы получают буквы X и Y.</p></li>
+        <li data-reveal style="--d:.24s"><b>4</b><h3>Два порядка</h3><p>Судья читает X, потом Y, и наоборот. Если предпочтение сменилось, оно не считается.</p></li>
+        <li data-reveal style="--d:.32s"><b>5</b><h3>Отчёт</h3><p>Баллы по рубрике «Проработанность», цена, время человека, доля чисел, найденных в материалах.</p></li>
+      </ol>
+      <div class="pf-d13-status">
+        <span class="st no">прогона нет</span>
+        <p>Нужен демо-прогон агента на материалах и вход в Claude Code. До него в отчёте D13 нет ни одной цифры, и мы их не рисуем. Что известно о слабостях замера: числа сверяются механически, и короткое число может совпасть случайно; судья-sonnet из того же семейства, что обе работы, поэтому предусмотрен судья YandexGPT, не проверенный на настоящем ключе; время, которое человек тратит на доработку ответа чата, не измеряется.</p>
+        <p class="mono src">evals/d13/README.md, <code>tests/test_d13.py</code> проверяет только механику</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pf-sec pf-crit wrap" id="criteria" aria-labelledby="critH">
+    <div class="pf-sechead">
+      <p class="kicker">Матрица</p>
+      <h2 id="critH">Требование ТЗ → где сделано → чем проверить</h2>
+      <p class="lead">Копия <code>docs/CRITERIA.md</code> на 17.11.2026. Команда в последнем столбце запускается из папки агента.</p>
+    </div>
+    <div class="pf-filter" role="group" aria-label="Фильтр по статусу">
+      <button type="button" class="on" data-f="all">Все <i></i></button>
+      <button type="button" data-f="ok">Проверено <i></i></button>
+      <button type="button" data-f="part">Частично <i></i></button>
+      <button type="button" data-f="no">Не проверено <i></i></button>
+    </div>
+    <div class="pf-tablewrap">
+      <table class="pf-table crit" id="critTable">
+        <thead><tr><th>№</th><th>Требование</th><th>Где</th><th>Проверка</th><th>Статус</th></tr></thead>
+        <tbody>
+          <tr data-s="ok"><td>M1</td><td>Постановка: вопрос, цель, получатель, ограничения, данные</td><td>навык <code>intake</code>, точка G1</td><td><code>tests/test_path.py</code></td><td><span class="st ok">проверено</span></td></tr>
+          <tr data-s="ok"><td>M2</td><td>Материалы разных форматов, источник у каждого сведения</td><td><code>source fetch/add</code>, список доменов</td><td><code>test_security.py::test_fact_needs_real_quote</code></td><td><span class="st ok">проверено</span></td></tr>
+          <tr data-s="part"><td>M3</td><td>План вопросов, меняющих решение; честные пробелы</td><td>навыки <code>collect</code>, <code>research</code></td><td><code>checks._research</code></td><td><span class="st part">тестом; на демо нет</span></td></tr>
+          <tr data-s="ok"><td>M4</td><td>Три разных варианта с «оставить» и «закрыть», сильные возражения</td><td>навык <code>options</code>, субагенты <code>skeptic</code>, <code>closure-advocate</code></td><td><code>checks._options</code></td><td><span class="st ok">проверено</span></td></tr>
+          <tr data-s="ok"><td>M5a</td><td>Продуктовая стратегия</td><td><code>outputs/product.md</code></td><td><code>make eval</code>, раздел 3</td><td><span class="st ok">проверено</span></td></tr>
+          <tr data-s="ok"><td>M5b</td><td>Коммуникационная стратегия: обещания соответствуют продукту</td><td><code>outputs/communication.md</code></td><td><code>make eval</code>, раздел 3</td><td><span class="st ok">проверено</span></td></tr>
+          <tr data-s="ok"><td>M5c</td><td>План проверки: база сравнения, срок, антиметрики</td><td><code>outputs/validation.md</code></td><td><code>make eval</code>, раздел 3</td><td><span class="st ok">проверено</span></td></tr>
+          <tr data-s="ok"><td>A1</td><td>Сам ведёт по шагам, зовёт человека при выборе</td><td><code>AGENTS.md</code>, точки G1–G4 и R</td><td><code>test_path.py::test_agent_cannot_skip_gate</code></td><td><span class="st ok">проверено</span></td></tr>
+          <tr data-s="ok"><td>A2</td><td>Инструкции, методики, материалы и состояние раздельно</td><td><code>instructions/</code>, <code>methods/</code>, <code>kb/</code>, <code>projects/</code></td><td><code>test_security.py::Guard</code></td><td><span class="st ok">проверено</span></td></tr>
+          <tr data-s="ok"><td>A3</td><td>Продолжение после перерыва и в новом чате</td><td><code>resume</code>, хук SessionStart</td><td><code>test_path.py::test_end_to_end_gates_resume_review_map</code></td><td><span class="st ok">тестом; на видео не снято</span></td></tr>
+          <tr data-s="part"><td>A4</td><td>Видно, что сделано, на каком основании и сколько стоило</td><td><code>log</code>, <code>map</code>, <code>cost</code>, <code>replay build</code></td><td><code>tests/test_replay.py</code></td><td><span class="st part">частично: цена демо после прогона</span></td></tr>
+          <tr data-s="part"><td>D1</td><td>Интервью и модельные респонденты; синтетика не доказывает спрос</td><td><code>interview</code>, тип <code>synthetic</code></td><td><code>make eval</code>, раздел 3</td><td><span class="st part">правило проверено; живых интервью нет</span></td></tr>
+          <tr data-s="no"><td>D2</td><td>Изображения, аудио, видео</td><td><code>parse.py</code>: tesseract, whisper-cli, ffmpeg</td><td><code>bin/osnovanie doctor</code></td><td><span class="st no">не проверено на демо</span></td></tr>
+          <tr data-s="no"><td>D3</td><td>Анализ UX с привязкой к видимому</td><td><code>ux</code>, <code>methods/ux-heuristics.md</code></td><td>нет</td><td><span class="st no">не проверено на демо</span></td></tr>
+          <tr data-s="ok"><td>D4</td><td>Воспроизводимые расчёты, единицы, периоды</td><td><code>data</code>, <code>model</code>, <code>calc_id</code></td><td><code>test_security.py::test_calculation_needs_calc_id</code></td><td><span class="st ok">проверено</span></td></tr>
+          <tr data-s="ok"><td>D5</td><td>Решения связаны с ответственными, показателями, сроками</td><td><code>commit</code>, <code>decide</code>, <code>expires</code></td><td><code>tests/test_fields.py</code></td><td><span class="st ok">проверено</span></td></tr>
+          <tr data-s="part"><td>D6</td><td>Пересмотр при новых данных</td><td><code>review</code>, <code>depends_on</code>, точка R</td><td><code>test_path.py::test_end_to_end_gates_resume_review_map</code></td><td><span class="st part">тестом; на живом прогоне нет</span></td></tr>
+          <tr data-s="no"><td>D7</td><td>Маршрутизация с исправлением ошибочного выбора</td><td><code>route</code>, <code>config/thresholds.toml</code></td><td>журнал исправлений после демо</td><td><span class="st no">не проверено</span></td></tr>
+          <tr data-s="ok"><td>D8</td><td>Навыки, хуки, субагенты</td><td><code>.agents/skills</code>, <code>tools/hooks/</code>, <code>.claude/agents/</code></td><td><code>bin/osnovanie doctor</code></td><td><span class="st ok">проверено</span></td></tr>
+          <tr data-s="ok"><td>D9</td><td>MCP и CLI</td><td><code>bin/osnovanie</code>, MCP <code>kb-state</code>, <code>serve</code></td><td><code>bin/osnovanie doctor</code></td><td><span class="st ok">проверено</span></td></tr>
+          <tr data-s="ok"><td>D10</td><td>База знаний; память не превращает ответ в факт; отзыв устаревшего</td><td><code>search</code>, <code>kb/</code>, <code>claim retract</code></td><td><code>make eval</code>, раздел 3</td><td><span class="st ok">проверено</span></td></tr>
+          <tr data-s="ok"><td>D11</td><td>Устойчивость к сбоям без незаметного повтора</td><td><code>step</code>, <code>doctor --repair</code></td><td><code>test_path.py::test_export_import_continues</code></td><td><span class="st ok">проверено</span></td></tr>
+          <tr data-s="no"><td>D12</td><td>Переносимость в другую среду</td><td><code>.cursor/</code>, <code>.codex/</code>, <code>export</code>/<code>import</code></td><td>нет</td><td><span class="st no">Cursor и Codex не установлены</span></td></tr>
+          <tr data-s="no"><td>D13</td><td>Сравнение с обычным чатом</td><td><code>evals/d13/</code></td><td><code>python3 evals/d13/d13.py score</code></td><td><span class="st no">каркас есть, прогона нет</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mono src">docs/CRITERIA.md · статусы переписаны без изменений смысла; счётчики на кнопках считаются по таблице</p>
+  </section>
+
+  <section class="pf-sec paper" id="cost" aria-labelledby="costH">
+    <div class="wrap">
+      <div class="pf-sechead">
+        <p class="kicker">Стоимость</p>
+        <h2 id="costH">Цена результата считается из журналов.<br>Цены прогона пока нет</h2>
+      </div>
+      <div class="pf-two">
+        <div>
+          <h3>Как считается</h3>
+          <p class="formula mono">токены × тариф модели + поиск ($0,01 за запрос) + время человека × ставка</p>
+          <table class="pf-table slim">
+            <thead><tr><th>Модель</th><th>Вход, $/млн</th><th>Выход, $/млн</th></tr></thead>
+            <tbody>
+              <tr><td>Claude Opus 5.5</td><td>4</td><td>20</td></tr>
+              <tr><td>Claude Sonnet 5.5</td><td>2</td><td>10</td></tr>
+              <tr><td>Claude Haiku 5.5</td><td>0,10</td><td>0,50</td></tr>
+            </tbody>
+          </table>
+          <p class="mono src">config/prices.toml, цены сверены 14.11.2026 с платформой Anthropic. Курс 92 ₽/$ и ставка часа руководителя 1500 ₽ — допущения, их задаёт команда</p>
+          <p>Бюджет назначает человек на точке G2. Агент показывает израсходованное в каждом пакете точки и останавливается, когда бюджет кончился.</p>
+        </div>
+        <div>
+          <h3>Что есть сейчас</h3>
+          <div class="cost-fig">
+            <p class="num"><b data-count="0" data-fact="projects.meganeuroseti-ref.llm_rub">0</b><i> ₽</i></p>
+            <p>по эталонному проекту <code>meganeuroseti-ref</code></p>
+          </div>
+          <div class="pf-honest slim" data-reveal>
+            <span class="st hyp">не путать</span>
+            <p>Ноль — потому что эталон собран движком из 27 цитат без вызовов модели. Это не цена работы агента. Цена и время полного прогона не измерены: они появятся после демо-прогона в чистом профиле Claude Code (<code>make demo-shell</code>), и их покажет <code>bin/osnovanie cost</code>.</p>
+            <p class="mono src">projects/meganeuroseti-ref/outputs/cost.md · docs/facts.json</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pf-sec pf-repro wrap" id="repro" aria-labelledby="reproH">
+    <div class="pf-two">
+      <div>
+        <p class="kicker">Повторить</p>
+        <h2 id="reproH">Три минуты, без ключей</h2>
+        <p class="lead">Нужны Python 3.11+ и uv. Ничего не скачивается, модель не вызывается.</p>
+        <div class="cta-row">
+          <a class="btn" href="/guide/#engineer">Установка по шагам <span class="arr">→</span></a>
+          <a class="btn ghost" href="/replay/">Смотреть прогон</a>
+        </div>
+      </div>
+      <div class="term" data-reveal>
+        <div class="bar"><i></i><i></i><i></i><span>osnovanie/</span></div>
+        <pre id="reproCmd"><span class="p">$</span> make doctor <span class="c"># окружение, хуки, навыки, хеши правил</span>
+<span class="p">$</span> make test   <span class="c"># <span data-fact="agent.tests">79</span> тестов</span>
+<span class="p">$</span> make eval   <span class="c"># оценки → evals/report.md</span></pre>
+        <button class="copy" type="button" data-copy="reproCmd">копировать</button>
+      </div>
+    </div>
+    <p class="mono src pf-docs-note">Каталога <code>docs/evidence/</code> в папке агента пока нет: источники этой страницы — <code>evals/report.md</code>, <code>evals/HISTORY.md</code>, <code>docs/facts.json</code>, <code>docs/CRITERIA.md</code>, <code>docs/score.md</code>, <code>config/prices.toml</code>.</p>
+  </section>
+
+</main>
+<!--foot-->
+<script type="module" src="/src/js/proof.js"></script>
+</body>
+</html>

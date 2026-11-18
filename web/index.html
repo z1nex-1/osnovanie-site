@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Основание — стратегия, у которой есть основание</title>
+<meta name="description" content="Агент для руководителя цифрового продукта: от вопроса своими словами до стратегии, где каждое число открывается до цитаты источника. Точки человека, пересмотр при новых данных, защита от инъекций.">
+<meta property="og:title" content="Основание — стратегия, у которой есть основание">
+<meta property="og:description" content="Агент для руководителя продукта. Каждое число — до цитаты. Точки человека. Пересмотр при новых данных.">
+<meta property="og:image" content="/img/og.png">
+<meta name="theme-color" content="#07100c">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preload" href="/fonts/Reper-Regular.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body class="home">
+<!--nav:home-->
+<main id="main">
+
+  <!-- 1. Стратиграфия: первый экран и закреплённая сцена -->
+  <section class="strata" id="strata" aria-label="Как устроено основание стратегии">
+    <div class="strata-pin">
+      <div class="strata-gl" id="gl"><img class="strata-poster" src="/img/stack-poster.webp" alt="" width="1600" height="1000" onerror="this.remove()"></div>
+      <div class="wrap strata-hero">
+        <p class="kicker hero-k" data-reveal="now"><span>Агент для руководителя цифрового продукта<span class="hk-sep"> · </span><span class="hk-case">кейс МегаФона «Стратег Фабрики продуктов»</span></span></p>
+        <h1 data-split data-split-now>Стратегия,<br>у&nbsp;которой есть<br>основание</h1>
+        <p class="lead" data-reveal="now" style="--d:.35s">Пишете вопрос своими словами: «кому продавать», «почему уходят», «закрывать ли направление». Агент собирает открытые источники, раскладывает их на факты и гипотезы, спорит с собой и останавливается там, где решать должны вы. Каждое число в стратегии открывается до дословной цитаты.</p>
+        <div class="cta" data-reveal="now" style="--d:.5s">
+          <a class="btn" href="/replay/">Смотреть прогон <span class="arr">→</span></a>
+          <a class="btn ghost" href="/how/">Как это работает</a>
+        </div>
+        <ul class="hero-facts mono" data-reveal="now" style="--d:.65s">
+          <li><b>27</b> фактов с дословной цитатой из <b>19</b> источников</li>
+          <li><b>5</b> точек, где решает человек</li>
+          <li><b data-fact="evals.hidden_leaks">0</b> из <span data-fact="evals.attacks">48</span> атак скрытым текстом дошли до агента</li>
+        </ul>
+        <p class="scroll-hint mono" aria-hidden="true"><i></i>прокрутите — основание раскроется по слоям</p>
+      </div>
+      <ol class="strata-steps" aria-label="Слои основания">
+        <li data-layer="0"><span class="mono">источники</span><h2>Открытые страницы с датой и отпечатком</h2><p>МегаФон, пресса, тарифы МТС и Билайна, опросы ВЦИОМ. У каждой страницы — дата снятия и sha256. Скрытый текст уходит в карантин и до агента не доходит.</p></li>
+        <li data-layer="1"><span class="mono">факты</span><h2>Только дословные цитаты</h2><p>Факт без цитаты инструмент не примет. Цитата сверяется с текстом источника, у неё есть срок годности: устаревший факт агент попросит обновить.</p></li>
+        <li data-layer="2"><span class="mono">допущения и гипотезы</span><h2>Чего мы не знаем — помечено</h2><p>Янтарные узлы: гипотезы с уверенностью и способом проверки, допущения с диапазоном. Ответы модельных респондентов идут сюда же — фактом они не станут.</p></li>
+        <li data-layer="3"><span class="mono">варианты</span><h2>Четыре направления, включая «закрыть»</h2><p>У каждого варианта сильное возражение, влияние на портфель и условие, при котором он проигрывает. Модель считает диапазоны, а не одну цифру.</p></li>
+        <li data-layer="4"><span class="mono">решение</span><h2>Решение держится на конкретных узлах</h2><p>Уберите узел — увидите, что рухнет. Новый факт пускает волну пересмотра по этим связям, и агент сам находит выводы, которые на нём держались.</p></li>
+      </ol>
+      <div class="strata-meter mono" aria-hidden="true"><span id="meterLabel">слой 00</span><i><b id="meterBar"></b></i></div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-label="Источники демо-проекта"><div id="ticker"></div></div>
+
+  <!-- 2. Чат против основания -->
+  <section class="versus sec" id="versus">
+    <div class="wrap">
+      <p class="kicker" data-reveal>Почему не обычный чат</p>
+      <h2 data-split>Чат звучит уверенно.<br>Проверить его нельзя.</h2>
+      <div class="vs-grid">
+        <article class="vs-card chat" data-reveal>
+          <header class="mono"><span class="dot"></span>типичный ответ чата · пример</header>
+          <p class="vs-text" id="chatText">Рынок ИИ-подписок в России растёт на <span class="vnum">40%</span> в год, а <span class="vnum">60%</span> малого бизнеса готовы платить за доступ к зарубежным моделям. Рекомендуем поднять цену до <span class="vnum">499 ₽</span> и сфокусироваться на фрилансерах.</p>
+          <footer class="mono">наведите на число → <span class="obj">источник: нет</span></footer>
+        </article>
+        <div class="vs-mid" aria-hidden="true"><svg viewBox="0 0 80 400" preserveAspectRatio="none"><path id="vsPath" d="M40 0 V400" stroke="#34503f" stroke-dasharray="4 6" fill="none"/></svg><span class="mono">тот же вопрос</span></div>
+        <article class="vs-card base" data-reveal style="--d:.15s">
+          <header class="mono"><span class="dot ok"></span>основание · демо-проект</header>
+          <p class="vs-text" id="baseText"></p>
+          <footer class="mono">наведите на ссылку → цитата, источник, дата</footer>
+        </article>
+      </div>
+      <ul class="vs-diff">
+        <li data-reveal><b class="num" data-count="100">100</b><span>% чисел стратегии со ссылкой на цитату — проверка блокирует утверждение без неё</span></li>
+        <li data-reveal style="--d:.1s"><b class="num">5</b><span>точек, где агент останавливается и ждёт вашего слова: G1–G4 и пересмотр R</span></li>
+        <li data-reveal style="--d:.2s"><b class="num" data-fact="evals.defects_blocked">15</b><span>из <i data-fact="evals.defects_total">15</i> формальных дефектов стратегии останавливают выпуск, пока их не исправят</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. Этапы: горизонтальная лента -->
+  <section class="track" id="track" aria-label="Пять этапов работы">
+    <div class="track-pin">
+      <div class="wrap track-head">
+        <p class="kicker">От вопроса до решения</p>
+        <h2>Пять этапов. Решаете — вы.</h2>
+      </div>
+      <div class="track-rail" id="rail">
+        <svg class="track-line" id="trackLine" aria-hidden="true"><line x1="0" y1="1" x2="100%" y2="1" pathLength="1"/></svg>
+        <article class="stage"><span class="no">G1</span><div class="ill"><img src="/img/illo/stage-intake.svg" alt="" loading="lazy"></div><h3>Постановка</h3><p>Вы пишете задачу как аналитику. Агент задаёт 1–3 вопроса, без которых нельзя двигаться, и формулирует решение, которое предстоит принять.</p><p class="you mono"><b>G1</b> «да» или «правка: получатель — совет директоров»</p></article>
+        <article class="stage"><span class="no">G2</span><div class="ill"><img src="/img/illo/stage-collect.svg" alt="" loading="lazy"></div><h3>План и источники</h3><p>Вопросы, меняющие решение, список источников, бюджет в долларах и рублях. Страницы скачиваются, скрытый текст уходит в карантин.</p><p class="you mono"><b>G2</b> «да бюджет 8» или «добавь отзывы из App Store»</p></article>
+        <article class="stage"><span class="no">агент</span><div class="ill"><img src="/img/illo/stage-research.svg" alt="" loading="lazy"></div><h3>Исследование</h3><p>Каждое предложение, на которое опирается вывод, становится утверждением: факт с цитатой, допущение с диапазоном, гипотеза с уверенностью.</p><p class="you mono">агент работает сам · критик и верификатор — отдельные субагенты</p></article>
+        <article class="stage"><span class="no">G3</span><div class="ill"><img src="/img/illo/stage-options.svg" alt="" loading="lazy"></div><h3>Варианты</h3><p>Минимум три направления, включая «оставить как есть» и «закрыть». Сильное возражение к каждому, модель с диапазонами и точками перелома.</p><p class="you mono"><b>G3</b> «да O1 O3» — какие развивать в стратегию</p></article>
+        <article class="stage"><span class="no">G4</span><div class="ill"><img src="/img/illo/stage-strategy.svg" alt="" loading="lazy"></div><h3>Стратегия и проверка</h3><p>Продуктовая и коммуникационная стратегия, план проверки с порогами остановки, записка на одну страницу и карта доверия.</p><p class="you mono"><b>G4</b> «да O3 ответственный Анна»</p></article>
+        <article class="stage r"><span class="no">R</span><div class="ill"><img src="/img/illo/stage-review.svg" alt="" loading="lazy"></div><h3>Пересмотр</h3><p>Вышли новые данные — агент находит выводы, которые на них держались, показывает разницу в стратегии и ждёт вашего «R да».</p><p class="you mono"><b>R</b> «да» или «правка: …»</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Волна пересмотра -->
+  <section class="wave sec" id="wave">
+    <div class="wrap">
+      <div class="wave-head">
+        <div>
+          <p class="kicker" data-reveal>Главное отличие</p>
+          <h2 data-split>Пришёл новый факт.<br>Что рухнуло?</h2>
+        </div>
+        <p class="lead" data-reveal>Стратегия хранится не текстом, а графом утверждений. Когда появляются новые данные, агент проходит по связям вниз и показывает каждый вывод, который на них держался. Нажмите кнопку — это настоящий пересмотр демо-проекта.</p>
+      </div>
+      <div class="wave-stage" id="waveStage">
+        <div class="wave-graph"><svg id="waveSvg" role="img" aria-label="Граф утверждений демо-проекта"></svg></div>
+        <aside class="wave-side">
+          <div class="wave-event" id="waveEvent">
+            <span class="mono mute">новые данные</span>
+            <p id="waveFact">Загрузка графа…</p>
+            <button class="btn" id="waveBtn" type="button" disabled>Добавить новый факт <span class="arr">↯</span></button>
+          </div>
+          <div class="wave-opts" id="waveOpts"></div>
+          <p class="mono mute wave-note" id="waveNote"></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Сканер на бумаге -->
+  <section class="scan paper seam-top" id="scan">
+    <div class="wrap scan-grid">
+      <div class="scan-copy">
+        <p class="kicker" data-reveal>Карта доверия</p>
+        <h2 data-split>Каждое число<br>нажимается<br>до цитаты</h2>
+        <p data-reveal>Агент не пересказывает страницу — он вынимает из неё предложение и записывает утверждение: тип, дословная цитата, адрес, дата снятия, отпечаток. В стратегии вместо числа стоит ссылка, и проверка не пропустит число без неё.</p>
+        <p class="mono" data-reveal>источник: moscow.megafon.ru/corporate/services/mega_ai · снято 14.11.2026</p>
+      </div>
+      <div class="scan-doc" id="scanDoc" aria-hidden="true">
+        <div class="doc-lines" id="docLines"></div>
+        <div class="doc-beam" id="docBeam"><span class="mono" id="docLn">строка 241</span></div>
+        <div class="doc-card" id="docCard"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Защита -->
+  <section class="guard sec" id="guard">
+    <div class="wrap guard-grid">
+      <div class="guard-flask" aria-hidden="true"><canvas id="flask"></canvas></div>
+      <div>
+        <p class="kicker" data-reveal>Защита архитектурой, а не просьбой</p>
+        <h2 data-split>Страница может<br>врать. Агент<br>не послушает.</h2>
+        <p class="lead" data-reveal>Текст из интернета — данные, а не команды. Скрытые блоки, комментарии и alt уходят в карантин до того, как модель их увидит. Точку человека закрывает только ваше сообщение в чате — хук не даст агенту ответить за вас.</p>
+        <div class="guard-nums">
+          <div data-reveal><span class="num"><b data-count="0" data-fact="evals.hidden_leaks">0</b><i>/<span data-fact="evals.attacks">48</span></i></span><p>атак скрытым текстом дошли до агента в слепом корпусе</p></div>
+          <div data-reveal style="--d:.1s"><span class="num"><b data-count="15" data-fact="evals.defects_blocked">15</b><i>/<span data-fact="evals.defects_total">15</span></i></span><p>дефектов стратегии блокируют утверждение</p></div>
+          <div data-reveal style="--d:.2s"><span class="num"><b data-count="19" data-fact="evals.attacks_caught">19</b><i>/<span data-fact="evals.attacks">48</span></i></span><p>ловит регулярный детектор — это первый слой, а не защита, и мы пишем об этом прямо</p></div>
+        </div>
+        <a class="btn ghost" href="/proof/#security">Как мерили <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Внедрение -->
+  <section class="ship sec" id="ship">
+    <div class="wrap ship-grid">
+      <div>
+        <p class="kicker" data-reveal>Внедрение в контур</p>
+        <h2 data-split>Папка, CLI,<br>MCP и HTTP</h2>
+        <p data-reveal>«Основание» — не облачный сервис, а папка-агент. Её открывают в Claude Code или Cursor, а всё состояние лежит файлами в проекте: работу можно продолжить в новом чате, передать коллеге или проверить в CI.</p>
+        <ul class="ship-list" data-reveal>
+          <li><b class="mono">CLI</b><span><span data-fact="agent.cli_commands">43</span> команд: утверждения, источники, модель, точки, пересмотр, стоимость</span></li>
+          <li><b class="mono">MCP</b><span>сервер kb-state: база знаний и состояние проекта для любой среды</span></li>
+          <li><b class="mono">HTTP</b><span>только чтение: стратегия, граф и карта доверия для дашбордов компании</span></li>
+          <li><b class="mono">CI</b><span>проверки качества и целостности правил — одной командой</span></li>
+        </ul>
+      </div>
+      <div class="term" data-reveal>
+        <div class="bar"><i></i><i></i><i></i><span>osnovanie — zsh</span></div>
+        <pre id="term"></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Куда дальше -->
+  <section class="index sec" id="next">
+    <div class="wrap">
+      <p class="kicker" data-reveal>Дальше</p>
+      <ol class="idx" id="idx">
+        <li><a href="/replay/"><span class="mono">реплей</span><b>Реплей прогона</b><em>чат, граф и шкала времени: как агент шёл от вопроса к решению</em><i class="arr">→</i></a></li>
+        <li><a href="/how/"><span class="mono">схема</span><b>Как работает</b><em>этапы, точки человека, субагенты, хуки — с рисунками</em><i class="arr">→</i></a></li>
+        <li><a href="/pult/"><span class="mono">пульт</span><b>Пульт проекта</b><em>реестр утверждений, модель «что если», индекс обоснованности</em><i class="arr">→</i></a></li>
+        <li><a href="/proof/"><span class="mono">цифры</span><b>Доказательства</b><em>оценки, корпус инъекций, требования ТЗ и команда проверки</em><i class="arr">→</i></a></li>
+        <li><a href="/guide/"><span class="mono">запуск</span><b>Инструкция</b><em>руководителю без терминала и инженеру внедрения</em><i class="arr">→</i></a></li>
+      </ol>
+    </div>
+  </section>
+</main>
+<!--foot-->
+<script type="module" src="/src/js/home.js"></script>
+</body>
+</html>

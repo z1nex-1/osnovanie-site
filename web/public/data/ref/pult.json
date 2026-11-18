@@ -1,0 +1,5402 @@
+{
+  "schema": "osnovanie-site/1",
+  "generated_at": "2026-11-18T01:08:42+03:00",
+  "project": {
+    "slug": "meganeuroseti-ref",
+    "title": "МегаНейросети: эталонный проект",
+    "question": "Кому и как продавать МегаНейросети и продолжать ли направление?",
+    "reference": true,
+    "note": "Эталонный проект: собран командой demo seed из 27 проверенных цитат. Формулировки вариантов и допущений авторские, это не прогон агента и не ответы руководителя.",
+    "stage": "decided",
+    "stage_label": "решение принято, сопровождение",
+    "decision": {
+      "option": "O3",
+      "owner": "demo-seed",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "comment": "O3 ответственный demo-seed"
+    },
+    "created_at": "2026-11-18T01:08:41+03:00"
+  },
+  "brief": {
+    "question": "Кому и как продавать МегаНейросети и продолжать ли направление?",
+    "goal": "выбрать между сохранением, сдвигом в малый бизнес, продажей с тарифом и закрытием",
+    "recipient": "руководитель направления МегаНейросети (роль в демонстрации)",
+    "constraints": "только открытые данные на 14.11.2026, внутренних цифр МегаФона нет",
+    "data": "27 цитат из 18 открытых источников"
+  },
+  "claims": [
+    {
+      "id": "c001",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "МегаФон запустил МегаНейросети для корпоративных абонентов, в версии «Лайт» есть бесплатные генерации",
+      "quote": "Услуга доступна корпоративным абонентам, включая бесплатные генерации в версии «Лайт».",
+      "source_id": "s001",
+      "source": {
+        "title": "Запуск нового продукта «МегаНейросети»",
+        "origin": "https://moscow.megafon.ru/help/info/popular/information/20260408-1728.html",
+        "domain": "moscow.megafon.ru",
+        "published_at": "2026-04-08"
+      },
+      "value": null,
+      "unit": null,
+      "topic": "segment",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-08-11",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c002",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "Тариф «Про»: 10 моделей, до 50 запросов в сутки, 299 ₽ в месяц",
+      "quote": "Про 10 моделей нейросети для работы с текстом и изображениями. До 50 запросов в сутки. ... 299 ₽ в месяц",
+      "source_id": "s002",
+      "source": {
+        "title": "Услуга МегаНейросети от МегаФона (страница продукта)",
+        "origin": "https://moscow.megafon.ru/corporate/services/mega_ai",
+        "domain": "moscow.megafon.ru",
+        "published_at": null
+      },
+      "value": 299,
+      "unit": "руб/чел/мес",
+      "topic": "price",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-02-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c003",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "6 токенов стоят 1 ₽",
+      "quote": "6 токенов стоят 1 ₽",
+      "source_id": "s002",
+      "source": {
+        "title": "Услуга МегаНейросети от МегаФона (страница продукта)",
+        "origin": "https://moscow.megafon.ru/corporate/services/mega_ai",
+        "domain": "moscow.megafon.ru",
+        "published_at": null
+      },
+      "value": 6,
+      "unit": "токен/руб",
+      "topic": "price",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-02-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c004",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "МегаФон адресует продукт и фрилансерам с самозанятыми, а не только корпоративным клиентам",
+      "quote": "Фрилансерам и самозанятым Выполняйте заказы быстрее и берите больше проектов.",
+      "source_id": "s002",
+      "source": {
+        "title": "Услуга МегаНейросети от МегаФона (страница продукта)",
+        "origin": "https://moscow.megafon.ru/corporate/services/mega_ai",
+        "domain": "moscow.megafon.ru",
+        "published_at": null
+      },
+      "value": null,
+      "unit": null,
+      "topic": "segment",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-08-11",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c005",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "Пресса: бесплатная подписка даёт шесть зарубежных моделей, платная — 25",
+      "quote": "Бесплатная подписка включает доступ к шести зарубежным моделям с ограниченным числом запросов, платная — к 25.",
+      "source_id": "s003",
+      "source": {
+        "title": "МегаФон запустил доступ к популярным зарубежным ИИ-моделям",
+        "origin": "https://www.anti-malware.ru/news/2026-04-10-121598/49666",
+        "domain": "www.anti-malware.ru",
+        "published_at": "2026-04-10"
+      },
+      "value": null,
+      "unit": null,
+      "topic": "offer",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-08-11",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c006",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "«Лайт»: бесплатно, до 10 запросов в сутки в 6 нейросетях; «Про»: 299 рублей в месяц и до 50 запросов в сутки",
+      "quote": "платной подписке «Про» (299 рублей в месяц и до 50 запросов в сутки), так и в версии «Лайт» (бесплатно и до 10 запросов в сутки в 6 нейросетях)",
+      "source_id": "s004",
+      "source": {
+        "title": "«МегаФон» открыл доступ к 25 ИИ-сервисам",
+        "origin": "https://itspeaker.ru/news/megafon-otkryl-dostup-k-25-ii-servisam-/",
+        "domain": "itspeaker.ru",
+        "published_at": "2026-04-09"
+      },
+      "value": null,
+      "unit": null,
+      "topic": "price",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-02-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c007",
+      "type": "opinion",
+      "effective_type": "opinion",
+      "status": "verified",
+      "confidence": null,
+      "text": "Директор по продуктам корпоративного бизнеса МегаФона обещает расширять список моделей в ближайшие месяцы",
+      "quote": "В ближайшие месяцы мы планируем расширять список доступных для абонентов моделей",
+      "source_id": "s004",
+      "source": {
+        "title": "«МегаФон» открыл доступ к 25 ИИ-сервисам",
+        "origin": "https://itspeaker.ru/news/megafon-otkryl-dostup-k-25-ii-servisam-/",
+        "domain": "itspeaker.ru",
+        "published_at": "2026-04-09"
+      },
+      "value": null,
+      "unit": null,
+      "topic": "roadmap",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-08-11",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c008",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "Предприниматели сталкиваются с трудностями при оплате зарубежных сервисов и настройкой VPN",
+      "quote": "предприниматели часто сталкиваются с трудностями при оплате зарубежных сервисов и необходимостью настройки VPN-соединений",
+      "source_id": "s005",
+      "source": {
+        "title": "МегаФон: МегаНейросети (TAdviser)",
+        "origin": "https://www.tadviser.ru/index.php/Продукт:МегаФон:_МегаНейросети",
+        "domain": "www.tadviser.ru",
+        "published_at": "2026-04-09"
+      },
+      "value": null,
+      "unit": null,
+      "topic": "pain",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-08-11",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c009",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "Сгенерированный контент и диалог сохраняются 30 дней",
+      "quote": "Сгенерированный контент и диалог сохраняются 30 дней, что улучшает качество ответов нейросетей.",
+      "source_id": "s006",
+      "source": {
+        "title": "«МегаФон» открыл доступ к 25 ИИ-сервисам",
+        "origin": "https://allweb.ru/novosti-it/megafon-otkryl-dostyp-k-25-ii-servisam/",
+        "domain": "allweb.ru",
+        "published_at": null
+      },
+      "value": null,
+      "unit": null,
+      "topic": "legal",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-08-11",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c010",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "МТС продаёт тариф «РИИЛ» с ИИ за 890 рублей в месяц",
+      "quote": "Цена: 890 рублей в месяц. Тариф «РИИЛ» предназначен для зумеров и поколения альфа.",
+      "source_id": "s007",
+      "source": {
+        "title": "Тарифы с нейросетями у операторов",
+        "origin": "https://mobile-review.com/all/articles/operator/tarify-s-nejrosetyami-u-operatorov/",
+        "domain": "mobile-review.com",
+        "published_at": "2026-04-20"
+      },
+      "value": 890,
+      "unit": "руб/чел/мес",
+      "topic": "price",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-02-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c011",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "Пакеты МегаФона в Telegram: 1000 запросов GPT за 199 рублей, 200 запросов к Claude 4.5 за 599 рублей",
+      "quote": "1000 запросов в месяц (пакет GPT) — 199 рублей; 200 запросов в месяц к Claude 4.5 — 599 рублей",
+      "source_id": "s007",
+      "source": {
+        "title": "Тарифы с нейросетями у операторов",
+        "origin": "https://mobile-review.com/all/articles/operator/tarify-s-nejrosetyami-u-operatorov/",
+        "domain": "mobile-review.com",
+        "published_at": "2026-04-20"
+      },
+      "value": null,
+      "unit": null,
+      "topic": "price",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-02-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c012",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "Абонент тарифа МегаФона «Персональный» получает 20 бесплатных запросов в неделю",
+      "quote": "Каждый абонент получает по 20 бесплатных запросов в неделю.» (тариф МегаФона «Персональный. Для доступа к ИИ",
+      "source_id": "s007",
+      "source": {
+        "title": "Тарифы с нейросетями у операторов",
+        "origin": "https://mobile-review.com/all/articles/operator/tarify-s-nejrosetyami-u-operatorov/",
+        "domain": "mobile-review.com",
+        "published_at": "2026-04-20"
+      },
+      "value": null,
+      "unit": null,
+      "topic": "offer",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-02-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c013",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "«Алиса Плюс» подорожала со 100 ₽ до 199 ₽ в месяц",
+      "quote": "Летом 2026 года опция «Алиса Плюс» подорожала вдвое: со 100 ₽ до 199 ₽ в месяц.",
+      "source_id": "s008",
+      "source": {
+        "title": "Алиса Плюс, Алиса Про и бесплатная Алиса: разбор тарифов в 2026",
+        "origin": "https://checkroi.ru/blog/alisa-plyus-vs-alisa-pro/",
+        "domain": "checkroi.ru",
+        "published_at": "2026-09-07"
+      },
+      "value": 199,
+      "unit": "руб/чел/мес",
+      "topic": "price",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-02-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c014",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "Сбер оставит GigaChat бесплатным, пока растёт аудитория, а за часть функций возьмёт деньги позже",
+      "quote": "оставит доступ к ней бесплатным, пока сервис набирает аудиторию, но в перспективе за некоторые функции разработчик намеревается взимать деньги",
+      "source_id": "s009",
+      "source": {
+        "title": "«Сбер» хочет превратить «ГигаЧат» в замену всем приложениям — и сделать его платным",
+        "origin": "https://3dnews.ru/1138791/sber-hochet-prevratit-gigachat-v-zamenu-vsem-prilogeniyam-i-sdelat-ego-platnim/amp",
+        "domain": "3dnews.ru",
+        "published_at": "2026-03-24"
+      },
+      "value": null,
+      "unit": null,
+      "topic": "competition",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-08-11",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c015",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "GoGPT берёт от 699 руб в месяц",
+      "quote": "Для любителей и профессионалов от 699 руб /месяц",
+      "source_id": "s010",
+      "source": {
+        "title": "GoGPT (независимый агрегатор)",
+        "origin": "https://gogpt.ru",
+        "domain": "gogpt.ru",
+        "published_at": null
+      },
+      "value": 699,
+      "unit": "руб/чел/мес",
+      "topic": "price",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-02-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c016",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "Chad AI: тариф для команд стоит 1 690 ₽ в месяц",
+      "quote": "Для команд Плюс 1.87 ₽ за 1 000 искр 900 000 искр на месяц 1 690₽ / мес",
+      "source_id": "s011",
+      "source": {
+        "title": "Chad AI (независимый агрегатор)",
+        "origin": "https://chadgpt.ru",
+        "domain": "chadgpt.ru",
+        "published_at": null
+      },
+      "value": 1690,
+      "unit": "руб/чел/мес",
+      "topic": "price",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-02-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c017",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "BotHub: тариф Deluxe стоит 16 $ за 10 000 000 Caps",
+      "quote": "Deluxe You receive 10 000 000 Caps 16 $",
+      "source_id": "s012",
+      "source": {
+        "title": "BotHub (страница на английском)",
+        "origin": "https://bothub.chat",
+        "domain": "bothub.chat",
+        "published_at": null
+      },
+      "value": null,
+      "unit": null,
+      "topic": "price",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-02-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c018",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "78% интернет-пользователей России обращались к нейросетям за последний год (опрос ВЦИОМ)",
+      "quote": "78% российских интернет-пользователей обращались к нейросетям за последний год (2025 г. – 73%), среди них 58% раз в неделю и чаще",
+      "source_id": "s013",
+      "source": {
+        "title": "Нейросети в нашей жизни (ВЦИОМ)",
+        "origin": "https://wciom.ru/analytical-reviews/analiticheskii-obzor/neiroseti-v-nashei-zhizni",
+        "domain": "wciom.ru",
+        "published_at": "2026-07-30"
+      },
+      "value": 78,
+      "unit": "%",
+      "topic": "market",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-07-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c019",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "Для пользователей нейросеть прежде всего рабочий инструмент",
+      "quote": "Для пользователей нейросеть – это, прежде всего, рабочий инструмент (33-58%)",
+      "source_id": "s013",
+      "source": {
+        "title": "Нейросети в нашей жизни (ВЦИОМ)",
+        "origin": "https://wciom.ru/analytical-reviews/analiticheskii-obzor/neiroseti-v-nashei-zhizni",
+        "domain": "wciom.ru",
+        "published_at": "2026-07-30"
+      },
+      "value": null,
+      "unit": null,
+      "topic": "market",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-07-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c020",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "Платные подписки на сервисы называют барьером 15 процентов опрошенных",
+      "quote": "Платные подписки на сервисы 15",
+      "source_id": "s013",
+      "source": {
+        "title": "Нейросети в нашей жизни (ВЦИОМ)",
+        "origin": "https://wciom.ru/analytical-reviews/analiticheskii-obzor/neiroseti-v-nashei-zhizni",
+        "domain": "wciom.ru",
+        "published_at": "2026-07-30"
+      },
+      "value": 15,
+      "unit": "%",
+      "topic": "market",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-07-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c021",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "Месячный охват ИИ-сервисов в России в сентябре достиг 55% населения старше 12 лет",
+      "quote": "Месячный охват ИИ-сервисов в России в сентябре 2026 г. достиг 55% населения старше 12 лет — за год аудитория выросла более чем в два раза",
+      "source_id": "s014",
+      "source": {
+        "title": "Аудитория нейросетей в России за год выросла вдвое",
+        "origin": "https://expert.ru/news/auditoriya-neyrosetey-v-rossii-za-god-vyrosla-vdvoe",
+        "domain": "expert.ru",
+        "published_at": "2026-10-16"
+      },
+      "value": 55,
+      "unit": "%",
+      "topic": "market",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-07-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c022",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "DeepSeek пользуются 13 млн человек (11%), GigaChat — 6 млн (5%)",
+      "quote": "На втором месте — DeepSeek, которым пользуются 13 млн человек (11%), на третьем — GigaChat с 6 млн пользователей (5%).",
+      "source_id": "s014",
+      "source": {
+        "title": "Аудитория нейросетей в России за год выросла вдвое",
+        "origin": "https://expert.ru/news/auditoriya-neyrosetey-v-rossii-za-god-vyrosla-vdvoe",
+        "domain": "expert.ru",
+        "published_at": "2026-10-16"
+      },
+      "value": null,
+      "unit": null,
+      "topic": "competition",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-07-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c023",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "44% россиян используют модели ИИ против 39,2% годом ранее",
+      "quote": "В 2026 году 44% россиян используют модели ИИ и нейросети против 39,2% в 2025 году и 27,3% в 2024 году.",
+      "source_id": "s015",
+      "source": {
+        "title": "Использование ИИ: НИУ ВШЭ и Ромир",
+        "origin": "https://www.hse.ru/news/expertise/1162855603.html",
+        "domain": "www.hse.ru",
+        "published_at": "2026-05-26"
+      },
+      "value": 44,
+      "unit": "%",
+      "topic": "market",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-07-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c024",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "Доля россиян, пользующихся нейросетями не реже раза в неделю, за полгода выросла с 51 до 58% (ВЦИОМ в пересказе AdIndex)",
+      "quote": "Количество россиян, которые обращаются к нейросетям не реже одного раза в неделю, за последние полгода выросло с 51 до 58%, следует из опроса ВЦИОМ",
+      "source_id": "s016",
+      "source": {
+        "title": "Доля активных пользователей нейросетей в России достигла 58%",
+        "origin": "https://adindex.ru/news/innovations/2026/07/30/347630.phtml",
+        "domain": "adindex.ru",
+        "published_at": "2026-07-30"
+      },
+      "value": null,
+      "unit": null,
+      "topic": "market",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-07-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c025",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "По трафику МегаФона аудитория ИИ-сервисов в России выросла на 110%",
+      "quote": "В целом аудитория ИИ-сервисов в России увеличилась на 110%.",
+      "source_id": "s017",
+      "source": {
+        "title": "МегаФон: люди старше 55 лет стали в четыре раза чаще пользоваться нейросетями",
+        "origin": "https://www.iphones.ru/iNotes/megafon-chislo-polzovateley-neyrosetey-starshe-55-let-vyroslo-v-chetyre-raza",
+        "domain": "www.iphones.ru",
+        "published_at": "2025-11-06"
+      },
+      "value": 110,
+      "unit": "%",
+      "topic": "demand",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-07-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c026",
+      "type": "calculation",
+      "effective_type": "calculation",
+      "status": "verified",
+      "confidence": null,
+      "text": "Медиана цен платных предложений конкурентов, ₽ в месяц: 794.5",
+      "quote": null,
+      "source_id": "s018",
+      "source": {
+        "title": "Таблица цен из цитат (собрана демо-командой)",
+        "origin": "derived:price-table",
+        "domain": null,
+        "published_at": null
+      },
+      "value": 794.5,
+      "unit": "руб/чел/мес",
+      "topic": null,
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c013",
+        "c015",
+        "c016",
+        "c010"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": "price-median",
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c027",
+      "type": "assumption",
+      "effective_type": "stale",
+      "status": "open",
+      "confidence": 0.6,
+      "text": "Допущение: операторы-конкуренты не включают ИИ в базовый пакет бесплатно, ИИ продаётся отдельной услугой",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": null,
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c010"
+      ],
+      "superseded_by": "c052",
+      "supersedes": null,
+      "verify_plan": "проверить тарифы Билайна, МТС, Т2 на их сайтах: страницы не открывались напрямую",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c028",
+      "type": "assumption",
+      "effective_type": "assumption",
+      "status": "open",
+      "confidence": 0.3,
+      "text": "Допущение: к «Лайт» подключилось 20 000 абонентов (диапазон 5 000–60 000); цифра не раскрыта",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": 20000,
+      "unit": "чел",
+      "topic": null,
+      "range": [
+        5000,
+        60000
+      ],
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c001",
+        "c006"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": "запросить у владельца продукта число активаций «Лайт»",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c029",
+      "type": "assumption",
+      "effective_type": "assumption",
+      "status": "open",
+      "confidence": 0.3,
+      "text": "Допущение: в «Про» переходит 5% подключивших «Лайт» (диапазон 2–10%)",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": 0.05,
+      "unit": "1",
+      "topic": null,
+      "range": [
+        0.02,
+        0.1
+      ],
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c002",
+        "c006"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": "запросить конверсию «Лайт» → «Про» или измерить в пилоте",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c030",
+      "type": "assumption",
+      "effective_type": "assumption",
+      "status": "open",
+      "confidence": 0.35,
+      "text": "Допущение: активный пользователь «Про» докупает токены на 120 ₽ в месяц (диапазон 30–250 ₽)",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": 120,
+      "unit": "руб/чел/мес",
+      "topic": null,
+      "range": [
+        30,
+        250
+      ],
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c003"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": "взять средний расход токенов из биллинга",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c031",
+      "type": "assumption",
+      "effective_type": "assumption",
+      "status": "open",
+      "confidence": 0.3,
+      "text": "Допущение: закупка моделей стоит 90 ₽ на пользователя «Про» в месяц (диапазон 40–180 ₽); закупочные цены не раскрыты",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": 90,
+      "unit": "руб/чел/мес",
+      "topic": null,
+      "range": [
+        40,
+        180
+      ],
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c002"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": "запросить закупочные цены у посредника",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c032",
+      "type": "assumption",
+      "effective_type": "assumption",
+      "status": "open",
+      "confidence": 0.25,
+      "text": "Допущение: адресная продажа малому бизнесу увеличивает число платящих в 1,6 раза (диапазон 1,0–2,5)",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": 1.6,
+      "unit": "1",
+      "topic": null,
+      "range": [
+        1.0,
+        2.5
+      ],
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c001",
+        "c004"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": "пилот на 10 малых компаниях и интервью",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c033",
+      "type": "assumption",
+      "effective_type": "stale",
+      "status": "open",
+      "confidence": 0.35,
+      "text": "Допущение: абоненты соглашаются доплатить за ИИ в тарифе 99 ₽ в месяц (диапазон 49–149 ₽)",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": 99,
+      "unit": "руб/чел/мес",
+      "topic": null,
+      "range": [
+        49,
+        149
+      ],
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c027",
+        "c010",
+        "c012"
+      ],
+      "superseded_by": "c053",
+      "supersedes": null,
+      "verify_plan": "пилот пакета на 5 000 абонентов, 28 дней, контрольная группа",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c034",
+      "type": "assumption",
+      "effective_type": "assumption",
+      "status": "open",
+      "confidence": 0.3,
+      "text": "Допущение: пакет с ИИ в тарифе подключат 8 000 абонентов (диапазон 2 000–25 000)",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": 8000,
+      "unit": "чел",
+      "topic": null,
+      "range": [
+        2000,
+        25000
+      ],
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c010",
+        "c011"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": "пилот пакета на 5 000 абонентов, 28 дней",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c035",
+      "type": "assumption",
+      "effective_type": "assumption",
+      "status": "open",
+      "confidence": 0.3,
+      "text": "Допущение: закупка моделей для абонента тарифа стоит 25 ₽ в месяц (диапазон 10–60 ₽): лёгкое использование",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": 25,
+      "unit": "руб/чел/мес",
+      "topic": null,
+      "range": [
+        10,
+        60
+      ],
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c003"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": "замерить расход токенов абонентов тарифа в пилоте",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c036",
+      "type": "hypothesis",
+      "effective_type": "hypothesis",
+      "status": "open",
+      "confidence": 0.55,
+      "text": "Корпоративные покупатели заплатят за агрегатор, если он снимает проблему оплаты и VPN",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": null,
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c008",
+        "c020"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": "10 интервью с закупщиками и пилот с оплатой по счёту за 28 дней",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c037",
+      "type": "hypothesis",
+      "effective_type": "hypothesis",
+      "status": "open",
+      "confidence": 0.45,
+      "text": "Малый бизнес и фрилансеры переходят из «Лайт» в «Про» чаще, чем крупные компании",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": null,
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c004",
+        "c016"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": "10 интервью с закупщиками малого бизнеса и сравнение конверсии по сегментам",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c038",
+      "type": "hypothesis",
+      "effective_type": "stale",
+      "status": "stale",
+      "confidence": 0.5,
+      "text": "Платный агрегатор выдержит бесплатных Алису и GigaChat только нишевой пользой: оплата, VPN, выбор моделей",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": null,
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c014",
+        "c022",
+        "c027"
+      ],
+      "superseded_by": "c055",
+      "supersedes": null,
+      "verify_plan": "сравнить причины подключения в пилоте и в опросе абонентов",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": "изменилось основание: c027, c033"
+    },
+    {
+      "id": "c039",
+      "type": "hypothesis",
+      "effective_type": "hypothesis",
+      "status": "open",
+      "confidence": 0.4,
+      "text": "Связка с тарифом связи даёт больше подключений, чем разовая подписка",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": null,
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c010",
+        "c012"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": "пилот пакета в тарифе против подписки «Про» на сопоставимых группах",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c040",
+      "type": "forecast",
+      "effective_type": "forecast",
+      "status": "open",
+      "confidence": 0.5,
+      "text": "Прогноз: цены массовых ИИ-подписок в России будут расти и дальше",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": null,
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c013"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": "сверить цены «Алисы Плюс», GoGPT, Chad AI в мае 2027",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c041",
+      "type": "hypothesis",
+      "effective_type": "hypothesis",
+      "status": "open",
+      "confidence": 0.9,
+      "text": "Расхождение источников: пресса и релиз говорят о 25 моделях в платной подписке, а страница продукта называет 10 моделей в «Про»",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": "conflict",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c005",
+        "c002"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": "сверить источники вручную",
+      "resolution": "не снято: нужна сверка со страницей продукта вручную",
+      "conflict_between": [
+        "c005",
+        "c002"
+      ],
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c042",
+      "type": "hypothesis",
+      "effective_type": "hypothesis",
+      "status": "open",
+      "confidence": 0.9,
+      "text": "Расхождение источников: релиз адресует услугу корпоративным абонентам, страница продукта называет и фрилансеров с самозанятыми, а МегаФон уже продаёт частным клиентам пакеты в Telegram",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": "conflict",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c001",
+        "c004",
+        "c011"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": "сверить источники вручную",
+      "resolution": "не снято: целевой сегмент заявлен как B2B, продаётся шире",
+      "conflict_between": [
+        "c001",
+        "c004",
+        "c011"
+      ],
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c043",
+      "type": "hypothesis",
+      "effective_type": "hypothesis",
+      "status": "open",
+      "confidence": 0.9,
+      "text": "Расхождение баз: 78% (интернет-пользователи, ВЦИОМ), 55% (население старше 12 лет, Mediascope) и 44% (россияне, ВШЭ) нельзя сравнивать напрямую",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": "conflict",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c018",
+        "c021",
+        "c023"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": "сверить источники вручную",
+      "resolution": "снято: показываем каждую цифру со своей базой",
+      "conflict_between": [
+        "c018",
+        "c021",
+        "c023"
+      ],
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c044",
+      "type": "hypothesis",
+      "effective_type": "hypothesis",
+      "status": "open",
+      "confidence": 0.9,
+      "text": "Расхождение формулировок: AdIndex пишет «58% россиян», а у ВЦИОМ 78% интернет-пользователей обращались к нейросетям за год",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": "conflict",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c024",
+        "c018"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": "сверить источники вручную",
+      "resolution": "снято: берём формулировку первоисточника",
+      "conflict_between": [
+        "c024",
+        "c018"
+      ],
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c045",
+      "type": "hypothesis",
+      "effective_type": "hypothesis",
+      "status": "open",
+      "confidence": 0.7,
+      "text": "Вывод: цена «Про» 299 ₽ ниже медианы конкурентов 794,5 ₽, ценовой запас есть, но конкуренты продают разные пакеты",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": "conclusion",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c002",
+        "c026"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": "сравнить сопоставимые пакеты по числу запросов и моделей",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c046",
+      "type": "hypothesis",
+      "effective_type": "hypothesis",
+      "status": "open",
+      "confidence": 0.85,
+      "text": "Вывод: без числа платящих и конверсии решение остаётся ставкой на допущениях",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": "conclusion",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c028",
+        "c029"
+      ],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": "запросить данные у владельца продукта",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c047",
+      "type": "calculation",
+      "effective_type": "stale",
+      "status": "stale",
+      "confidence": null,
+      "text": "Прибыль в месяц по модели вариантов, база: O1: -121 тыс. ₽ (P10 -240 тыс. ₽, P90 519 тыс. ₽, лидер в 0% прогонов); O2: -74 тыс. ₽ (P10 -261 тыс. ₽, P90 1 111 тыс. ₽, лидер в 16% прогонов); O3: 381 тыс. ₽ (P10 158 тыс. ₽, P90 1 508 тыс. ₽, лидер в 84% прогонов); O4: -200 тыс. ₽ (P10 -200 тыс. ₽, P90 -200 тыс. ₽, лидер в 0% прогонов). Лидер: O3",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": null,
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c028",
+        "c029",
+        "c030",
+        "c031",
+        "c033",
+        "c034",
+        "c035",
+        "c002"
+      ],
+      "superseded_by": "c054",
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": "model-r001",
+      "author": "demo-seed",
+      "stale_reason": "изменилось основание: c027, c033"
+    },
+    {
+      "id": "c048",
+      "type": "hypothesis",
+      "effective_type": "stale",
+      "status": "stale",
+      "confidence": 0.4,
+      "text": "Вывод: пакет «ИИ в тарифе» лидирует по модели, но только на допущениях о доплате и числе абонентов",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": "conclusion",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c047",
+        "c033",
+        "c039"
+      ],
+      "superseded_by": "c056",
+      "supersedes": null,
+      "verify_plan": "пилот пакета на 5 000 абонентов, 28 дней",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": "изменилось основание: c027, c033"
+    },
+    {
+      "id": "c049",
+      "type": "hypothesis",
+      "effective_type": "stale",
+      "status": "stale",
+      "confidence": 0.35,
+      "text": "Вывод: стартовая цена пакета 99 ₽ в месяц, её проверяем пилотом",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": "conclusion",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c048"
+      ],
+      "superseded_by": "c057",
+      "supersedes": null,
+      "verify_plan": "пилот с двумя ценами: 99 ₽ и 79 ₽",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": "изменилось основание: c027, c033"
+    },
+    {
+      "id": "c050",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "Билайн начисляет клиентам обновлённой подписки Bee 300 токенов в месяц без дополнительной платы",
+      "quote": "В рамках обновленной подписки Bee (Би) клиентам ежемесячно начисляется 300 токенов, которые можно использовать без дополнительной платы.",
+      "source_id": "s019",
+      "source": {
+        "title": "Билайн интегрировал валюту для нейросетей в тарифы мобильной связи",
+        "origin": "https://lenta.ru/articles/2026/04/15/bilayn-integriroval-neyroseti-v-tarify-mobilnoy-svyazi/",
+        "domain": "lenta.ru",
+        "published_at": "2026-04-15"
+      },
+      "value": 300,
+      "unit": "токен/мес",
+      "topic": "price",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-02-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c051",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "Обращения к ИИ-сервисам у клиентов Билайна за год выросли более чем в три раза (данные самого Билайна)",
+      "quote": "За последний год количество обращений к ИИ-сервисам увеличилось более чем в три раза.",
+      "source_id": "s019",
+      "source": {
+        "title": "Билайн интегрировал валюту для нейросетей в тарифы мобильной связи",
+        "origin": "https://lenta.ru/articles/2026/04/15/bilayn-integriroval-neyroseti-v-tarify-mobilnoy-svyazi/",
+        "domain": "lenta.ru",
+        "published_at": "2026-04-15"
+      },
+      "value": null,
+      "unit": null,
+      "topic": "demand",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-08-11",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": null,
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c052",
+      "type": "fact",
+      "effective_type": "fact",
+      "status": "verified",
+      "confidence": null,
+      "text": "Билайн включает 300 токенов в месяц в подписку без доплаты, значит ИИ в базовом пакете оператора уже есть",
+      "quote": "В рамках обновленной подписки Bee (Би) клиентам ежемесячно начисляется 300 токенов, которые можно использовать без дополнительной платы.",
+      "source_id": "s019",
+      "source": {
+        "title": "Билайн интегрировал валюту для нейросетей в тарифы мобильной связи",
+        "origin": "https://lenta.ru/articles/2026/04/15/bilayn-integriroval-neyroseti-v-tarify-mobilnoy-svyazi/",
+        "domain": "lenta.ru",
+        "published_at": "2026-04-15"
+      },
+      "value": 300,
+      "unit": "токен/мес",
+      "topic": "price",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": "2027-02-12",
+      "depends_on": [],
+      "superseded_by": null,
+      "supersedes": "c027",
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c053",
+      "type": "assumption",
+      "effective_type": "assumption",
+      "status": "open",
+      "confidence": 0.3,
+      "text": "Допущение с учётом бесплатных токенов Билайна: абоненты соглашаются доплатить за ИИ в тарифе 59 ₽ в месяц (диапазон 29–89 ₽)",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": 59,
+      "unit": "руб/чел/мес",
+      "topic": null,
+      "range": [
+        29,
+        89
+      ],
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c050",
+        "c010",
+        "c012"
+      ],
+      "superseded_by": null,
+      "supersedes": "c033",
+      "verify_plan": "пилот пакета на 5 000 абонентов, 28 дней, цена 59 ₽ и 79 ₽",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c054",
+      "type": "calculation",
+      "effective_type": "calculation",
+      "status": "verified",
+      "confidence": null,
+      "text": "Прибыль в месяц по модели вариантов, база: O1: -121 тыс. ₽ (P10 -234 тыс. ₽, P90 477 тыс. ₽, лидер в 2% прогонов); O2: -74 тыс. ₽ (P10 -257 тыс. ₽, P90 992 тыс. ₽, лидер в 43% прогонов); O3: 61 тыс. ₽ (P10 -142 тыс. ₽, P90 823 тыс. ₽, лидер в 51% прогонов); O4: -200 тыс. ₽ (P10 -200 тыс. ₽, P90 -200 тыс. ₽, лидер в 4% прогонов). Лидер: O3",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": null,
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c028",
+        "c029",
+        "c030",
+        "c031",
+        "c053",
+        "c034",
+        "c035",
+        "c002"
+      ],
+      "superseded_by": null,
+      "supersedes": "c047",
+      "verify_plan": null,
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": "model-r002",
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c055",
+      "type": "hypothesis",
+      "effective_type": "hypothesis",
+      "status": "open",
+      "confidence": 0.45,
+      "text": "Платный агрегатор выдержит бесплатных Алису, GigaChat и ИИ в базе у Билайна только нишевой пользой: оплата, VPN, выбор моделей",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": null,
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c014",
+        "c022",
+        "c052"
+      ],
+      "superseded_by": null,
+      "supersedes": "c038",
+      "verify_plan": "сравнить причины подключения в пилоте и в опросе абонентов",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c056",
+      "type": "hypothesis",
+      "effective_type": "hypothesis",
+      "status": "open",
+      "confidence": 0.35,
+      "text": "Вывод: пакет «ИИ в тарифе» всё ещё лидирует по модели, но отрыв сократился после бесплатных токенов Билайна",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": "conclusion",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c054",
+        "c053",
+        "c039"
+      ],
+      "superseded_by": null,
+      "supersedes": "c048",
+      "verify_plan": "пилот пакета на 5 000 абонентов, 28 дней",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    },
+    {
+      "id": "c057",
+      "type": "hypothesis",
+      "effective_type": "hypothesis",
+      "status": "open",
+      "confidence": 0.3,
+      "text": "Вывод: стартовая цена пакета 59 ₽ в месяц, её проверяем пилотом",
+      "quote": null,
+      "source_id": null,
+      "source": null,
+      "value": null,
+      "unit": null,
+      "topic": "conclusion",
+      "range": null,
+      "created_at": "2026-11-18T01:08:41+03:00",
+      "updated_at": "2026-11-18T01:08:41+03:00",
+      "expires": null,
+      "depends_on": [
+        "c056"
+      ],
+      "superseded_by": null,
+      "supersedes": "c049",
+      "verify_plan": "пилот с двумя ценами: 59 ₽ и 79 ₽",
+      "resolution": null,
+      "conflict_between": null,
+      "calc_id": null,
+      "author": "demo-seed",
+      "stale_reason": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "c013",
+      "to": "c026",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c015",
+      "to": "c026",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c016",
+      "to": "c026",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c010",
+      "to": "c026",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c010",
+      "to": "c027",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c001",
+      "to": "c028",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c006",
+      "to": "c028",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c002",
+      "to": "c029",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c006",
+      "to": "c029",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c003",
+      "to": "c030",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c002",
+      "to": "c031",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c001",
+      "to": "c032",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c004",
+      "to": "c032",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c027",
+      "to": "c033",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c010",
+      "to": "c033",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c012",
+      "to": "c033",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c010",
+      "to": "c034",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c011",
+      "to": "c034",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c003",
+      "to": "c035",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c008",
+      "to": "c036",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c020",
+      "to": "c036",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c004",
+      "to": "c037",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c016",
+      "to": "c037",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c014",
+      "to": "c038",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c022",
+      "to": "c038",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c027",
+      "to": "c038",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c010",
+      "to": "c039",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c012",
+      "to": "c039",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c013",
+      "to": "c040",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c005",
+      "to": "c041",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c002",
+      "to": "c041",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c001",
+      "to": "c042",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c004",
+      "to": "c042",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c011",
+      "to": "c042",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c018",
+      "to": "c043",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c021",
+      "to": "c043",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c023",
+      "to": "c043",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c024",
+      "to": "c044",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c018",
+      "to": "c044",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c002",
+      "to": "c045",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c026",
+      "to": "c045",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c028",
+      "to": "c046",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c029",
+      "to": "c046",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c028",
+      "to": "c047",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c029",
+      "to": "c047",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c030",
+      "to": "c047",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c031",
+      "to": "c047",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c033",
+      "to": "c047",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c034",
+      "to": "c047",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c035",
+      "to": "c047",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c002",
+      "to": "c047",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c047",
+      "to": "c048",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c033",
+      "to": "c048",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c039",
+      "to": "c048",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c048",
+      "to": "c049",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c050",
+      "to": "c053",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c010",
+      "to": "c053",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c012",
+      "to": "c053",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c028",
+      "to": "c054",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c029",
+      "to": "c054",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c030",
+      "to": "c054",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c031",
+      "to": "c054",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c053",
+      "to": "c054",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c034",
+      "to": "c054",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c035",
+      "to": "c054",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c002",
+      "to": "c054",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c014",
+      "to": "c055",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c022",
+      "to": "c055",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c052",
+      "to": "c055",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c054",
+      "to": "c056",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c053",
+      "to": "c056",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c039",
+      "to": "c056",
+      "kind": "depends_on"
+    },
+    {
+      "from": "c056",
+      "to": "c057",
+      "kind": "depends_on"
+    },
+    {
+      "from": "s001",
+      "to": "c001",
+      "kind": "cites"
+    },
+    {
+      "from": "s002",
+      "to": "c002",
+      "kind": "cites"
+    },
+    {
+      "from": "s002",
+      "to": "c003",
+      "kind": "cites"
+    },
+    {
+      "from": "s002",
+      "to": "c004",
+      "kind": "cites"
+    },
+    {
+      "from": "s003",
+      "to": "c005",
+      "kind": "cites"
+    },
+    {
+      "from": "s004",
+      "to": "c006",
+      "kind": "cites"
+    },
+    {
+      "from": "s004",
+      "to": "c007",
+      "kind": "cites"
+    },
+    {
+      "from": "s005",
+      "to": "c008",
+      "kind": "cites"
+    },
+    {
+      "from": "s006",
+      "to": "c009",
+      "kind": "cites"
+    },
+    {
+      "from": "s007",
+      "to": "c010",
+      "kind": "cites"
+    },
+    {
+      "from": "s007",
+      "to": "c011",
+      "kind": "cites"
+    },
+    {
+      "from": "s007",
+      "to": "c012",
+      "kind": "cites"
+    },
+    {
+      "from": "s008",
+      "to": "c013",
+      "kind": "cites"
+    },
+    {
+      "from": "s009",
+      "to": "c014",
+      "kind": "cites"
+    },
+    {
+      "from": "s010",
+      "to": "c015",
+      "kind": "cites"
+    },
+    {
+      "from": "s011",
+      "to": "c016",
+      "kind": "cites"
+    },
+    {
+      "from": "s012",
+      "to": "c017",
+      "kind": "cites"
+    },
+    {
+      "from": "s013",
+      "to": "c018",
+      "kind": "cites"
+    },
+    {
+      "from": "s013",
+      "to": "c019",
+      "kind": "cites"
+    },
+    {
+      "from": "s013",
+      "to": "c020",
+      "kind": "cites"
+    },
+    {
+      "from": "s014",
+      "to": "c021",
+      "kind": "cites"
+    },
+    {
+      "from": "s014",
+      "to": "c022",
+      "kind": "cites"
+    },
+    {
+      "from": "s015",
+      "to": "c023",
+      "kind": "cites"
+    },
+    {
+      "from": "s016",
+      "to": "c024",
+      "kind": "cites"
+    },
+    {
+      "from": "s017",
+      "to": "c025",
+      "kind": "cites"
+    },
+    {
+      "from": "s018",
+      "to": "c026",
+      "kind": "cites"
+    },
+    {
+      "from": "s019",
+      "to": "c050",
+      "kind": "cites"
+    },
+    {
+      "from": "s019",
+      "to": "c051",
+      "kind": "cites"
+    },
+    {
+      "from": "s019",
+      "to": "c052",
+      "kind": "cites"
+    },
+    {
+      "from": "c001",
+      "to": "O1",
+      "kind": "basis"
+    },
+    {
+      "from": "c002",
+      "to": "O1",
+      "kind": "basis"
+    },
+    {
+      "from": "c046",
+      "to": "O1",
+      "kind": "objection"
+    },
+    {
+      "from": "c022",
+      "to": "O1",
+      "kind": "objection"
+    },
+    {
+      "from": "c037",
+      "to": "O2",
+      "kind": "basis"
+    },
+    {
+      "from": "c004",
+      "to": "O2",
+      "kind": "basis"
+    },
+    {
+      "from": "c008",
+      "to": "O2",
+      "kind": "basis"
+    },
+    {
+      "from": "c016",
+      "to": "O2",
+      "kind": "basis"
+    },
+    {
+      "from": "c037",
+      "to": "O2",
+      "kind": "objection"
+    },
+    {
+      "from": "c016",
+      "to": "O2",
+      "kind": "objection"
+    },
+    {
+      "from": "c039",
+      "to": "O3",
+      "kind": "basis"
+    },
+    {
+      "from": "c010",
+      "to": "O3",
+      "kind": "basis"
+    },
+    {
+      "from": "c012",
+      "to": "O3",
+      "kind": "basis"
+    },
+    {
+      "from": "c011",
+      "to": "O3",
+      "kind": "basis"
+    },
+    {
+      "from": "c012",
+      "to": "O3",
+      "kind": "objection"
+    },
+    {
+      "from": "c027",
+      "to": "O3",
+      "kind": "objection"
+    },
+    {
+      "from": "c014",
+      "to": "O4",
+      "kind": "basis"
+    },
+    {
+      "from": "c022",
+      "to": "O4",
+      "kind": "basis"
+    },
+    {
+      "from": "c020",
+      "to": "O4",
+      "kind": "basis"
+    },
+    {
+      "from": "c021",
+      "to": "O4",
+      "kind": "objection"
+    },
+    {
+      "from": "c046",
+      "to": "O4",
+      "kind": "objection"
+    }
+  ],
+  "doc_refs": [
+    {
+      "doc": "situation.md",
+      "paragraph": 3,
+      "claim": "c001"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 3,
+      "claim": "c002"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 4,
+      "claim": "c003"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 5,
+      "claim": "c026"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 5,
+      "claim": "c013"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 5,
+      "claim": "c015"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 5,
+      "claim": "c016"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 6,
+      "claim": "c050"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 7,
+      "claim": "c021"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 7,
+      "claim": "c018"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 7,
+      "claim": "c043"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 8,
+      "claim": "c020"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 8,
+      "claim": "c008"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 9,
+      "claim": "c041"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 9,
+      "claim": "c042"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 11,
+      "claim": "c028"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 11,
+      "claim": "c029"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 11,
+      "claim": "c031"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 11,
+      "claim": "c009"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 11,
+      "claim": "c037"
+    },
+    {
+      "doc": "situation.md",
+      "paragraph": 11,
+      "claim": "c053"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 4,
+      "claim": "c001"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 5,
+      "claim": "c008"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 5,
+      "claim": "c020"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 7,
+      "claim": "c014"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 7,
+      "claim": "c022"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 7,
+      "claim": "c015"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 7,
+      "claim": "c010"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 8,
+      "claim": "c050"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 8,
+      "claim": "c045"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 10,
+      "claim": "c022"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 10,
+      "claim": "c008"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 10,
+      "claim": "c046"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 11,
+      "claim": "c056"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 13,
+      "claim": "c022"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 13,
+      "claim": "c021"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 13,
+      "claim": "c037"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 15,
+      "claim": "c054"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 16,
+      "claim": "c028"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 16,
+      "claim": "c029"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 16,
+      "claim": "c053"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 18,
+      "claim": "c003"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 18,
+      "claim": "c002"
+    },
+    {
+      "doc": "product.md",
+      "paragraph": 18,
+      "claim": "c010"
+    },
+    {
+      "doc": "communication.md",
+      "paragraph": 4,
+      "claim": "c019"
+    },
+    {
+      "doc": "communication.md",
+      "paragraph": 6,
+      "claim": "c022"
+    },
+    {
+      "doc": "communication.md",
+      "paragraph": 6,
+      "claim": "c008"
+    },
+    {
+      "doc": "communication.md",
+      "paragraph": 8,
+      "claim": "c008"
+    },
+    {
+      "doc": "communication.md",
+      "paragraph": 10,
+      "claim": "c003"
+    },
+    {
+      "doc": "communication.md",
+      "paragraph": 10,
+      "claim": "c002"
+    },
+    {
+      "doc": "communication.md",
+      "paragraph": 14,
+      "claim": "c003"
+    },
+    {
+      "doc": "communication.md",
+      "paragraph": 14,
+      "claim": "c002"
+    },
+    {
+      "doc": "communication.md",
+      "paragraph": 14,
+      "claim": "c010"
+    },
+    {
+      "doc": "validation.md",
+      "paragraph": 4,
+      "claim": "c053"
+    },
+    {
+      "doc": "validation.md",
+      "paragraph": 4,
+      "claim": "c034"
+    },
+    {
+      "doc": "validation.md",
+      "paragraph": 6,
+      "claim": "c034"
+    },
+    {
+      "doc": "validation.md",
+      "paragraph": 8,
+      "claim": "c053"
+    },
+    {
+      "doc": "validation.md",
+      "paragraph": 10,
+      "claim": "c053"
+    },
+    {
+      "doc": "validation.md",
+      "paragraph": 10,
+      "claim": "c035"
+    },
+    {
+      "doc": "validation.md",
+      "paragraph": 12,
+      "claim": "c002"
+    },
+    {
+      "doc": "validation.md",
+      "paragraph": 12,
+      "claim": "c010"
+    },
+    {
+      "doc": "monday.md",
+      "paragraph": 2,
+      "claim": "c028"
+    },
+    {
+      "doc": "monday.md",
+      "paragraph": 2,
+      "claim": "c029"
+    },
+    {
+      "doc": "monday.md",
+      "paragraph": 2,
+      "claim": "c037"
+    },
+    {
+      "doc": "monday.md",
+      "paragraph": 2,
+      "claim": "c034"
+    },
+    {
+      "doc": "strategy.md",
+      "paragraph": 2,
+      "claim": "c054"
+    },
+    {
+      "doc": "strategy.md",
+      "paragraph": 2,
+      "claim": "c056"
+    },
+    {
+      "doc": "strategy.md",
+      "paragraph": 3,
+      "claim": "c050"
+    },
+    {
+      "doc": "strategy.md",
+      "paragraph": 3,
+      "claim": "c021"
+    },
+    {
+      "doc": "strategy.md",
+      "paragraph": 3,
+      "claim": "c022"
+    },
+    {
+      "doc": "strategy.md",
+      "paragraph": 4,
+      "claim": "c045"
+    },
+    {
+      "doc": "strategy.md",
+      "paragraph": 4,
+      "claim": "c053"
+    },
+    {
+      "doc": "strategy.md",
+      "paragraph": 5,
+      "claim": "c028"
+    },
+    {
+      "doc": "strategy.md",
+      "paragraph": 5,
+      "claim": "c029"
+    },
+    {
+      "doc": "strategy.md",
+      "paragraph": 5,
+      "claim": "c031"
+    },
+    {
+      "doc": "strategy.md",
+      "paragraph": 5,
+      "claim": "c046"
+    },
+    {
+      "doc": "strategy.md",
+      "paragraph": 6,
+      "claim": "c053"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s001",
+      "title": "Запуск нового продукта «МегаНейросети»",
+      "kind": "primary",
+      "origin": "https://moscow.megafon.ru/help/info/popular/information/20260408-1728.html",
+      "domain": "moscow.megafon.ru",
+      "sha256": "6fb6786b3e65e0c2b6037dbf91d7c78156a37dee2e49ba2efcc74b25ab057b61",
+      "published_at": "2026-04-08",
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 237,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s002",
+      "title": "Услуга МегаНейросети от МегаФона (страница продукта)",
+      "kind": "primary",
+      "origin": "https://moscow.megafon.ru/corporate/services/mega_ai",
+      "domain": "moscow.megafon.ru",
+      "sha256": "5da1af174728f2a4112785df74742f195c5c5cb69a1baf7356f8ac1ee9777737",
+      "published_at": null,
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 331,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s003",
+      "title": "МегаФон запустил доступ к популярным зарубежным ИИ-моделям",
+      "kind": "secondary",
+      "origin": "https://www.anti-malware.ru/news/2026-04-10-121598/49666",
+      "domain": "www.anti-malware.ru",
+      "sha256": "fdb49c83950da0590dcf177c40117d5097407f58b499adc0119262faa335b71d",
+      "published_at": "2026-04-10",
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 243,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s004",
+      "title": "«МегаФон» открыл доступ к 25 ИИ-сервисам",
+      "kind": "secondary",
+      "origin": "https://itspeaker.ru/news/megafon-otkryl-dostup-k-25-ii-servisam-/",
+      "domain": "itspeaker.ru",
+      "sha256": "26c5daeff170fce5e6ec620a24cbf7158811b367ebdcd1fb96a2472af0439034",
+      "published_at": "2026-04-09",
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 367,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s005",
+      "title": "МегаФон: МегаНейросети (TAdviser)",
+      "kind": "secondary",
+      "origin": "https://www.tadviser.ru/index.php/Продукт:МегаФон:_МегаНейросети",
+      "domain": "www.tadviser.ru",
+      "sha256": "656be4d5ba529c91f24315e41263a42d319f7b815b6a729d6714fb628c9df4b7",
+      "published_at": "2026-04-09",
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 262,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s006",
+      "title": "«МегаФон» открыл доступ к 25 ИИ-сервисам",
+      "kind": "secondary",
+      "origin": "https://allweb.ru/novosti-it/megafon-otkryl-dostyp-k-25-ii-servisam/",
+      "domain": "allweb.ru",
+      "sha256": "c343cf59323f4cccd3242a8ee5a924abfe972e6527ca64100acb6c3ab2b77aa7",
+      "published_at": null,
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 240,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s007",
+      "title": "Тарифы с нейросетями у операторов",
+      "kind": "secondary",
+      "origin": "https://mobile-review.com/all/articles/operator/tarify-s-nejrosetyami-u-operatorov/",
+      "domain": "mobile-review.com",
+      "sha256": "2e5c35a6718feaaea035ee934430adaf2938aaa599a0015179d2fd339e14bef8",
+      "published_at": "2026-04-20",
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 446,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s008",
+      "title": "Алиса Плюс, Алиса Про и бесплатная Алиса: разбор тарифов в 2026",
+      "kind": "secondary",
+      "origin": "https://checkroi.ru/blog/alisa-plyus-vs-alisa-pro/",
+      "domain": "checkroi.ru",
+      "sha256": "bf4e706c8a47daa6c73001a76a2d8664e052be3023c3cd9c10a3d46bb7382710",
+      "published_at": "2026-09-07",
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 206,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s009",
+      "title": "«Сбер» хочет превратить «ГигаЧат» в замену всем приложениям — и сделать его платным",
+      "kind": "secondary",
+      "origin": "https://3dnews.ru/1138791/sber-hochet-prevratit-gigachat-v-zamenu-vsem-prilogeniyam-i-sdelat-ego-platnim/amp",
+      "domain": "3dnews.ru",
+      "sha256": "ecc43da3d449e37ebd8cdfcb46da3dfe216cb22747112d6d885f9aab5f7f627b",
+      "published_at": "2026-03-24",
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 327,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s010",
+      "title": "GoGPT (независимый агрегатор)",
+      "kind": "primary",
+      "origin": "https://gogpt.ru",
+      "domain": "gogpt.ru",
+      "sha256": "e37b9a596d86e063b4dc163601eeca7daf27bcce7116e550f80ace4d5341ac0a",
+      "published_at": null,
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 141,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s011",
+      "title": "Chad AI (независимый агрегатор)",
+      "kind": "primary",
+      "origin": "https://chadgpt.ru",
+      "domain": "chadgpt.ru",
+      "sha256": "d2ace6a88bfcd04f0d2314a9974f3fd49d660351131e6f5ce60dcfbadeaf1d20",
+      "published_at": null,
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 166,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s012",
+      "title": "BotHub (страница на английском)",
+      "kind": "primary",
+      "origin": "https://bothub.chat",
+      "domain": "bothub.chat",
+      "sha256": "11f7d184c04e649896ea41446caa5c8c99dac2c96f11e15ad89af0649617dc71",
+      "published_at": null,
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 135,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s013",
+      "title": "Нейросети в нашей жизни (ВЦИОМ)",
+      "kind": "primary",
+      "origin": "https://wciom.ru/analytical-reviews/analiticheskii-obzor/neiroseti-v-nashei-zhizni",
+      "domain": "wciom.ru",
+      "sha256": "60eb6e607d01407fe68abdc3cb660884779530082287b083dc0f03cc0f6c3aaf",
+      "published_at": "2026-07-30",
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 396,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s014",
+      "title": "Аудитория нейросетей в России за год выросла вдвое",
+      "kind": "secondary",
+      "origin": "https://expert.ru/news/auditoriya-neyrosetey-v-rossii-za-god-vyrosla-vdvoe",
+      "domain": "expert.ru",
+      "sha256": "86365cd8a3b9973f8b292aafec769468e7fdeda2daae05c7168b5a12ba7c28f2",
+      "published_at": "2026-10-16",
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 407,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s015",
+      "title": "Использование ИИ: НИУ ВШЭ и Ромир",
+      "kind": "secondary",
+      "origin": "https://www.hse.ru/news/expertise/1162855603.html",
+      "domain": "www.hse.ru",
+      "sha256": "4599c346d69d2731f9896315a915beb36089c19e478dd7c6e059842134e8fcb0",
+      "published_at": "2026-05-26",
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 228,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s016",
+      "title": "Доля активных пользователей нейросетей в России достигла 58%",
+      "kind": "secondary",
+      "origin": "https://adindex.ru/news/innovations/2026/07/30/347630.phtml",
+      "domain": "adindex.ru",
+      "sha256": "2edf2f954e4ddd0db8671b6f44d759041f010e9072a4a32d179c6841fcbb1540",
+      "published_at": "2026-07-30",
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 283,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s017",
+      "title": "МегаФон: люди старше 55 лет стали в четыре раза чаще пользоваться нейросетями",
+      "kind": "secondary",
+      "origin": "https://www.iphones.ru/iNotes/megafon-chislo-polzovateley-neyrosetey-starshe-55-let-vyroslo-v-chetyre-raza",
+      "domain": "www.iphones.ru",
+      "sha256": "1b9fd808368d9b15f597a41d63b82a19065478cefc30862740c382617ae9f455",
+      "published_at": "2025-11-06",
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 242,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s018",
+      "title": "Таблица цен из цитат (собрана демо-командой)",
+      "kind": "own",
+      "origin": "derived:price-table",
+      "domain": null,
+      "sha256": "0fe12efbdc2724e4c212b362e5d7d7fb0c064f9125fbdd5f17caa561ff02e396",
+      "published_at": null,
+      "accessed_at": "2026-11-18T01:08:41+03:00",
+      "offline": false,
+      "chars": 135,
+      "quarantined": 0,
+      "status": "active"
+    },
+    {
+      "id": "s019",
+      "title": "Билайн интегрировал валюту для нейросетей в тарифы мобильной связи",
+      "kind": "secondary",
+      "origin": "https://lenta.ru/articles/2026/04/15/bilayn-integriroval-neyroseti-v-tarify-mobilnoy-svyazi/",
+      "domain": "lenta.ru",
+      "sha256": "c4de401859669abfb9f3f4e97a79e070c1724555d9108e5205d47ede8aba43d1",
+      "published_at": "2026-04-15",
+      "accessed_at": "2026-11-14T12:00:00+03:00",
+      "offline": true,
+      "chars": 391,
+      "quarantined": 0,
+      "status": "active"
+    }
+  ],
+  "options": [
+    {
+      "basis": [
+        "c001",
+        "c002"
+      ],
+      "id": "O1",
+      "kind": "keep",
+      "loses_if": "платящих меньше 1 000 человек: расходы на команду не покрываются",
+      "objections": [
+        {
+          "by": "skeptic",
+          "claims": [
+            "c046"
+          ],
+          "text": "Число платящих не раскрыто, окупаемость нельзя показать ни одной цифрой",
+          "ts": "2026-11-18T01:08:41+03:00"
+        },
+        {
+          "by": "closure-advocate",
+          "claims": [
+            "c022"
+          ],
+          "text": "Бесплатные Алиса и GigaChat держат массовую аудиторию, платный агрегатор остаётся нишей",
+          "ts": "2026-11-18T01:08:41+03:00"
+        }
+      ],
+      "portfolio": "не задевает другие продукты МегаФона",
+      "thesis": "Оставить корпоративный запуск без изменений: «Лайт» бесплатно, «Про» за 299 ₽, токены с баланса",
+      "title": "Оставить как есть",
+      "what_changes": "если конверсия «Лайт» → «Про» окажется выше 7% или бесплатные пакеты конкурентов исчезнут"
+    },
+    {
+      "basis": [
+        "c037",
+        "c004",
+        "c008",
+        "c016"
+      ],
+      "id": "O2",
+      "kind": "change",
+      "loses_if": "малый бизнес не платит больше крупных клиентов: гипотеза H2 не подтверждается",
+      "objections": [
+        {
+          "by": "skeptic",
+          "claims": [
+            "c037"
+          ],
+          "text": "Опросов малого бизнеса в открытых источниках нет, сегмент назван гипотезой",
+          "ts": "2026-11-18T01:08:41+03:00"
+        },
+        {
+          "by": "pre-mortem",
+          "claims": [
+            "c016"
+          ],
+          "text": "Независимые агрегаторы уже продают командам по счёту и дешевле в пересчёте на пользователя",
+          "ts": "2026-11-18T01:08:41+03:00"
+        }
+      ],
+      "portfolio": "пересекается с корпоративными тарифами связи и пакетами в Telegram: возможна каннибализация",
+      "thesis": "Продавать малому бизнесу и фрилансерам с оплатой по счёту, пакетами по числу сотрудников и персональным менеджером",
+      "title": "Сместиться в малый бизнес",
+      "what_changes": "интервью с закупщиками малого бизнеса и сравнение конверсии по сегментам"
+    },
+    {
+      "basis": [
+        "c039",
+        "c010",
+        "c012",
+        "c011"
+      ],
+      "id": "O3",
+      "kind": "change",
+      "loses_if": "доплата за ИИ в тарифе ниже закупки моделей или абоненты не подключают пакет",
+      "objections": [
+        {
+          "by": "skeptic",
+          "claims": [
+            "c012"
+          ],
+          "text": "Тариф «Персональный» уже даёт 20 бесплатных запросов в неделю: пакет придётся отличать от него",
+          "ts": "2026-11-18T01:08:41+03:00"
+        },
+        {
+          "by": "pre-mortem",
+          "claims": [
+            "c027"
+          ],
+          "text": "Часть абонентов уйдёт к операторам, у которых ИИ входит в тариф бесплатно, доплата станет причиной оттока",
+          "ts": "2026-11-18T01:08:41+03:00"
+        }
+      ],
+      "portfolio": "каннибализирует тариф «Персональный» и пакеты в Telegram; общие расходы на закупку моделей",
+      "thesis": "Встроить ИИ в тариф связи как платный пакет рядом с услугой, а не продавать отдельной подпиской",
+      "title": "Продавать вместе с тарифом связи",
+      "what_changes": "пилот пакета на 5 000 абонентов с контрольной группой"
+    },
+    {
+      "basis": [
+        "c014",
+        "c022",
+        "c020"
+      ],
+      "id": "O4",
+      "kind": "close",
+      "loses_if": "платящая аудитория растёт быстрее, чем уходит к бесплатным сервисам",
+      "objections": [
+        {
+          "by": "skeptic",
+          "claims": [
+            "c021"
+          ],
+          "text": "Выход отдаёт растущий рынок конкурентам: охват ИИ-сервисов 55% населения и вырос вдвое за год",
+          "ts": "2026-11-18T01:08:41+03:00"
+        },
+        {
+          "by": "pre-mortem",
+          "claims": [
+            "c046"
+          ],
+          "text": "Сворачивание без данных о марже не докажет, что направление убыточно",
+          "ts": "2026-11-18T01:08:41+03:00"
+        }
+      ],
+      "portfolio": "освобождает ресурсы, но оставляет абонентов без собственного ИИ-предложения",
+      "thesis": "Свернуть МегаНейросети, перевести абонентов на партнёрские ИИ-сервисы и сократить команду",
+      "title": "Закрыть направление",
+      "what_changes": "данные о платящих и марже выше точки окупаемости"
+    }
+  ],
+  "model": {
+    "output_unit": "руб/мес",
+    "samples": 4000,
+    "formulas": {
+      "O1": "users * conv * (price + tokens - unitcost) - fixed",
+      "O2": "users * conv * smb * (price + tokens - unitcost) - fixed - smb_sales",
+      "O3": "users * conv * (price + tokens - unitcost) + bundle_users * (bundle_price - bundle_cost) - fixed - cannibal",
+      "O4": "-winddown"
+    },
+    "constants": {
+      "fixed": {
+        "value": 450000,
+        "unit": "руб/мес"
+      },
+      "smb_sales": {
+        "value": 150000,
+        "unit": "руб/мес"
+      },
+      "cannibal": {
+        "value": 90000,
+        "unit": "руб/мес"
+      },
+      "winddown": {
+        "value": 200000,
+        "unit": "руб/мес"
+      }
+    },
+    "params": {
+      "bundle_cost": {
+        "base": 25.0,
+        "claim": "c035",
+        "high": 60.0,
+        "label": "закупка моделей на абонента тарифа",
+        "low": 10.0,
+        "unit": "руб/чел/мес"
+      },
+      "bundle_price": {
+        "base": 59.0,
+        "claim": "c053",
+        "high": 88.798,
+        "label": "доплата за ИИ в тарифе",
+        "low": 29.202,
+        "unit": "руб/чел/мес"
+      },
+      "bundle_users": {
+        "base": 8000.0,
+        "claim": "c034",
+        "high": 25000.0,
+        "label": "абоненты тарифа с ИИ",
+        "low": 2000.0,
+        "unit": "чел"
+      },
+      "conv": {
+        "base": 0.05,
+        "claim": "c029",
+        "high": 0.1,
+        "label": "доля перешедших в «Про»",
+        "low": 0.02,
+        "unit": "1"
+      },
+      "price": {
+        "base": 299.0,
+        "claim": "c002",
+        "high": 399.0,
+        "label": "цена «Про»",
+        "low": 199.0,
+        "unit": "руб/чел/мес"
+      },
+      "smb": {
+        "base": 1.6,
+        "claim": "c032",
+        "high": 2.5,
+        "label": "рост платящих при продаже малому бизнесу",
+        "low": 1.0,
+        "unit": "1"
+      },
+      "tokens": {
+        "base": 120.0,
+        "claim": "c030",
+        "high": 250.0,
+        "label": "токены сверх подписки",
+        "low": 30.0,
+        "unit": "руб/чел/мес"
+      },
+      "unitcost": {
+        "base": 90.0,
+        "claim": "c031",
+        "high": 180.0,
+        "label": "закупка моделей на пользователя «Про»",
+        "low": 40.0,
+        "unit": "руб/чел/мес"
+      },
+      "users": {
+        "base": 20000.0,
+        "claim": "c028",
+        "high": 60000.0,
+        "label": "подключили «Лайт»",
+        "low": 5000.0,
+        "unit": "чел"
+      }
+    },
+    "ranking": [
+      "O3",
+      "O2",
+      "O1",
+      "O4"
+    ],
+    "assumption_share": 0.889,
+    "run": "r002",
+    "monte_carlo": {
+      "O3": {
+        "base": 61000.0,
+        "p10": -141737.02,
+        "p90": 823261.4,
+        "p_best": 0.513,
+        "histogram": {
+          "edges": [
+            -747938.51,
+            -628298.92,
+            -508659.34,
+            -389019.76,
+            -269380.17,
+            -149740.59,
+            -30101.01,
+            89538.58,
+            209178.16,
+            328817.74,
+            448457.32,
+            568096.91,
+            687736.49,
+            807376.07,
+            927015.66,
+            1046655.24,
+            1166294.82,
+            1285934.41,
+            1405573.99,
+            1525213.57,
+            1644853.16,
+            1764492.74,
+            1884132.32,
+            2003771.9,
+            2123411.49
+          ],
+          "counts": [
+            1,
+            4,
+            30,
+            93,
+            244,
+            391,
+            526,
+            543,
+            487,
+            427,
+            383,
+            274,
+            176,
+            170,
+            92,
+            62,
+            34,
+            24,
+            13,
+            10,
+            9,
+            3,
+            3,
+            1
+          ]
+        }
+      },
+      "O2": {
+        "base": -73600.0,
+        "p10": -256981.63,
+        "p90": 991767.99,
+        "p_best": 0.433,
+        "histogram": {
+          "edges": [
+            -526977.06,
+            -368581.23,
+            -210185.4,
+            -51789.58,
+            106606.25,
+            265002.08,
+            423397.91,
+            581793.73,
+            740189.56,
+            898585.39,
+            1056981.22,
+            1215377.04,
+            1373772.87,
+            1532168.7,
+            1690564.53,
+            1848960.35,
+            2007356.18,
+            2165752.01,
+            2324147.84,
+            2482543.67,
+            2640939.49,
+            2799335.32,
+            2957731.15,
+            3116126.98,
+            3274522.8
+          ],
+          "counts": [
+            117,
+            439,
+            619,
+            618,
+            496,
+            444,
+            326,
+            253,
+            203,
+            137,
+            89,
+            67,
+            52,
+            40,
+            36,
+            19,
+            6,
+            11,
+            8,
+            8,
+            5,
+            3,
+            3,
+            1
+          ]
+        }
+      },
+      "O1": {
+        "base": -121000.0,
+        "p10": -234358.87,
+        "p90": 476574.49,
+        "p_best": 0.015,
+        "histogram": {
+          "edges": [
+            -401224.74,
+            -312806.65,
+            -224388.56,
+            -135970.47,
+            -47552.38,
+            40865.71,
+            129283.8,
+            217701.89,
+            306119.98,
+            394538.07,
+            482956.16,
+            571374.26,
+            659792.35,
+            748210.44,
+            836628.53,
+            925046.62,
+            1013464.71,
+            1101882.8,
+            1190300.89,
+            1278718.98,
+            1367137.07,
+            1455555.16,
+            1543973.25,
+            1632391.34,
+            1720809.43
+          ],
+          "counts": [
+            97,
+            383,
+            552,
+            610,
+            523,
+            454,
+            352,
+            279,
+            195,
+            170,
+            110,
+            81,
+            59,
+            40,
+            27,
+            26,
+            16,
+            11,
+            4,
+            3,
+            4,
+            2,
+            0,
+            2
+          ]
+        }
+      },
+      "O4": {
+        "base": -200000,
+        "p10": -200000,
+        "p90": -200000,
+        "p_best": 0.038,
+        "histogram": {
+          "edges": [
+            -200000,
+            -200000
+          ],
+          "counts": [
+            4000
+          ]
+        }
+      }
+    },
+    "breakeven": [
+      {
+        "base": 20000.0,
+        "direction": "high",
+        "label": "подключили «Лайт»",
+        "new_leader": "O2",
+        "param": "users",
+        "threshold": 33637.2847,
+        "unit": "чел"
+      },
+      {
+        "base": 0.05,
+        "direction": "high",
+        "label": "доля перешедших в «Про»",
+        "new_leader": "O2",
+        "param": "conv",
+        "threshold": 0.0841,
+        "unit": "1"
+      },
+      {
+        "base": 1.6,
+        "direction": "high",
+        "label": "рост платящих при продаже малому бизнесу",
+        "new_leader": "O2",
+        "param": "smb",
+        "threshold": 2.0091,
+        "unit": "1"
+      },
+      {
+        "base": 59.0,
+        "direction": "low",
+        "label": "доплата за ИИ в тарифе",
+        "new_leader": "O2",
+        "param": "bundle_price",
+        "threshold": 42.175,
+        "unit": "руб/чел/мес"
+      },
+      {
+        "base": 8000.0,
+        "direction": "low",
+        "label": "абоненты тарифа с ИИ",
+        "new_leader": "O2",
+        "param": "bundle_users",
+        "threshold": 4041.1765,
+        "unit": "чел"
+      },
+      {
+        "base": 25.0,
+        "direction": "high",
+        "label": "закупка моделей на абонента тарифа",
+        "new_leader": "O2",
+        "param": "bundle_cost",
+        "threshold": 41.825,
+        "unit": "руб/чел/мес"
+      }
+    ],
+    "history": [
+      {
+        "id": "r001",
+        "ts": "2026-11-18T01:08:41+03:00",
+        "tag": "seed",
+        "ranking": [
+          "O3",
+          "O2",
+          "O1",
+          "O4"
+        ],
+        "results": {
+          "O1": {
+            "base": -121000.0,
+            "p10": -240087.29,
+            "p90": 519019.45,
+            "p_best": 0.0
+          },
+          "O2": {
+            "base": -73600.0,
+            "p10": -260660.13,
+            "p90": 1111133.44,
+            "p_best": 0.161
+          },
+          "O3": {
+            "base": 381000.0,
+            "p10": 157936.71,
+            "p90": 1508226.84,
+            "p_best": 0.836
+          },
+          "O4": {
+            "base": -200000,
+            "p10": -200000,
+            "p90": -200000,
+            "p_best": 0.004
+          }
+        }
+      },
+      {
+        "id": "r002",
+        "ts": "2026-11-18T01:08:41+03:00",
+        "tag": "review",
+        "ranking": [
+          "O3",
+          "O2",
+          "O1",
+          "O4"
+        ],
+        "results": {
+          "O1": {
+            "base": -121000.0,
+            "p10": -234358.87,
+            "p90": 476574.49,
+            "p_best": 0.015
+          },
+          "O2": {
+            "base": -73600.0,
+            "p10": -256981.63,
+            "p90": 991767.99,
+            "p_best": 0.433
+          },
+          "O3": {
+            "base": 61000.0,
+            "p10": -141737.02,
+            "p90": 823261.4,
+            "p_best": 0.513
+          },
+          "O4": {
+            "base": -200000,
+            "p10": -200000,
+            "p90": -200000,
+            "p_best": 0.038
+          }
+        }
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": "q001",
+      "text": "Кому продавать: корпоративным клиентам, малому бизнесу или частным абонентам?",
+      "status": "answered",
+      "why": null,
+      "changes": "выбор между «как есть», сдвигом в малый бизнес и тарифом",
+      "claims": [
+        "c001",
+        "c004",
+        "c011",
+        "c042"
+      ]
+    },
+    {
+      "id": "q002",
+      "text": "Выдержит ли цена 299 ₽ давление бесплатных и более дешёвых предложений?",
+      "status": "answered",
+      "why": null,
+      "changes": "цена пакета и роль «Лайт»",
+      "claims": [
+        "c002",
+        "c013",
+        "c015",
+        "c014",
+        "c026"
+      ]
+    },
+    {
+      "id": "q003",
+      "text": "Достаточно ли велика аудитория, которая платит за нейросети?",
+      "status": "answered",
+      "why": null,
+      "changes": "закрывать направление или нет",
+      "claims": [
+        "c018",
+        "c021",
+        "c023",
+        "c043"
+      ]
+    },
+    {
+      "id": "q004",
+      "text": "Сколько абонентов платит за «Про» и какова конверсия «Лайт» → «Про»?",
+      "status": "gap",
+      "why": "число подписчиков, активаций и конверсия нигде не раскрыты",
+      "changes": "выбор между вариантами",
+      "claims": null
+    },
+    {
+      "id": "q005",
+      "text": "Какова маржа направления и закупочная цена токенов?",
+      "status": "gap",
+      "why": "модели оплачиваются через посредника, выручка и расходы направления не раскрыты",
+      "changes": "закрывать или оставлять",
+      "claims": null
+    },
+    {
+      "id": "q006",
+      "text": "Как ведут себя удержание и отток платящих?",
+      "status": "gap",
+      "why": "данных об удержании и среднем чеке в открытых источниках нет",
+      "changes": "цена и пакет",
+      "claims": null
+    },
+    {
+      "id": "q007",
+      "text": "Совместимо ли хранение данных 30 дней и 152-ФЗ с B2B-продажами?",
+      "status": "gap",
+      "why": "условия хранения, локализации и соответствие 152-ФЗ не раскрыты",
+      "changes": "выход на крупный B2B",
+      "claims": null
+    }
+  ],
+  "human_points": [
+    {
+      "gate": "G1",
+      "label": "постановка задачи",
+      "status": "approved",
+      "channel": "demo-seed",
+      "by_human": false,
+      "opened_at": "2026-11-18T01:08:41+03:00",
+      "closed_at": "2026-11-18T01:08:41+03:00",
+      "round": 1,
+      "comment": "постановка собрана демо-командой",
+      "options": [],
+      "owner": null
+    },
+    {
+      "gate": "G2",
+      "label": "источники и бюджет",
+      "status": "approved",
+      "channel": "demo-seed",
+      "by_human": false,
+      "opened_at": "2026-11-18T01:08:41+03:00",
+      "closed_at": "2026-11-18T01:08:41+03:00",
+      "round": 1,
+      "comment": "источники и бюджет собраны демо-командой",
+      "options": [],
+      "owner": null
+    },
+    {
+      "gate": "G3",
+      "label": "варианты",
+      "status": "approved",
+      "channel": "demo-seed",
+      "by_human": false,
+      "opened_at": "2026-11-18T01:08:41+03:00",
+      "closed_at": "2026-11-18T01:08:41+03:00",
+      "round": 1,
+      "comment": "O1 O2 O3 варианты собраны демо-командой",
+      "options": [
+        "O1",
+        "O2",
+        "O3"
+      ],
+      "owner": null
+    },
+    {
+      "gate": "G4",
+      "label": "решение",
+      "status": "approved",
+      "channel": "demo-seed",
+      "by_human": false,
+      "opened_at": "2026-11-18T01:08:41+03:00",
+      "closed_at": "2026-11-18T01:08:41+03:00",
+      "round": 1,
+      "comment": "O3 ответственный demo-seed",
+      "options": [
+        "O3"
+      ],
+      "owner": "demo-seed"
+    },
+    {
+      "gate": "R",
+      "label": "пересмотр при новых данных",
+      "status": "approved",
+      "channel": "demo-seed",
+      "by_human": false,
+      "opened_at": "2026-11-18T01:08:41+03:00",
+      "closed_at": "2026-11-18T01:08:41+03:00",
+      "round": 1,
+      "comment": "пересмотр принят, формулировки обновлены демо-командой",
+      "options": [],
+      "owner": null
+    }
+  ],
+  "events": [
+    {
+      "kind": "created",
+      "question": "Кому и как продавать МегаНейросети и продолжать ли направление?",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "kind": "brief",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "gate": "G1",
+      "kind": "gate_open",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "channel": "demo-seed",
+      "gate": "G1",
+      "kind": "gate_approve",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "kind": "stage",
+      "stage": "plan",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://moscow.megafon.ru/help/info/popular/information/20260408-1728.html"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://moscow.megafon.ru/corporate/services/mega_ai"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://www.anti-malware.ru/news/2026-04-10-121598/49666"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://itspeaker.ru/news/megafon-otkryl-dostup-k-25-ii-servisam-/"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://www.tadviser.ru/index.php/Продукт:МегаФон:_МегаНейросети"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://allweb.ru/novosti-it/megafon-otkryl-dostyp-k-25-ii-servisam/"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://mobile-review.com/all/articles/operator/tarify-s-nejrosetyami-u-operatorov/"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://lenta.ru/articles/2026/04/15/bilayn-integriroval-neyroseti-v-tarify-mobilnoy-svyazi/"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://checkroi.ru/blog/alisa-plyus-vs-alisa-pro/"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://3dnews.ru/1138791/sber-hochet-prevratit-gigachat-v-zamenu-vsem-prilogeniyam-i-sdelat-ego-platnim/amp"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://gogpt.ru"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://chadgpt.ru"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://bothub.chat"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://wciom.ru/analytical-reviews/analiticheskii-obzor/neiroseti-v-nashei-zhizni"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://expert.ru/news/auditoriya-neyrosetey-v-rossii-za-god-vyrosla-vdvoe"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://www.hse.ru/news/expertise/1162855603.html"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://adindex.ru/news/innovations/2026/07/30/347630.phtml"
+    },
+    {
+      "kind": "source_plan",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "url": "https://www.iphones.ru/iNotes/megafon-chislo-polzovateley-neyrosetey-starshe-55-let-vyroslo-v-chetyre-raza"
+    },
+    {
+      "gate": "G2",
+      "kind": "gate_open",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "channel": "demo-seed",
+      "gate": "G2",
+      "kind": "gate_approve",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "kind": "stage",
+      "stage": "research",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s001",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "Запуск нового продукта «МегаНейросети»",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s002",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "Услуга МегаНейросети от МегаФона (страница продукта)",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s003",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "МегаФон запустил доступ к популярным зарубежным ИИ-моделям",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s004",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "«МегаФон» открыл доступ к 25 ИИ-сервисам",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s005",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "МегаФон: МегаНейросети (TAdviser)",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s006",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "«МегаФон» открыл доступ к 25 ИИ-сервисам",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s007",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "Тарифы с нейросетями у операторов",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s008",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "Алиса Плюс, Алиса Про и бесплатная Алиса: разбор тарифов в 2026",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s009",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "«Сбер» хочет превратить «ГигаЧат» в замену всем приложениям — и сделать его платным",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s010",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "GoGPT (независимый агрегатор)",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s011",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "Chad AI (независимый агрегатор)",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s012",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "BotHub (страница на английском)",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s013",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "Нейросети в нашей жизни (ВЦИОМ)",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s014",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "Аудитория нейросетей в России за год выросла вдвое",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s015",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "Использование ИИ: НИУ ВШЭ и Ромир",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s016",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "Доля активных пользователей нейросетей в России достигла 58%",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s017",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "МегаФон: люди старше 55 лет стали в четыре раза чаще пользоваться нейросетями",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "c001",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c002",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c003",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c004",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c005",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c006",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c007",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "opinion"
+    },
+    {
+      "id": "c008",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c009",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c010",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c011",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c012",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c013",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c014",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c015",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c016",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c017",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c018",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c019",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c020",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c021",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c022",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c023",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c024",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c025",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "contested": 0,
+      "kind": "verify",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "verified": 25
+    },
+    {
+      "id": "s018",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "Таблица цен из цитат (собрана демо-командой)",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "c026",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "calculation"
+    },
+    {
+      "id": "c027",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "assumption"
+    },
+    {
+      "id": "c028",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "assumption"
+    },
+    {
+      "id": "c029",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "assumption"
+    },
+    {
+      "id": "c030",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "assumption"
+    },
+    {
+      "id": "c031",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "assumption"
+    },
+    {
+      "id": "c032",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "assumption"
+    },
+    {
+      "id": "c033",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "assumption"
+    },
+    {
+      "id": "c034",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "assumption"
+    },
+    {
+      "id": "c035",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "assumption"
+    },
+    {
+      "id": "c036",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "hypothesis"
+    },
+    {
+      "id": "c037",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "hypothesis"
+    },
+    {
+      "id": "c038",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "hypothesis"
+    },
+    {
+      "id": "c039",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "hypothesis"
+    },
+    {
+      "id": "c040",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "forecast"
+    },
+    {
+      "id": "c041",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "hypothesis"
+    },
+    {
+      "id": "c042",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "hypothesis"
+    },
+    {
+      "id": "c043",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "hypothesis"
+    },
+    {
+      "id": "c044",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "hypothesis"
+    },
+    {
+      "id": "c045",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "hypothesis"
+    },
+    {
+      "id": "c046",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "hypothesis"
+    },
+    {
+      "kind": "stage",
+      "stage": "options",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "O1",
+      "kind": "option",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "O2",
+      "kind": "option",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "O3",
+      "kind": "option",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "O4",
+      "kind": "option",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "kind": "model_set",
+      "options": 4,
+      "params": 9,
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "kind": "model_run",
+      "ranking": [
+        "O3",
+        "O2",
+        "O1",
+        "O4"
+      ],
+      "run": "r001",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "gate": "G3",
+      "kind": "gate_open",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "channel": "demo-seed",
+      "gate": "G3",
+      "kind": "gate_approve",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "kind": "stage",
+      "stage": "strategy",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "c047",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "calculation"
+    },
+    {
+      "id": "c048",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "hypothesis"
+    },
+    {
+      "id": "c049",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "hypothesis"
+    },
+    {
+      "gate": "G4",
+      "kind": "gate_open",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "channel": "demo-seed",
+      "gate": "G4",
+      "kind": "gate_approve",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "kind": "snapshot",
+      "label": "решение G4",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "version": "v1"
+    },
+    {
+      "kind": "stage",
+      "stage": "decided",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "k001",
+      "kind": "commitment",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "k002",
+      "kind": "commitment",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "k003",
+      "kind": "commitment",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "s019",
+      "kind": "source_added",
+      "quarantined": 0,
+      "title": "Билайн интегрировал валюту для нейросетей в тарифы мобильной связи",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "c050",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "id": "c051",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "contested": 0,
+      "kind": "verify",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "verified": 2
+    },
+    {
+      "id": "c052",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "fact"
+    },
+    {
+      "kind": "claim_superseded",
+      "new": "c052",
+      "old": "c027",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "contested": 0,
+      "kind": "verify",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "verified": 1
+    },
+    {
+      "id": "c053",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "assumption"
+    },
+    {
+      "kind": "claim_superseded",
+      "new": "c053",
+      "old": "c033",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "kind": "model_run",
+      "ranking": [
+        "O3",
+        "O2",
+        "O1",
+        "O4"
+      ],
+      "run": "r002",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "kind": "review",
+      "leader_changed": false,
+      "number": 1,
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "gate": "R",
+      "kind": "gate_open",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "channel": "demo-seed",
+      "gate": "R",
+      "kind": "gate_approve",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "c054",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "calculation"
+    },
+    {
+      "kind": "claim_superseded",
+      "new": "c054",
+      "old": "c047",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "c055",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "hypothesis"
+    },
+    {
+      "kind": "claim_superseded",
+      "new": "c055",
+      "old": "c038",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "c056",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "hypothesis"
+    },
+    {
+      "kind": "claim_superseded",
+      "new": "c056",
+      "old": "c048",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "id": "c057",
+      "kind": "claim_added",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "type": "hypothesis"
+    },
+    {
+      "kind": "claim_superseded",
+      "new": "c057",
+      "old": "c049",
+      "ts": "2026-11-18T01:08:41+03:00"
+    },
+    {
+      "kind": "snapshot",
+      "label": "после пересмотра",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "version": "v2"
+    },
+    {
+      "kind": "map_built",
+      "ts": "2026-11-18T01:08:41+03:00"
+    }
+  ],
+  "reviews": [
+    {
+      "changed": [
+        "c027",
+        "c033"
+      ],
+      "downstream": [
+        "c038",
+        "c047",
+        "c048",
+        "c049"
+      ],
+      "id": "R1",
+      "leader_after": "O3",
+      "leader_before": "O3",
+      "leader_changed": false,
+      "note": "новый факт: Билайн начисляет 300 токенов в месяц без доплаты",
+      "options": [],
+      "paragraphs": 8,
+      "report": "review-1.md",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "waves": [
+        {
+          "depth": 1,
+          "claims": [
+            "c038",
+            "c047",
+            "c048"
+          ]
+        },
+        {
+          "depth": 2,
+          "claims": [
+            "c049"
+          ]
+        }
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "check_at": "2026-12-05",
+      "claims": [
+        "c028",
+        "c029"
+      ],
+      "due": "2026-12-05",
+      "expected": "числа подтвердят или опровергнут допущения A1 и A2",
+      "id": "k001",
+      "metric": "получены ли числа",
+      "observations": [],
+      "owner": "demo-seed",
+      "review_if": "конверсия вне диапазона 2–10%",
+      "status": "active",
+      "threshold": "да",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "what": "Запросить у владельца продукта число подписчиков «Про» и конверсию из «Лайт»"
+    },
+    {
+      "check_at": "2026-12-20",
+      "claims": [
+        "c037"
+      ],
+      "due": "2027-01-31",
+      "expected": "4 из 10 назовут оплату счёта за ИИ рабочим расходом",
+      "id": "k002",
+      "metric": "число интервью, где называют готовность платить",
+      "observations": [],
+      "owner": "demo-seed",
+      "review_if": "меньше 2 из 10",
+      "status": "active",
+      "threshold": ">= 4 из 10",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "what": "Собрать 10 интервью с закупщиками малого бизнеса"
+    },
+    {
+      "check_at": "2027-01-15",
+      "claims": [
+        "c033",
+        "c034"
+      ],
+      "due": "2027-03-31",
+      "expected": "подключат 8% абонентов группы",
+      "id": "k003",
+      "metric": "доля подключивших платный пакет через 28 дней",
+      "observations": [],
+      "owner": "demo-seed",
+      "review_if": "подключение ниже 4% или два оператора дают ИИ в тарифе бесплатно",
+      "status": "active",
+      "threshold": ">= 8%",
+      "ts": "2026-11-18T01:08:41+03:00",
+      "what": "Провести пилот пакета «ИИ в тарифе» на 5 000 абонентов"
+    }
+  ],
+  "cost": {
+    "llm_usd": 0,
+    "llm_rub": 0.0,
+    "calls": 0,
+    "human_minutes": 0,
+    "human_rub": 0.0,
+    "total_rub": 0.0,
+    "rework_usd": 0,
+    "failures": 0,
+    "by_stage": {},
+    "by_model": {},
+    "by_agent": {},
+    "by_kind": {},
+    "budget_usd": 1,
+    "elapsed": {
+      "first": "2026-11-18T01:08:41+03:00",
+      "last": "2026-11-18T01:08:41+03:00"
+    },
+    "assumptions": {
+      "usd_rub": 92.0,
+      "human_rub_per_hour": 1500.0,
+      "prices_checked": "2026-11-14"
+    }
+  },
+  "score": {
+    "score": 85,
+    "max": 100,
+    "parts": [
+      {
+        "key": "numbers",
+        "label": "Числа стратегии со ссылкой на живое утверждение",
+        "weight": 25,
+        "value": 1.0,
+        "points": 25.0,
+        "detail": "33 из 33 чисел с живой ссылкой"
+      },
+      {
+        "key": "quotes",
+        "label": "Факты и мнения с проверенной цитатой",
+        "weight": 20,
+        "value": 1.0,
+        "points": 20.0,
+        "detail": "28 из 28 проверены по тексту источника"
+      },
+      {
+        "key": "fresh",
+        "label": "Утверждения со сроком, который не истёк",
+        "weight": 10,
+        "value": 1.0,
+        "points": 10.0,
+        "detail": "28 из 28 со сроком не истекли"
+      },
+      {
+        "key": "weak",
+        "label": "Гипотезы, прогнозы и допущения с confidence и планом проверки",
+        "weight": 10,
+        "value": 1.0,
+        "points": 10.0,
+        "detail": "21 из 21 с confidence и планом проверки"
+      },
+      {
+        "key": "objections",
+        "label": "Варианты с возражением skeptic и не менее чем двумя возражениями",
+        "weight": 10,
+        "value": 1.0,
+        "points": 10.0,
+        "detail": "4 из 4 вариантов"
+      },
+      {
+        "key": "close",
+        "label": "Среди вариантов есть «закрыть направление»",
+        "weight": 5,
+        "value": 1.0,
+        "points": 5.0,
+        "detail": "есть вариант «закрыть»"
+      },
+      {
+        "key": "human",
+        "label": "Точки закрыты человеком, а не сценарием",
+        "weight": 15,
+        "value": 0.0,
+        "points": 0.0,
+        "detail": "0 из 5 точек закрыл человек"
+      },
+      {
+        "key": "review",
+        "label": "Был хотя бы один пересмотр при новых данных",
+        "weight": 5,
+        "value": 1.0,
+        "points": 5.0,
+        "detail": "пересмотров: 1"
+      }
+    ],
+    "notes": [
+      "Точки G1, G2, G3, G4, R закрыты каналом demo-seed: это сценарий, а не человек, баллы за них не начисляются."
+    ],
+    "formula": "score = сумма по восьми компонентам: вес × доля выполненного. Числа стратегии со ссылкой на живое утверждение — 25; Факты и мнения с проверенной цитатой — 20; Утверждения со сроком, который не истёк — 10; Гипотезы, прогнозы и допущения с confidence и планом проверки — 10; Варианты с возражением skeptic и не менее чем двумя возражениями — 10; Среди вариантов есть «закрыть направление» — 5; Точки закрыты человеком, а не сценарием — 15; Был хотя бы один пересмотр при новых данных — 5. Все доли считаются по текущему состоянию проекта, устаревшие версии утверждений не учитываются.",
+    "reference": true
+  },
+  "layout": {
+    "algorithm": "fruchterman-reingold-3d",
+    "seed": "osnovanie-site",
+    "nodes": [
+      {
+        "id": "c001",
+        "kind": "claim",
+        "x": 0.2776,
+        "y": -0.0259,
+        "z": -0.1823
+      },
+      {
+        "id": "c002",
+        "kind": "claim",
+        "x": 0.2238,
+        "y": -0.2776,
+        "z": -0.1063
+      },
+      {
+        "id": "c003",
+        "kind": "claim",
+        "x": 0.2366,
+        "y": -0.4936,
+        "z": -0.2183
+      },
+      {
+        "id": "c004",
+        "kind": "claim",
+        "x": 0.0743,
+        "y": -0.0582,
+        "z": -0.4536
+      },
+      {
+        "id": "c005",
+        "kind": "claim",
+        "x": 0.6304,
+        "y": -0.4195,
+        "z": -0.4065
+      },
+      {
+        "id": "c006",
+        "kind": "claim",
+        "x": 0.5134,
+        "y": -0.2051,
+        "z": 0.152
+      },
+      {
+        "id": "c007",
+        "kind": "claim",
+        "x": 0.8701,
+        "y": -0.1818,
+        "z": 0.3133
+      },
+      {
+        "id": "c008",
+        "kind": "claim",
+        "x": -0.0454,
+        "y": 0.3691,
+        "z": -0.5273
+      },
+      {
+        "id": "c009",
+        "kind": "claim",
+        "x": -0.847,
+        "y": 0.3682,
+        "z": 0.4603
+      },
+      {
+        "id": "c010",
+        "kind": "claim",
+        "x": -0.1992,
+        "y": -0.3004,
+        "z": 0.0488
+      },
+      {
+        "id": "c011",
+        "kind": "claim",
+        "x": -0.1546,
+        "y": -0.2173,
+        "z": -0.0434
+      },
+      {
+        "id": "c012",
+        "kind": "claim",
+        "x": -0.2395,
+        "y": -0.3629,
+        "z": 0.2164
+      },
+      {
+        "id": "c013",
+        "kind": "claim",
+        "x": -0.5831,
+        "y": -0.0989,
+        "z": -0.3904
+      },
+      {
+        "id": "c014",
+        "kind": "claim",
+        "x": 0.0652,
+        "y": 0.292,
+        "z": 0.3913
+      },
+      {
+        "id": "c015",
+        "kind": "claim",
+        "x": -0.5145,
+        "y": -0.3478,
+        "z": -0.4027
+      },
+      {
+        "id": "c016",
+        "kind": "claim",
+        "x": -0.2096,
+        "y": -0.0184,
+        "z": -0.5443
+      },
+      {
+        "id": "c017",
+        "kind": "claim",
+        "x": -0.9943,
+        "y": -0.371,
+        "z": 0.2178
+      },
+      {
+        "id": "c018",
+        "kind": "claim",
+        "x": -0.0269,
+        "y": 0.8298,
+        "z": 0.0833
+      },
+      {
+        "id": "c019",
+        "kind": "claim",
+        "x": 0.071,
+        "y": 0.8662,
+        "z": -0.1808
+      },
+      {
+        "id": "c020",
+        "kind": "claim",
+        "x": 0.0896,
+        "y": 0.5254,
+        "z": -0.0745
+      },
+      {
+        "id": "c021",
+        "kind": "claim",
+        "x": 0.1919,
+        "y": 0.5529,
+        "z": 0.2351
+      },
+      {
+        "id": "c022",
+        "kind": "claim",
+        "x": 0.1734,
+        "y": 0.2006,
+        "z": 0.2674
+      },
+      {
+        "id": "c023",
+        "kind": "claim",
+        "x": 0.2186,
+        "y": 0.8728,
+        "z": 0.3206
+      },
+      {
+        "id": "c024",
+        "kind": "claim",
+        "x": -0.3925,
+        "y": 0.8921,
+        "z": 0.0606
+      },
+      {
+        "id": "c025",
+        "kind": "claim",
+        "x": 0.8394,
+        "y": 0.5063,
+        "z": -0.4461
+      },
+      {
+        "id": "c026",
+        "kind": "claim",
+        "x": -0.3253,
+        "y": -0.2135,
+        "z": -0.3167
+      },
+      {
+        "id": "c027",
+        "kind": "claim",
+        "x": -0.1448,
+        "y": -0.1495,
+        "z": 0.2111
+      },
+      {
+        "id": "c028",
+        "kind": "claim",
+        "x": 0.3051,
+        "y": -0.1791,
+        "z": 0.0393
+      },
+      {
+        "id": "c029",
+        "kind": "claim",
+        "x": 0.3027,
+        "y": -0.2342,
+        "z": 0.0907
+      },
+      {
+        "id": "c030",
+        "kind": "claim",
+        "x": 0.1821,
+        "y": -0.522,
+        "z": -0.0534
+      },
+      {
+        "id": "c031",
+        "kind": "claim",
+        "x": 0.285,
+        "y": -0.3987,
+        "z": 0.0158
+      },
+      {
+        "id": "c032",
+        "kind": "claim",
+        "x": 0.2424,
+        "y": 0.0038,
+        "z": -0.4007
+      },
+      {
+        "id": "c033",
+        "kind": "claim",
+        "x": -0.0859,
+        "y": -0.3646,
+        "z": 0.1433
+      },
+      {
+        "id": "c034",
+        "kind": "claim",
+        "x": -0.023,
+        "y": -0.3395,
+        "z": 0.0186
+      },
+      {
+        "id": "c035",
+        "kind": "claim",
+        "x": 0.2534,
+        "y": -0.5124,
+        "z": -0.0293
+      },
+      {
+        "id": "c036",
+        "kind": "claim",
+        "x": 0.0212,
+        "y": 0.4931,
+        "z": -0.3236
+      },
+      {
+        "id": "c037",
+        "kind": "claim",
+        "x": -0.0573,
+        "y": 0.0136,
+        "z": -0.5928
+      },
+      {
+        "id": "c038",
+        "kind": "claim",
+        "x": -0.0148,
+        "y": 0.1039,
+        "z": 0.3127
+      },
+      {
+        "id": "c039",
+        "kind": "claim",
+        "x": -0.1706,
+        "y": -0.4541,
+        "z": 0.1939
+      },
+      {
+        "id": "c040",
+        "kind": "claim",
+        "x": -0.7414,
+        "y": -0.0233,
+        "z": -0.3641
+      },
+      {
+        "id": "c041",
+        "kind": "claim",
+        "x": 0.4608,
+        "y": -0.363,
+        "z": -0.276
+      },
+      {
+        "id": "c042",
+        "kind": "claim",
+        "x": 0.0426,
+        "y": -0.0852,
+        "z": -0.2374
+      },
+      {
+        "id": "c043",
+        "kind": "claim",
+        "x": 0.1271,
+        "y": 0.7663,
+        "z": 0.2179
+      },
+      {
+        "id": "c044",
+        "kind": "claim",
+        "x": -0.22,
+        "y": 0.8861,
+        "z": 0.0764
+      },
+      {
+        "id": "c045",
+        "kind": "claim",
+        "x": -0.06,
+        "y": -0.274,
+        "z": -0.2646
+      },
+      {
+        "id": "c046",
+        "kind": "claim",
+        "x": 0.2837,
+        "y": 0.0337,
+        "z": 0.1183
+      },
+      {
+        "id": "c047",
+        "kind": "claim",
+        "x": 0.1442,
+        "y": -0.3847,
+        "z": 0.0369
+      },
+      {
+        "id": "c048",
+        "kind": "claim",
+        "x": -0.0421,
+        "y": -0.555,
+        "z": 0.1313
+      },
+      {
+        "id": "c049",
+        "kind": "claim",
+        "x": -0.0917,
+        "y": -0.7684,
+        "z": 0.1597
+      },
+      {
+        "id": "c050",
+        "kind": "claim",
+        "x": -0.056,
+        "y": -0.2527,
+        "z": 0.573
+      },
+      {
+        "id": "c051",
+        "kind": "claim",
+        "x": -0.0436,
+        "y": -0.1094,
+        "z": 0.916
+      },
+      {
+        "id": "c052",
+        "kind": "claim",
+        "x": 0.0627,
+        "y": 0.0752,
+        "z": 0.7016
+      },
+      {
+        "id": "c053",
+        "kind": "claim",
+        "x": -0.0593,
+        "y": -0.3502,
+        "z": 0.2901
+      },
+      {
+        "id": "c054",
+        "kind": "claim",
+        "x": 0.1593,
+        "y": -0.3763,
+        "z": 0.0997
+      },
+      {
+        "id": "c055",
+        "kind": "claim",
+        "x": 0.1201,
+        "y": 0.1934,
+        "z": 0.5136
+      },
+      {
+        "id": "c056",
+        "kind": "claim",
+        "x": 0.0125,
+        "y": -0.4974,
+        "z": 0.2959
+      },
+      {
+        "id": "c057",
+        "kind": "claim",
+        "x": 0.0279,
+        "y": -0.6404,
+        "z": 0.4581
+      },
+      {
+        "id": "s001",
+        "kind": "source",
+        "x": 0.4527,
+        "y": 0.0722,
+        "z": -0.2795
+      },
+      {
+        "id": "s002",
+        "kind": "source",
+        "x": 0.1907,
+        "y": -0.2844,
+        "z": -0.3339
+      },
+      {
+        "id": "s003",
+        "kind": "source",
+        "x": 0.7434,
+        "y": -0.4468,
+        "z": -0.4995
+      },
+      {
+        "id": "s004",
+        "kind": "source",
+        "x": 0.7285,
+        "y": -0.1967,
+        "z": 0.2467
+      },
+      {
+        "id": "s005",
+        "kind": "source",
+        "x": -0.0665,
+        "y": 0.4803,
+        "z": -0.6564
+      },
+      {
+        "id": "s006",
+        "kind": "source",
+        "x": -0.8046,
+        "y": 0.3453,
+        "z": 0.5551
+      },
+      {
+        "id": "s007",
+        "kind": "source",
+        "x": -0.3215,
+        "y": -0.2978,
+        "z": 0.0633
+      },
+      {
+        "id": "s008",
+        "kind": "source",
+        "x": -0.7079,
+        "y": -0.0376,
+        "z": -0.4971
+      },
+      {
+        "id": "s009",
+        "kind": "source",
+        "x": 0.0164,
+        "y": 0.4034,
+        "z": 0.5505
+      },
+      {
+        "id": "s010",
+        "kind": "source",
+        "x": -0.6419,
+        "y": -0.4405,
+        "z": -0.4664
+      },
+      {
+        "id": "s011",
+        "kind": "source",
+        "x": -0.2873,
+        "y": 0.0196,
+        "z": -0.7202
+      },
+      {
+        "id": "s012",
+        "kind": "source",
+        "x": -1.0,
+        "y": -0.2798,
+        "z": 0.2744
+      },
+      {
+        "id": "s013",
+        "kind": "source",
+        "x": 0.0476,
+        "y": 0.745,
+        "z": -0.07
+      },
+      {
+        "id": "s014",
+        "kind": "source",
+        "x": 0.2451,
+        "y": 0.4083,
+        "z": 0.3069
+      },
+      {
+        "id": "s015",
+        "kind": "source",
+        "x": 0.3066,
+        "y": 0.9269,
+        "z": 0.4093
+      },
+      {
+        "id": "s016",
+        "kind": "source",
+        "x": -0.5249,
+        "y": 0.8702,
+        "z": 0.043
+      },
+      {
+        "id": "s017",
+        "kind": "source",
+        "x": 0.7868,
+        "y": 0.5069,
+        "z": -0.5351
+      },
+      {
+        "id": "s018",
+        "kind": "source",
+        "x": -0.4077,
+        "y": -0.2642,
+        "z": -0.4777
+      },
+      {
+        "id": "s019",
+        "kind": "source",
+        "x": -0.0182,
+        "y": -0.107,
+        "z": 0.7554
+      },
+      {
+        "id": "O1",
+        "kind": "option",
+        "x": 0.244,
+        "y": 0.0038,
+        "z": 0.0247
+      },
+      {
+        "id": "O2",
+        "kind": "option",
+        "x": -0.08,
+        "y": 0.1027,
+        "z": -0.5542
+      },
+      {
+        "id": "O3",
+        "kind": "option",
+        "x": -0.236,
+        "y": -0.2846,
+        "z": 0.1512
+      },
+      {
+        "id": "O4",
+        "kind": "option",
+        "x": 0.1694,
+        "y": 0.3364,
+        "z": 0.164
+      }
+    ]
+  }
+}

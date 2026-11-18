@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Инструкция — Основание</title>
+<meta name="description" content="Как пользоваться «Основанием» без терминала: что написать агенту, как отвечать в точках G1–G4 и R, как остановить и продолжить. Для инженера: установка, тесты, CLI, MCP и HTTP.">
+<meta property="og:title" content="Инструкция — Основание">
+<meta property="og:image" content="/img/og.png">
+<meta name="theme-color" content="#07100c">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/Reper-Regular.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body class="gd-page">
+<!--nav:guide-->
+<main id="main">
+
+  <section class="gd-hero wrap">
+    <div class="hero-tx">
+      <p class="kicker">Инструкция</p>
+      <h1 data-split data-split-now>Руководителю<br>без терминала</h1>
+      <p class="lead">Папку открываете в Claude Code, задачу пишете как аналитику. Дальше агент работает сам и останавливается в пяти местах, где решать вам. Отвечать нужно двумя словами: «G1 да».</p>
+      <nav class="gd-jump" aria-label="Разделы инструкции">
+        <a class="btn" href="#start">Начать <span class="arr">↓</span></a>
+        <span class="gd-or mono">или сразу: <a href="#engineer">инженеру</a> · <a href="#cli">интерфейсы</a> · <a href="#faq">вопросы</a></span>
+      </nav>
+    </div>
+    <div class="hero-il" data-reveal><svg class="ill hero-ill" viewBox="0 0 404 245" role="img" aria-label="чат Claude Code" xmlns="http://www.w3.org/2000/svg"><path class="bx" d="M.5 .5H388L403.5 16V244.5H.5Z"/><path class="ln" d="M.5 28.5H403.5"/><rect class="sq" x="12" y="10" width="8" height="8"/><rect class="sq" x="26" y="10" width="8" height="8"/><rect class="sq on" x="40" y="10" width="8" height="8"/><text class="m mute" x="60" y="19" font-size="10.5">чат Claude Code</text><path class="bub u" d="M149.5 50.5H371.5L379.5 58.5V97.5H149.5Z"/><text class="t" x="160" y="72"><tspan x="160" dy="0">Кому продавать МегаНейросети и</tspan><tspan x="160" dy="17">продолжать ли направление?</tspan></text><path class="bub a" d="M24.5 112.5H287.5L295.5 120.5V176.5H24.5Z"/><text class="t" x="35" y="134"><tspan x="35" dy="0">Постановку собрал. Читайте точку G1:</tspan><tspan x="35" dy="17">outputs/gates/G1.md</tspan><tspan x="35" dy="17">Ответьте: G1 да или G1 правка: …</tspan></text><path class="chip on" d="M24.5 193.5H80.5L89.5 202.5V222.5H24.5Z"/><text class="m cl" x="38" y="213" font-size="12.5">G1 да</text><path class="chip" d="M100.5 193.5H201.5L210.5 202.5V222.5H100.5Z"/><text class="m cl" x="114" y="213" font-size="12.5">G1 правка …</text></svg></div>
+  </section>
+
+  <section class="gd-sec paper seam-top" id="start" aria-labelledby="startH">
+    <div class="wrap">
+      <div class="gd-head"><p class="kicker">Руководителю</p><h2 id="startH">Начать за три шага</h2></div>
+      <ol class="gd-steps">
+        <li class="gd-step" data-reveal><span class="n num">1</span><div class="tx"><h3>Откройте папку</h3><p>В Claude Code выберите папку <code>osnovanie</code>. Больше ничего устанавливать не нужно. Агент сам начнёт с команды <code>resume</code>.</p></div><div class="il"><svg class="ill " viewBox="0 0 360 200" role="img" aria-label="Claude Code" xmlns="http://www.w3.org/2000/svg"><path class="bx" d="M.5 .5H344L359.5 16V199.5H.5Z"/><path class="ln" d="M.5 28.5H359.5"/><rect class="sq" x="12" y="10" width="8" height="8"/><rect class="sq" x="26" y="10" width="8" height="8"/><rect class="sq on" x="40" y="10" width="8" height="8"/><text class="m mute" x="60" y="19" font-size="10.5">Claude Code</text><text class="m mute" x="20" y="54" font-size="10.5">Папка</text><path class="ln" d="M20.5 76H340.5"/><text class="m" x="20" y="71" font-size="12.5">AGENTS.md</text><path class="ln" d="M20.5 98H340.5"/><text class="m" x="20" y="93" font-size="12.5">bin/osnovanie</text><path class="ln" d="M20.5 120H340.5"/><text class="m" x="20" y="115" font-size="12.5">projects/</text><path class="ln" d="M20.5 142H340.5"/><text class="m" x="20" y="137" font-size="12.5">methods/</text><path class="chip on" d="M20.5 150.5H240.5L249.5 159.5V179.5H20.5Z"/><text class="m cl" x="34" y="170" font-size="12.5">Открыть папку osnovanie</text><path class="draw acc" d="M262 168l10 10 18-22" fill="none"/></svg></div></li>
+        <li class="gd-step" data-reveal><span class="n num">2</span><div class="tx"><h3>Напишите задачу</h3><p>Своими словами, как аналитику: про что решение, к какому сроку, для кого. Подойдёт пример справа.</p></div><div class="il"><svg class="ill " viewBox="0 0 360 200" role="img" aria-label="чат" xmlns="http://www.w3.org/2000/svg"><path class="bx" d="M.5 .5H344L359.5 16V199.5H.5Z"/><path class="ln" d="M.5 28.5H359.5"/><rect class="sq" x="12" y="10" width="8" height="8"/><rect class="sq" x="26" y="10" width="8" height="8"/><rect class="sq on" x="40" y="10" width="8" height="8"/><text class="m mute" x="60" y="19" font-size="10.5">чат</text><path class="bub u" d="M40.5 46.5H331.5L339.5 54.5V110.5H40.5Z"/><text class="t" x="51" y="68"><tspan x="51" dy="0">Через полгода после запуска надо решить,</tspan><tspan x="51" dy="17">кому и как продавать МегаНейросети</tspan><tspan x="51" dy="17">и стоит ли продолжать направление</tspan></text><path class="bub a" d="M20.5 125.5H235.5L243.5 133.5V172.5H20.5Z"/><text class="t" x="31" y="147"><tspan x="31" dy="0">Читаю папку. Первое действие:</tspan><tspan x="31" dy="17">bin/osnovanie resume</tspan></text></svg></div></li>
+        <li class="gd-step" data-reveal><span class="n num">3</span><div class="tx"><h3>Ответьте на 1–3 вопроса</h3><p>Агент спросит только то, без чего нельзя двигаться. Остальное не отнимет у вас времени.</p><p class="mono note">Вопросы здесь — пример. Обязательны пять полей: вопрос, цель, получатель, ограничения, данные.</p></div><div class="il"><svg class="ill " viewBox="0 0 360 210" role="img" aria-label="чат · пример" xmlns="http://www.w3.org/2000/svg"><path class="bx" d="M.5 .5H344L359.5 16V209.5H.5Z"/><path class="ln" d="M.5 28.5H359.5"/><rect class="sq" x="12" y="10" width="8" height="8"/><rect class="sq" x="26" y="10" width="8" height="8"/><rect class="sq on" x="40" y="10" width="8" height="8"/><text class="m mute" x="60" y="19" font-size="10.5">чат · пример</text><path class="bub a" d="M20.5 44.5H262.5L270.5 52.5V125.5H20.5Z"/><text class="t" x="31" y="66"><tspan x="31" dy="0">Два вопроса, без них не двигаюсь:</tspan><tspan x="31" dy="17">1. Кто получит результат — вы или</tspan><tspan x="31" dy="17">    совет директоров?</tspan><tspan x="31" dy="17">2. Какие данные у вас уже есть?</tspan></text><path class="bub u" d="M151.5 138.5H331.5L339.5 146.5V185.5H151.5Z"/><text class="t" x="162" y="160"><tspan x="162" dy="0">Совет директоров. Только</tspan><tspan x="162" dy="17">открытые источники</tspan></text></svg></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="gd-sec gd-gates" id="gates" aria-labelledby="gatesH">
+    <div class="wrap">
+      <div class="gd-head"><p class="kicker">Где вы нужны</p><h2 id="gatesH">Пять точек.<br>Между ними агент работает сам</h2>
+        <p class="lead">Перед каждой точкой агент кладёт короткий пакет в <code>outputs/gates/</code> и ждёт. Нажмите на точку и попробуйте ответить.</p></div>
+      <ol class="gd-track" id="track" aria-label="Этапы работы">
+        <li><span class="st">Постановка</span><b class="pt" data-g="G1">G1</b></li>
+        <li><span class="st">План и источники</span><b class="pt" data-g="G2">G2</b></li>
+        <li><span class="st">Исследование</span><i class="auto">сам</i></li>
+        <li><span class="st">Варианты</span><b class="pt" data-g="G3">G3</b></li>
+        <li><span class="st">Стратегии</span><b class="pt" data-g="G4">G4</b></li>
+        <li><span class="st">Сопровождение</span><b class="pt" data-g="R">R</b></li>
+      </ol>
+      <div class="gd-sim" id="sim">
+        <div class="sim-nav" role="tablist" aria-label="Точка"></div>
+        <div class="sim-chat" id="simChat" aria-live="polite"></div>
+        <div class="sim-side">
+          <p class="mono k">Что решаете</p><p class="what" id="simWhat"></p>
+          <p class="mono k">Как ответить</p>
+          <div class="replies" id="simReplies"></div>
+          <p class="mono note">Ответ принимает только ваше сообщение в чате. Реплики агента здесь — пример, карточки точек настоящие, из эталонного проекта.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gd-sec paper" id="control" aria-labelledby="ctrlH">
+    <div class="wrap">
+      <div class="gd-head"><p class="kicker">Управление</p><h2 id="ctrlH">Остановить, поправить,<br>продолжить</h2></div>
+      <ol class="gd-steps compact">
+        <li class="gd-step" data-reveal><span class="n num">—</span><div class="tx"><h3><code>стоп</code></h3><p>Агент останавливается сразу. Любые действия запрещены, пока вы не напишете «продолжить».</p></div><div class="il"><svg class="ill " viewBox="0 0 360 150" role="img" aria-label="чат" xmlns="http://www.w3.org/2000/svg"><path class="bx" d="M.5 .5H344L359.5 16V149.5H.5Z"/><path class="ln" d="M.5 28.5H359.5"/><rect class="sq" x="12" y="10" width="8" height="8"/><rect class="sq" x="26" y="10" width="8" height="8"/><rect class="sq on" x="40" y="10" width="8" height="8"/><text class="m mute" x="60" y="19" font-size="10.5">чат</text><path class="bub u" d="M260.5 44.5H331.5L339.5 52.5V74.5H260.5Z"/><text class="t" x="271" y="66"><tspan x="271" dy="0">стоп</tspan></text><path class="bub a" d="M20.5 87.5H242.5L250.5 95.5V134.5H20.5Z"/><text class="t" x="31" y="109"><tspan x="31" dy="0">Остановился. Пока не напишете</tspan><tspan x="31" dy="17">«продолжить», ничего не делаю.</tspan></text></svg></div></li>
+        <li class="gd-step" data-reveal><span class="n num">—</span><div class="tx"><h3>Сказать то, чего нет в источниках</h3><p>Назовите факт агенту. Он запишет его утверждением, а вы подтвердите: <code>подтверждаю c012</code>.</p></div><div class="il"><svg class="ill " viewBox="0 0 360 170" role="img" aria-label="чат · пример" xmlns="http://www.w3.org/2000/svg"><path class="bx" d="M.5 .5H344L359.5 16V169.5H.5Z"/><path class="ln" d="M.5 28.5H359.5"/><rect class="sq" x="12" y="10" width="8" height="8"/><rect class="sq" x="26" y="10" width="8" height="8"/><rect class="sq on" x="40" y="10" width="8" height="8"/><text class="m mute" x="60" y="19" font-size="10.5">чат · пример</text><path class="bub u" d="M82.5 44.5H331.5L339.5 52.5V91.5H82.5Z"/><text class="t" x="93" y="66"><tspan x="93" dy="0">Я знаю факт, которого нет в</tspan><tspan x="93" dy="17">источниках: рейтинг приложения 4,6</tspan></text><path class="bub a" d="M20.5 104.5H235.5L243.5 112.5V151.5H20.5Z"/><text class="t" x="31" y="126"><tspan x="31" dy="0">Записал утверждением c012.</tspan><tspan x="31" dy="17">Подтвердите: подтверждаю c012</tspan></text></svg></div></li>
+        <li class="gd-step" data-reveal><span class="n num">—</span><div class="tx"><h3>Вернуться через неделю</h3><p>Новый чат, слово «продолжим». Состояние лежит на диске, агент прочитает его и скажет, где остановились.</p></div><div class="il"><svg class="ill " viewBox="0 0 360 150" role="img" aria-label="новый чат · пример" xmlns="http://www.w3.org/2000/svg"><path class="bx" d="M.5 .5H344L359.5 16V149.5H.5Z"/><path class="ln" d="M.5 28.5H359.5"/><rect class="sq" x="12" y="10" width="8" height="8"/><rect class="sq" x="26" y="10" width="8" height="8"/><rect class="sq on" x="40" y="10" width="8" height="8"/><text class="m mute" x="60" y="19" font-size="10.5">новый чат · пример</text><path class="bub u" d="M230.5 44.5H331.5L339.5 52.5V74.5H230.5Z"/><text class="t" x="241" y="66"><tspan x="241" dy="0">продолжим</tspan></text><path class="bub a" d="M20.5 87.5H207.5L215.5 95.5V134.5H20.5Z"/><text class="t" x="31" y="109"><tspan x="31" dy="0">Читаю состояние с диска.</tspan><tspan x="31" dy="17">Остановились на точке G3.</tspan></text></svg></div></li>
+        <li class="gd-step" data-reveal><span class="n num">—</span><div class="tx"><h3>Пришли новые данные</h3><p>Дайте ссылку или файл. Агент найдёт выводы, которые на них держались, и попросит <code>R да</code>.</p></div><div class="il"><svg class="ill " viewBox="0 0 360 170" role="img" aria-label="чат · пример" xmlns="http://www.w3.org/2000/svg"><path class="bx" d="M.5 .5H344L359.5 16V169.5H.5Z"/><path class="ln" d="M.5 28.5H359.5"/><rect class="sq" x="12" y="10" width="8" height="8"/><rect class="sq" x="26" y="10" width="8" height="8"/><rect class="sq on" x="40" y="10" width="8" height="8"/><text class="m mute" x="60" y="19" font-size="10.5">чат · пример</text><path class="bub u" d="M158.5 44.5H331.5L339.5 52.5V91.5H158.5Z"/><text class="t" x="169" y="66"><tspan x="169" dy="0">вышли новые данные</tspan><tspan x="169" dy="17">https://…/тарифы-билайн</tspan></text><path class="bub a" d="M20.5 104.5H228.5L236.5 112.5V151.5H20.5Z"/><text class="t" x="31" y="126"><tspan x="31" dy="0">Нашёл затронутые выводы: 4.</tspan><tspan x="31" dy="17">Жду «R да» или «R правка: …»</tspan></text></svg></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="gd-sec gd-out" id="results" aria-labelledby="outH">
+    <div class="wrap">
+      <div class="gd-head"><p class="kicker">Что получите</p><h2 id="outH">Три документа<br>и карта доверия</h2>
+        <p class="lead">Страницы ниже — настоящие фрагменты эталонного проекта <code>meganeuroseti-ref</code>. Агент собрал их по правилам, но это не прогон модели.</p></div>
+      <div class="gd-docs">
+        <figure class="big" data-reveal><svg class="sheet" viewBox="0 0 340 248" role="img" aria-label="Записка: что делать в понедельник" xmlns="http://www.w3.org/2000/svg"><rect class="pg" x="0" y="0" width="340" height="248"/><text class="d" x="24" y="40" font-size="22">Что делать в понедельник</text><rect class="pk" x="24" y="74" width="8" height="8"/><text class="t pt" x="44" y="84" font-size="13">Запросить у владельца продукта число</text><text class="t pt" x="44" y="100" font-size="13">подписчиков «Про»</text><text class="m pc" x="44" y="118" font-size="11">[c028, c029]</text><rect class="pk" x="24" y="126" width="8" height="8"/><text class="t pt" x="44" y="136" font-size="13">Собрать 10 интервью с закупщиками</text><text class="t pt" x="44" y="152" font-size="13">малого бизнеса</text><text class="m pc" x="44" y="170" font-size="11">[c037]</text><rect class="pk" x="24" y="178" width="8" height="8"/><text class="t pt" x="44" y="188" font-size="13">Подготовить пилот «ИИ в тарифе»</text><text class="t pt" x="44" y="204" font-size="13">на 5 000 абонентов</text><text class="m pc" x="44" y="222" font-size="11">[c034]</text></svg><figcaption><b>outputs/monday.md</b> Записка «что делать в понедельник»: решение, первые шаги, кто отвечает. Одна страница.</figcaption></figure>
+        <figure data-reveal style="--d:.08s"><svg class="sheet" viewBox="0 0 340 248" role="img" aria-label="Стратегия" xmlns="http://www.w3.org/2000/svg"><rect class="pg" x="0" y="0" width="340" height="248"/><text class="d" x="24" y="40" font-size="22">Стратегия</text><text class="t pt" x="24" y="70" font-size="13">Рекомендуем вариант O3: встроить ИИ в</text><text class="t pt" x="24" y="88" font-size="13">тариф связи как платный пакет и проверить</text><text class="t pt" x="24" y="106" font-size="13">пилотом. Решение держится на допущениях,</text><text class="t pt" x="24" y="124" font-size="13">не на фактах</text><text class="m pc" x="24" y="150" font-size="11.5">[c054, c056]</text><rect class="mark" x="24" y="170" width="292" height="1"/><text class="t pt" x="24" y="192" font-size="13">Пилот на 5 000 абонентов, 28 дней.</text><text class="t pt" x="24" y="210" font-size="13">Стоп, если подключение ниже 4%</text><text class="m pc" x="24" y="230" font-size="11.5">[c053]</text></svg><figcaption><b>outputs/strategy.md</b> Стратегия. У каждого числа ссылка на цитату.</figcaption></figure>
+        <figure data-reveal style="--d:.16s"><svg class="sheet" viewBox="0 0 340 248" role="img" aria-label="Отчёт пересмотра: как изменился расчёт" xmlns="http://www.w3.org/2000/svg"><rect class="pg" x="0" y="0" width="340" height="248"/><text class="d" x="24" y="40" font-size="22">Пересмотр 1</text><text class="t pt" x="24" y="66" font-size="12.5">Новый факт: Билайн начисляет 300 токенов</text><text class="t pt" x="24" y="83" font-size="12.5">в месяц без доплаты</text><text class="m pc" x="24" y="114" font-size="10.5">вариант</text><text class="m pc" x="130" y="114" font-size="10.5">лидер был</text><text class="m pc" x="230" y="114" font-size="10.5">лидер стал</text><rect class="mark" x="24" y="120" width="292" height="1"/><text class="m pt" x="24" y="144" font-size="12">O1</text><rect class="bar0" x="130" y="135" width="0.0" height="9"/><text class="m pt" x="134.0" y="144" font-size="10.5">0%</text><rect class="bar1" x="230" y="135" width="1.2" height="9"/><text class="m pt" x="235.2" y="144" font-size="10.5">2%</text><text class="m pt" x="24" y="168" font-size="12">O2</text><rect class="bar0" x="130" y="159" width="9.6" height="9"/><text class="m pt" x="143.6" y="168" font-size="10.5">16%</text><rect class="bar1" x="230" y="159" width="25.8" height="9"/><text class="m pt" x="259.8" y="168" font-size="10.5">43%</text><text class="m pt" x="24" y="192" font-size="12">O3</text><rect class="bar0" x="130" y="183" width="50.4" height="9"/><text class="m pt" x="184.4" y="192" font-size="10.5">84%</text><rect class="bar1" x="230" y="183" width="30.599999999999998" height="9"/><text class="m pt" x="264.6" y="192" font-size="10.5">51%</text><text class="m pt" x="24" y="216" font-size="12">O4</text><rect class="bar0" x="130" y="207" width="0.0" height="9"/><text class="m pt" x="134.0" y="216" font-size="10.5">0%</text><rect class="bar1" x="230" y="207" width="2.4" height="9"/><text class="m pt" x="236.4" y="216" font-size="10.5">4%</text></svg><figcaption><b>outputs/review-1.md</b> Отчёт пересмотра: что изменилось и кто потерял лидерство.</figcaption></figure>
+      </div>
+      <p class="gd-more">Ещё в <code>outputs/</code>: <code>trust-map.html</code> (вся стратегия в браузере, цвет абзаца показывает опору), <code>situation.md</code>, <code>options.md</code>, <code>product.md</code>, <code>communication.md</code>, <code>validation.md</code>. <a href="/pult/">Пульт проекта</a> показывает то же на сайте.</p>
+    </div>
+  </section>
+
+  <section class="gd-sec paper" id="engineer" aria-labelledby="engH">
+    <div class="wrap">
+      <div class="gd-head"><p class="kicker">Инженеру внедрения</p><h2 id="engH">Развернуть и проверить<br>за три минуты</h2>
+        <p class="lead">Нужны Python 3.11+, uv и Claude Code. Ключи не обязательны: без них агент работает на вашей подписке.</p></div>
+      <ol class="eng">
+        <li data-reveal><span class="n num">1</span><div><h3>Проверить окружение</h3><p>Команда смотрит Python, <code>claude</code>, <code>uv</code>, списки доменов, хуки, навыки и хеши правил.</p>
+          <div class="term" data-reveal><div class="bar"><i></i><i></i><i></i><span>osnovanie/</span></div><pre id="e1"><span class="p">$</span> make doctor  <span class="c"># окружение, хуки, навыки, хеши правил</span></pre><button class="copy" type="button" data-copy="e1">копировать</button></div>
+          <p class="mono note">Если doctor пишет, что правила не совпадают с зафиксированными, это защита от тихой правки. Фиксирует человек в терминале: <code>bin/osnovanie rules lock</code>.</p></div></li>
+        <li data-reveal><span class="n num">2</span><div><h3>Прогнать тесты и оценки</h3><p><span data-fact="agent.tests">79</span> тестов и замеры защиты. Отчёт ложится в <code>evals/report.md</code>.</p>
+          <div class="term" data-reveal><div class="bar"><i></i><i></i><i></i><span>osnovanie/</span></div><pre id="e2"><span class="p">$</span> make test  <span class="c"># 79 тестов</span>
+<span class="p">$</span> make eval  <span class="c"># инъекции, дефекты стратегии</span></pre><button class="copy" type="button" data-copy="e2">копировать</button></div></div></li>
+        <li data-reveal><span class="n num">3</span><div><h3>Посмотреть эталонный проект</h3><p>Движок собирает проект из 27 цитат без сети и без модели. Точки закрыты каналом <code>demo-seed</code>.</p>
+          <div class="term" data-reveal><div class="bar"><i></i><i></i><i></i><span>osnovanie/</span></div><pre id="e3"><span class="p">$</span> bin/osnovanie demo seed
+<span class="p">$</span> bin/osnovanie score  <span class="c"># индекс обоснованности</span>
+<span class="p">$</span> bin/osnovanie map  <span class="c"># карта доверия</span>
+<span class="p">$</span> bin/osnovanie deck  <span class="c"># презентация из 14 слайдов</span></pre><button class="copy" type="button" data-copy="e3">копировать</button></div></div></li>
+        <li data-reveal><span class="n num">4</span><div><h3>Запустить настоящий прогон</h3><p>Чистый профиль Claude Code: без личных инструкций, навыков и хуков. Журналы сессии ложатся в <code>~/.claude-osnovanie/projects/</code>, оттуда их берёт сборка реплея.</p>
+          <div class="term" data-reveal><div class="bar"><i></i><i></i><i></i><span>osnovanie/</span></div><pre id="e4"><span class="p">$</span> make demo-shell  <span class="c"># войти через /login и написать задачу</span>
+<span class="p">$</span> bin/osnovanie replay build  <span class="c"># реплей прогона из журналов</span></pre><button class="copy" type="button" data-copy="e4">копировать</button></div>
+          <p class="mono note">Живого прогона на этих материалах ещё нет: сайт показывает эталонный проект и говорит об этом.</p></div></li>
+      </ol>
+      <div class="gd-zones" data-reveal>
+        <h3>Куда агент может писать</h3>
+        <svg class="ill wide" viewBox="0 0 750 170" role="img" aria-label="Три зоны папки: правила, состояние, результаты" xmlns="http://www.w3.org/2000/svg"><path class="bub a" d="M10.5 40.5H232.5L249.5 57.5V150.5H10.5Z"/><text class="m acc" x="26" y="68" font-size="11">ПРАВИЛА</text><text class="t" x="26" y="96" font-size="12.5">instructions/</text><text class="t" x="26" y="114" font-size="12.5">methods/</text><text class="t" x="26" y="132" font-size="12.5">kb/</text><text class="m mute" x="26" y="138" font-size="10.5">агент читает</text><path class="bub a" d="M260.5 40.5H482.5L499.5 57.5V150.5H260.5Z"/><text class="m acc" x="276" y="68" font-size="11">СОСТОЯНИЕ</text><text class="t" x="276" y="96" font-size="12.5">projects/&lt;проект&gt;/materials</text><text class="t" x="276" y="114" font-size="12.5">state</text><text class="m mute" x="276" y="138" font-size="10.5">только через bin/osnovanie</text><path class="bub u" d="M510.5 40.5H732.5L749.5 57.5V150.5H510.5Z"/><text class="m acc" x="526" y="68" font-size="11">РЕЗУЛЬТАТЫ</text><text class="t" x="526" y="96" font-size="12.5">projects/&lt;проект&gt;/outputs/</text><text class="m mute" x="526" y="138" font-size="10.5">здесь агент пишет сам</text><path class="draw acc" d="M236 98H258M486 98H508" fill="none"/></svg>
+        <p class="mono note">Запись только в <code>outputs/</code>, остальное через CLI. Это проверяет хук и тест <code>test_security.py::Guard</code>. Необязательные ключи — в <code>.env.example</code>: <code>TYPESAFE_API_KEY</code> (классификатор для маршрутизации; без него судья откатывается на haiku, потом sonnet), <code>WHISPER_MODEL</code>, <code>OSNOVANIE_API_TOKEN</code>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gd-sec gd-if" id="interfaces" aria-labelledby="ifH">
+    <div class="wrap">
+      <div class="gd-head"><p class="kicker">Интерфейсы</p><h2 id="ifH">Три способа<br>работать с состоянием</h2>
+        <p class="lead">Одни и те же данные проекта: руками, из Claude Code и из ваших систем.</p></div>
+
+      <div class="if-block" id="cli">
+        <div class="if-tx"><h3>CLI <code>osnovanie</code></h3>
+        <p><b class="num" data-fact="agent.cli_commands">43</b> команды в шести группах. Флаг <code>--json</code> даёт вывод для программ, <code>--project имя</code> выбирает проект вместо активного.</p></div>
+        <div class="if-body">
+          <div class="grps"><div class="grp" data-reveal><h4>Проект</h4><p><code>new</code><code>use</code><code>list</code><code>status</code><code>resume</code><code>log</code><code>brief</code><code>budget</code></p></div><div class="grp" data-reveal><h4>Знания</h4><p><code>source</code><code>claim</code><code>verify</code><code>question</code><code>search</code></p></div><div class="grp" data-reveal><h4>Анализ</h4><p><code>options</code><code>objection</code><code>model</code><code>check</code><code>whatif</code><code>data</code><code>ux</code><code>interview</code></p></div><div class="grp" data-reveal><h4>Точки и пересмотр</h4><p><code>gate</code><code>advance</code><code>decide</code><code>commit</code><code>review</code><code>watch</code></p></div><div class="grp" data-reveal><h4>Результат</h4><p><code>map</code><code>deck</code><code>score</code><code>export</code><code>import</code><code>replay</code></p></div><div class="grp" data-reveal><h4>Служебное</h4><p><code>doctor</code><code>facts</code><code>rules</code><code>cost</code><code>route</code><code>judge</code><code>step</code><code>serve</code><code>mcp</code><code>demo</code></p></div></div>
+          <div class="term" data-reveal><div class="bar"><i></i><i></i><i></i><span>osnovanie/</span></div><pre id="c1"><span class="p">$</span> bin/osnovanie status  <span class="c"># где мы сейчас</span>
+<span class="p">$</span> bin/osnovanie --json cost  <span class="c"># стоимость для программы</span>
+<span class="p">$</span> bin/osnovanie score --badge score.svg
+<span class="p">$</span> bin/osnovanie export site --out DIR  <span class="c"># пакет для сайта-витрины</span></pre><button class="copy" type="button" data-copy="c1">копировать</button></div>
+        </div>
+      </div>
+
+      <div class="if-block" id="mcp">
+        <div class="if-tx"><h3>MCP <code>kb-state</code></h3>
+        <p>Сервер подключается к Claude Code через <code>.mcp.json</code>. Он читает состояние и пишет утверждения, но <b>закрыть точку не может</b>.</p><svg class="ill wide" viewBox="0 0 480 170" role="img" aria-label="MCP: двенадцать инструментов, точку закрыть нельзя" xmlns="http://www.w3.org/2000/svg"><path class="bub a" d="M10.5 20.5H150.5V150.5H10.5Z"/><text class="m acc" x="26" y="46" font-size="11">CLAUDE CODE</text><text class="t" x="26" y="70" font-size="12.5">.mcp.json</text><text class="t" x="26" y="88" font-size="12.5">kb-state</text><path class="draw acc" d="M154 56H246" fill="none"/><path class="draw acc" d="M154 100H246" fill="none"/><path class="bub u" d="M250.5 20.5H470.5V150.5H250.5Z"/><text class="m acc" x="266" y="46" font-size="11">12 ИНСТРУМЕНТОВ</text><text class="t" x="266" y="70" font-size="12.5">читать состояние, искать</text><text class="t" x="266" y="88" font-size="12.5">утверждения, записать факт</text><text class="m obj" x="266" y="128" font-size="11">закрыть точку — нельзя</text></svg></div>
+        <div class="if-body">
+          <div class="term" data-reveal><div class="bar"><i></i><i></i><i></i><span>.mcp.json</span></div><pre id="m1">{
+  "mcpServers": {
+    "kb-state": {
+      "command": "python3",
+      "args": ["bin/osnovanie", "mcp"]
+    }
+  }
+}</pre><button class="copy" type="button" data-copy="m1">копировать</button></div>
+          <table class="gd-table"><thead><tr><th>Инструмент</th><th>Что делает</th></tr></thead><tbody><tr><td><code>kb_status</code></td><td>этап, точки, счётчики, бюджет</td></tr><tr><td><code>kb_resume</code></td><td>сводка для нового чата</td></tr><tr><td><code>claims_search</code></td><td>поиск утверждений по словам, смыслу и связям</td></tr><tr><td><code>claim_get</code></td><td>одно утверждение с цитатой</td></tr><tr><td><code>claim_add</code></td><td>записать утверждение; факт без цитаты отклоняется</td></tr><tr><td><code>claim_supersede</code></td><td>заменить утверждение, старое остаётся в журнале</td></tr><tr><td><code>verify_claims</code></td><td>проверить дословность цитат и числа</td></tr><tr><td><code>options_list</code></td><td>варианты с возражениями</td></tr><tr><td><code>model_run</code></td><td>пересчитать модель вариантов</td></tr><tr><td><code>review_preview</code></td><td>что затронут изменения, без записи</td></tr><tr><td><code>cost_report</code></td><td>стоимость проекта</td></tr><tr><td><code>gate_status</code></td><td>состояние точек; подтвердить точку нельзя</td></tr></tbody></table>
+        </div>
+      </div>
+
+      <div class="if-block" id="http">
+        <div class="if-tx"><h3>HTTP, только чтение</h3>
+        <p>Для панелей и отчётов. Слушает только <code>127.0.0.1</code>; запись не поддерживается. Если задан <code>OSNOVANIE_API_TOKEN</code>, нужен заголовок <code>Authorization: Bearer …</code>.</p><svg class="ill wide" viewBox="0 0 480 150" role="img" aria-label="GET работает, POST отклоняется с кодом 405" xmlns="http://www.w3.org/2000/svg"><path class="bub a" d="M10.5 30.5H150.5V130.5H10.5Z"/><text class="m acc" x="26" y="56" font-size="11">КЛИЕНТ</text><text class="t" x="26" y="80" font-size="12.5">ваша система,</text><text class="t" x="26" y="98" font-size="12.5">панель, скрипт</text><path class="bub u" d="M330.5 30.5H470.5V130.5H330.5Z"/><text class="m acc" x="346" y="56" font-size="11">ОСНОВАНИЕ</text><text class="t" x="346" y="80" font-size="12.5">127.0.0.1:8765</text><text class="t" x="346" y="98" font-size="12.5">только чтение</text><path class="draw acc" d="M154 62H326" fill="none"/><path class="acc2" d="M318 56l8 6-8 6" fill="none"/><text class="m acc" x="190" y="54" font-size="11">GET /v1/status</text><path class="ln" d="M154 104H326" stroke-dasharray="4 4"/><path class="xx" d="M232 96l16 16M248 96l-16 16"/><text class="m obj" x="190" y="124" font-size="11">POST → 405</text></svg></div>
+        <div class="if-body">
+          <div class="term" data-reveal><div class="bar"><i></i><i></i><i></i><span>osnovanie/</span></div><pre id="h1"><span class="p">$</span> bin/osnovanie serve --port 8765
+<span class="p">$</span> curl http://127.0.0.1:8765/v1/status
+<span class="p">$</span> curl -H &#x27;Authorization: Bearer $OSNOVANIE_API_TOKEN&#x27; http://127.0.0.1:8765/v1/gates</pre><button class="copy" type="button" data-copy="h1">копировать</button></div>
+          <table class="gd-table"><thead><tr><th>Запрос</th><th>Ответ</th></tr></thead><tbody><tr><td><code>GET /health</code></td><td>жив ли сервер; без токена</td></tr><tr><td><code>GET /v1/openapi.json</code></td><td>описание интерфейса</td></tr><tr><td><code>GET /v1/status</code></td><td>этап, точки, счётчики</td></tr><tr><td><code>GET /v1/claims</code></td><td>все утверждения</td></tr><tr><td><code>GET /v1/claims/{id}</code></td><td>одно утверждение</td></tr><tr><td><code>GET /v1/options</code></td><td>варианты с возражениями</td></tr><tr><td><code>GET /v1/cost</code></td><td>стоимость</td></tr><tr><td><code>GET /v1/gates</code></td><td>состояние точек</td></tr><tr><td><code>GET /v1/next</code></td><td>что делать дальше</td></tr><tr><td><code>GET /v1/map</code></td><td>карта доверия, HTML</td></tr></tbody></table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gd-sec paper" id="faq" aria-labelledby="faqH">
+    <div class="wrap faq-wrap">
+      <div class="gd-head"><p class="kicker">Вопросы</p><h2 id="faqH">Что обычно спрашивают</h2>
+        <p class="lead">Где проверки нет, так и сказано: про Cursor и цену прогона. <a href="/proof/#criteria">Что проверено</a>.</p></div>
+      <div class="faq"><details data-reveal><summary><span>Агент может ответить за меня в точке?</span><i aria-hidden="true"></i></summary><div class="a"><p>Нет. Точку закрывает только хук на ваше сообщение в чате. Текст страницы, файла или вызов инструмента её не закрывает. После 48 тестовых атак G1 осталась открытой: <a href="/proof/#security">доказательства</a>.</p></div></details><details data-reveal><summary><span>Что делать, если я не согласен с вариантами?</span><i aria-hidden="true"></i></summary><div class="a"><p>Напишите <code>G3 правка: …</code> и скажите, что не так. Агент перепишет варианты и покажет точку заново. Среди вариантов всегда есть «оставить как есть» и «закрыть направление».</p></div></details><details data-reveal><summary><span>Откуда агент берёт числа?</span><i aria-hidden="true"></i></summary><div class="a"><p>Каждое число в стратегии ведёт к утверждению вида <code>[c012]</code>, а оно к дословной цитате и адресу страницы. Утверждение без цитаты фактом не становится. В карте доверия цвет абзаца показывает: факт, расчёт, гипотеза или допущение.</p></div></details><details data-reveal><summary><span>Сколько это стоит?</span><i aria-hidden="true"></i></summary><div class="a"><p>Бюджет вы называете в точке G2. Агент показывает потраченное в каждой точке и останавливается, когда бюджет кончился. Цена полного прогона с моделью пока не измерена: на эталонном проекте 0 ₽, потому что модель в нём не вызывалась. <a href="/proof/#cost">Подробнее</a>.</p></div></details><details data-reveal><summary><span>Можно загрузить внутренние данные компании?</span><i aria-hidden="true"></i></summary><div class="a"><p>Нет. Агент работает с открытыми источниками и материалами, которые вы положили сами. Прочие домены вы утверждаете на G2, внутренние адреса и <code>file://</code> запрещены.</p></div></details><details data-reveal><summary><span>Закрыл чат или прошла неделя. Что дальше?</span><i aria-hidden="true"></i></summary><div class="a"><p>Откройте новый чат в той же папке и напишите «продолжим». Всё состояние лежит на диске, агент прочитает его командой <code>resume</code> и скажет, где остановились.</p></div></details><details data-reveal><summary><span>Пришли новые данные. Как пересмотреть решение?</span><i aria-hidden="true"></i></summary><div class="a"><p>Напишите «вышли новые данные» и дайте ссылку или файл. Агент найдёт выводы, которые на них держались, покажет, что меняется, и попросит <code>R да</code> или <code>R правка: …</code>.</p></div></details><details data-reveal><summary><span>Агент напишет кому-нибудь от моего имени?</span><i aria-hidden="true"></i></summary><div class="a"><p>Нет. Сообщения вне чата, отправка работ и публикация — только по вашей прямой просьбе. Так записано в правилах агента.</p></div></details><details data-reveal><summary><span>Работает ли это в Cursor или Codex?</span><i aria-hidden="true"></i></summary><div class="a"><p>Файлы для них подготовлены (<code>.cursor/</code>, <code>.codex/</code>, общий вход <code>AGENTS.md</code>), но сами программы на нашей машине не стоят, поэтому мы не проверяли. Проверено в Claude Code.</p></div></details><details data-reveal><summary><span>Что если агент ошибся?</span><i aria-hidden="true"></i></summary><div class="a"><p>Ошибиться он может. Поэтому у каждого варианта есть возражение скептика, у числа есть цитата, а решение принимаете вы. Чего скрипт не видит (аудитории продукта и коммуникации расходятся, гипотеза подана как факт), ловит рубрика судьи и вы на G4.</p></div></details></div>
+    </div>
+  </section>
+
+</main>
+<!--foot-->
+<script type="module" src="/src/js/guide.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Пульт проекта — Основание</title>
+<meta name="description" content="Пульт эталонного проекта «Основания»: двигайте допущения и смотрите, когда меняется лидер; реестр утверждений с цитатами, точки человека, обязательства и оценка проекта.">
+<meta property="og:title" content="Пульт проекта — Основание">
+<meta property="og:image" content="/img/og.png">
+<meta name="theme-color" content="#07100c">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/Reper-Regular.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+<!--nav:pult-->
+<main id="main" class="pt">
+  <header class="pt-head wrap">
+    <div>
+      <p class="kicker">Пульт проекта</p>
+      <h1 class="pt-h" id="ptTitle">МегаНейросети</h1>
+      <p class="pt-q" id="ptQ"></p>
+      <p class="pt-meta mono"><span class="badge ref">эталонный проект · не прогон модели</span><span id="ptStage"></span><span id="ptDecision"></span></p>
+    </div>
+    <figure class="score" id="score" data-hot tabindex="0">
+      <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="trk" cx="60" cy="60" r="52"/><circle class="val" id="scoreArc" cx="60" cy="60" r="52" pathLength="100"/></svg>
+      <figcaption><b class="num" id="scoreNum">85</b><span class="mono">из 100 · оценка основания</span></figcaption>
+    </figure>
+  </header>
+
+  <nav class="pt-tabs wrap mono" aria-label="Разделы пульта">
+    <a href="#whatif">Что если</a><a href="#registry">Реестр утверждений</a><a href="#gates">Точки человека</a><a href="#bets">Обязательства</a><a href="#scorecard">Из чего оценка</a>
+  </nav>
+
+  <section class="wi wrap" id="whatif" aria-labelledby="wiH">
+    <div class="wi-intro">
+      <h2 id="wiH">Что если допущение неверно?</h2>
+      <p>Девять чисел модели — не факты, а допущения с диапазоном. Каждое привязано к утверждению. Двигайте ползунок: модель пересчитает 4000 исходов прямо в браузере и покажет, когда лидер сменится. Риска на ползунке — точка перелома, найденная агентом.</p>
+      <p class="mono mute" id="wiShare"></p>
+    </div>
+    <div class="wi-grid">
+      <div class="wi-params" id="params"></div>
+      <div class="wi-out">
+        <div class="wi-leader"><span class="mono">лидер</span><b id="leader">—</b><span class="mono" id="leaderNote"></span></div>
+        <div class="wi-bars" id="bars"></div>
+        <p class="mono mute wi-legend"><i class="lg-r"></i>10–90% исходов <i class="lg-b"></i>база <i class="lg-z"></i>ноль · прибыль в месяц, ₽</p>
+        <div class="wi-actions"><button type="button" class="btn sm ghost" id="wiReset">Вернуть как у агента</button><code class="mono" id="wiCmd">osnovanie whatif</code></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rg paper sec" id="registry" aria-labelledby="rgH">
+    <div class="wrap">
+      <div class="rg-head">
+        <h2 id="rgH">Реестр утверждений</h2>
+        <p>Всё, на что опирается стратегия, лежит здесь. У факта — цитата и снимок источника, у допущения — диапазон, у гипотезы — уверенность. Заменённое не стирается.</p>
+      </div>
+      <div class="rg-tools">
+        <div class="rg-filters mono" id="filters" role="group" aria-label="Тип"></div>
+        <label class="rg-search"><span class="sr">Поиск</span><input type="search" id="q" placeholder="поиск: цена, Билайн, c028…" autocomplete="off"></label>
+      </div>
+      <div class="rg-table" role="treegrid" aria-label="Утверждения">
+        <div class="rg-row th mono" role="row"><span role="columnheader">id</span><span role="columnheader">тип</span><span role="columnheader">утверждение</span><span role="columnheader">опора</span><span role="columnheader">статус</span></div>
+        <div id="rows" role="rowgroup"></div>
+      </div>
+      <p class="mono rg-count" id="rgCount"></p>
+    </div>
+  </section>
+
+  <section class="gp wrap sec" id="gates" aria-labelledby="gpH">
+    <h2 id="gpH">Точки человека</h2>
+    <p class="gp-lead">Агент сам не переходит дальше. В каждой точке он кладёт пакет на стол и ждёт слова в чате. Хук блокирует попытку закрыть точку из инструмента.</p>
+    <ol class="gp-line" id="gpLine"></ol>
+  </section>
+
+  <section class="bt wrap sec" id="bets" aria-labelledby="btH">
+    <div class="bt-head"><h2 id="btH">Обязательства с порогом</h2><p>Стратегия кончается не презентацией, а ставками: что проверить, к какому сроку и при каком числе решение пересматривается.</p></div>
+    <div class="bt-list" id="btList"></div>
+  </section>
+
+  <section class="sc wrap sec" id="scorecard" aria-labelledby="scH">
+    <div class="sc-head"><h2 id="scH">Из чего складывается оценка</h2><p class="mono mute" id="scFormula"></p></div>
+    <div class="sc-parts" id="scParts"></div>
+    <p class="sc-note" id="scNote"></p>
+  </section>
+</main>
+<!--foot-->
+<script type="module" src="/src/js/pult.js"></script>
+</body>
+</html>

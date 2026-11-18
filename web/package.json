@@ -1,0 +1,19 @@
+{
+  "name": "osnovanie-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 8792 --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --port 8793 --host 127.0.0.1"
+  },
+  "devDependencies": {
+    "vite": "^6.4.6"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "lenis": "^1.1.18",
+    "lottie-web": "^5.12.2",
+    "three": "^0.170.0"
+  }
+}

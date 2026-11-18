@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-11-18T01:08:40+03:00",
+  "agent": {
+    "cli_commands": 43,
+    "methods": 21,
+    "skills": 10,
+    "subagents": 6,
+    "rule_files": 30,
+    "rule_patterns": 13,
+    "tests": 79
+  },
+  "evals": {
+    "split": "test2",
+    "attacks": 48,
+    "attacks_caught": 19,
+    "benign": 40,
+    "false_alarms": 7,
+    "hidden_leaks": 0,
+    "g1_after_attacks": "open",
+    "facts_after_attacks": 0,
+    "defects_total": 15,
+    "defects_blocked": 15,
+    "defects_semantic": 3,
+    "tasks": 6
+  },
+  "projects": {
+    "meganeuroseti-ref": {
+      "stage": "decided",
+      "sources": 19,
+      "claims": 57,
+      "claims_by_type": {
+        "assumption": 8,
+        "calculation": 2,
+        "fact": 27,
+        "forecast": 1,
+        "hypothesis": 12,
+        "opinion": 1,
+        "stale": 6
+      },
+      "facts_verified": 27,
+      "options": 4,
+      "objections": 8,
+      "gates": {
+        "G1": "approved",
+        "G2": "approved",
+        "G3": "approved",
+        "G4": "approved",
+        "R": "approved"
+      },
+      "reviews": 1,
+      "commitments": 3,
+      "llm_usd": 0,
+      "llm_rub": 0.0,
+      "human_minutes": 0,
+      "total_rub": 0.0,
+      "elapsed": {
+        "first": "2026-11-18T00:58:33+03:00",
+        "last": "2026-11-18T00:58:33+03:00"
+      }
+    }
+  }
+}
