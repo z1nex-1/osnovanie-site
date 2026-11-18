@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1200 220">
+  <!-- Generator: Adobe Illustrator 30.8.2, SVG Export Plug-In . SVG Version: 2.1.4 Build 7)  -->
+  <line id="rail" x1="20" y1="90" x2="1180" y2="90" fill="none" stroke="#23362c" stroke-width="1.5"/>
+  <line id="flow" x1="20" y1="90" x2="1180" y2="90" fill="none" stroke="#0cdc78" stroke-width="2"/>
+  <polygon id="s0" points="20 64 130 64 144 78 144 116 20 116 20 64" fill="#07100c" stroke="#d8e3dc" stroke-width="1.5"/>
+  <polygon id="s1" points="192.7 64 302.7 64 316.7 78 316.7 116 192.7 116 192.7 64" fill="#07100c" stroke="#d8e3dc" stroke-width="1.5"/>
+  <polygon id="s2" points="365.4 64 475.4 64 489.4 78 489.4 116 365.4 116 365.4 64" fill="#07100c" stroke="#d8e3dc" stroke-width="1.5"/>
+  <polygon id="s3" points="538.1 64 648.1 64 662.1 78 662.1 116 538.1 116 538.1 64" fill="#07100c" stroke="#0cdc78" stroke-width="2"/>
+  <polygon id="s4" points="710.8 64 820.8 64 834.8 78 834.8 116 710.8 116 710.8 64" fill="#07100c" stroke="#d8e3dc" stroke-width="1.5"/>
+  <polygon id="s5" points="883.5 64 993.5 64 1007.5 78 1007.5 116 883.5 116 883.5 64" fill="#07100c" stroke="#d8e3dc" stroke-width="1.5"/>
+  <polygon id="s6" points="1056.2 64 1166.2 64 1180.2 78 1180.2 116 1056.2 116 1056.2 64" fill="#07100c" stroke="#d8e3dc" stroke-width="1.5"/>
+  <g id="g1">
+    <rect x="161.35" y="46" width="4" height="88" fill="#eef4f0"/>
+    <rect x="171.35" y="46" width="4" height="88" fill="#eef4f0"/>
+    <polygon points="161.35 46 175.35 46 175.35 38 169.35 32 161.35 32 161.35 46" fill="#eef4f0"/>
+  </g>
+  <g id="g2">
+    <rect x="334.05" y="46" width="4" height="88" fill="#eef4f0"/>
+    <rect x="344.05" y="46" width="4" height="88" fill="#eef4f0"/>
+    <polygon points="334.05 46 348.05 46 348.05 38 342.05 32 334.05 32 334.05 46" fill="#eef4f0"/>
+  </g>
+  <g id="g3">
+    <rect x="852.15" y="46" width="4" height="88" fill="#eef4f0"/>
+    <rect x="862.15" y="46" width="4" height="88" fill="#eef4f0"/>
+    <polygon points="852.15 46 866.15 46 866.15 38 860.15 32 852.15 32 852.15 46" fill="#eef4f0"/>
+  </g>
+  <g id="g4">
+    <rect x="1024.85" y="46" width="4" height="88" fill="#eef4f0"/>
+    <rect x="1034.85" y="46" width="4" height="88" fill="#eef4f0"/>
+    <polygon points="1024.85 46 1038.85 46 1038.85 38 1032.85 32 1024.85 32 1024.85 46" fill="#eef4f0"/>
+  </g>
+  <polyline id="rloop" points="1118.2 116 1118.2 176 1108.2 186 610.1 186 600.1 176 600.1 124" fill="none" stroke="#ff5a64" stroke-dasharray="7 5" stroke-width="2"/>
+  <polyline points="593.1 127 600.1 120 607.1 127" fill="none" stroke="#ff5a64" stroke-width="2"/>
+  <polygon id="rnode" points="1078.2 172 1097.2 172 1106.2 181 1106.2 200 1078.2 200 1078.2 172" fill="#ff5a64"/>
+</svg>

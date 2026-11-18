@@ -1,0 +1,1 @@
+16	29.5	m	start	R · ПЕРЕСМОТР364	30.5	rb	middle	R16	251	m9	start	источники16	207	m9	start	факты16	163	m9	start	допущения16	119	m9	start	варианты16	75	m9	start	вывод252	276	r	middle	новые данные

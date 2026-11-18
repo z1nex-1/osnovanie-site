@@ -1,0 +1,13 @@
+16	29.5	m	start	04 · ВАРИАНТЫ
+364	30.5	hb	middle	G3
+62	88	hb	middle	O1
+62	240	h9	middle	оставить
+154	88	hb	middle	O2
+154	240	h9	middle	МСБ
+246	88	hb	middle	O3
+246	240	h9	middle	с тарифом
+338	88	m11	middle	O4
+338	240	m	middle	закрыть
+30	226	m9	middle	p10
+94	226	m9	middle	p90
+246	266	r	middle	возражение

@@ -1,0 +1,14 @@
+16	29.5	m	start	03 · УТВЕРЖДЕНИЯ
+26	72	m9	start	s002 · 14.11.26
+242	88	o	middle	ФАКТ
+220	114	h	start	«Про 10 моделей
+220	128	h	start	нейросети…»
+220	160	m	start	источник  s002
+220	174	m	start	дата      14.11.26
+220	188	m	start	sha256    5da1af
+232	252	h9	middle	c002
+232	266	m9	middle	факт
+292	252	h9	middle	c028
+292	266	m9	middle	допущение
+352	252	h9	middle	c046
+352	266	m9	middle	возражение

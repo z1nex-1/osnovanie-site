@@ -1,0 +1,1 @@
+82	95	s	middle	Вопрос254.7	95	s	middle	План427.4	95	s	middle	Источники600.1	95	s	middle	Утверждения772.8	95	s	middle	Варианты945.5	95	s	middle	Записка1118.2	95	s	middle	Решение168.4	22	g	middle	G1341	22	g	middle	G2859.2	22	g	middle	G31031.9	22	g	middle	G41092.2	192	r	middle	R859.1	176	m	middle	новый факт → пересчёт только зависимых выводов

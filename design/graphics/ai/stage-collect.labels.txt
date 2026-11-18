@@ -1,0 +1,8 @@
+16	29.5	m	start	02 · ИСТОЧНИКИ
+364	30.5	hb	middle	G2
+68	100	m9	start	6fb678 · 14.11
+56	116	m9	start	5da1af · 14.11
+54	147	h9	start	14.11.26
+54	158	o	start	sha 26c5da
+234	90	r	start	карантин
+304	272	r	middle	скрытый текст

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 400 300">
+  <!-- Generator: Adobe Illustrator 30.8.2, SVG Export Plug-In . SVG Version: 2.1.4 Build 7)  -->
+  <line x1="108" y1="26" x2="340" y2="26" fill="none" stroke="#23362c" stroke-width="1.25"/>
+  <polygon points="344 14 377 14 384 21 384 38 344 38 344 14" fill="none" stroke="#eef4f0" stroke-width="1.5"/>
+  <polygon points="60 88 142 88 156 102 156 236 60 236 60 88" fill="#0c1812" stroke="#34503f" stroke-width="1.25"/>
+  <polygon points="48 104 130 104 144 118 144 252 48 252 48 104" fill="#0c1812" stroke="#34503f" stroke-width="1.25"/>
+  <polygon points="36 120 118 120 132 134 132 268 36 268 36 120" fill="#0c1812" stroke="#34503f" stroke-width="1.25"/>
+  <rect x="46" y="134" width="76" height="30" fill="none" stroke="#0cdc78" stroke-width="1.5"/>
+  <line x1="46" y1="182" x2="122" y2="182" fill="none" stroke="#23362c" stroke-width="1.25"/>
+  <line x1="46" y1="196" x2="108" y2="196" fill="none" stroke="#23362c" stroke-width="1.25"/>
+  <line x1="46" y1="210" x2="122" y2="210" fill="none" stroke="#23362c" stroke-width="1.25"/>
+  <line x1="46" y1="224" x2="94" y2="224" fill="none" stroke="#23362c" stroke-width="1.25"/>
+  <line x1="46" y1="238" x2="114" y2="238" fill="none" stroke="#23362c" stroke-width="1.25"/>
+  <line x1="162" y1="190" x2="208" y2="190" fill="none" stroke="#34503f" stroke-width="1.25"/>
+  <polyline points="209 185 214 190 209 195" fill="none" stroke="#34503f" stroke-width="1.25"/>
+  <rect x="224" y="72" width="160" height="208" fill="none" stroke="#ff5a64" stroke-dasharray="4 3" stroke-width="1.5"/>
+  <polygon points="248 108 330 108 344 122 344 256 248 256 248 108" fill="#0c1812" stroke="#34503f" stroke-width="1.25"/>
+  <line x1="258" y1="130" x2="334" y2="130" fill="none" stroke="#23362c" stroke-width="1.25"/>
+  <line x1="258" y1="144" x2="318" y2="144" fill="none" stroke="#23362c" stroke-width="1.25"/>
+  <line x1="258" y1="158" x2="334" y2="158" fill="none" stroke="#23362c" stroke-width="1.25"/>
+  <line x1="258" y1="172" x2="302" y2="172" fill="none" stroke="#23362c" stroke-width="1.25"/>
+  <line x1="258" y1="186" x2="326" y2="186" fill="none" stroke="#23362c" stroke-width="1.25"/>
+  <line x1="258" y1="204" x2="334" y2="204" fill="none" stroke="#ff5a64" stroke-dasharray="2 2" stroke-width="1.25"/>
+  <line x1="248" y1="108" x2="344" y2="256" fill="none" stroke="#ff5a64" stroke-width="1.5"/>
+  <line x1="344" y1="108" x2="248" y2="256" fill="none" stroke="#ff5a64" stroke-width="1.5"/>
+</svg>
