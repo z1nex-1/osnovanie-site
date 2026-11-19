@@ -97,8 +97,8 @@
         <li data-reveal><span class="n num">1</span><div><h3>Проверить окружение</h3><p>Команда смотрит Python, <code>claude</code>, <code>uv</code>, списки доменов, хуки, навыки и хеши правил.</p>
           <div class="term" data-reveal><div class="bar"><i></i><i></i><i></i><span>osnovanie/</span></div><pre id="e1"><span class="p">$</span> make doctor  <span class="c"># окружение, хуки, навыки, хеши правил</span></pre><button class="copy" type="button" data-copy="e1">копировать</button></div>
           <p class="mono note">Если doctor пишет, что правила не совпадают с зафиксированными, это защита от тихой правки. Фиксирует человек в терминале: <code>bin/osnovanie rules lock</code>.</p></div></li>
-        <li data-reveal><span class="n num">2</span><div><h3>Прогнать тесты и оценки</h3><p><span data-fact="agent.tests">79</span> тестов и замеры защиты. Отчёт ложится в <code>evals/report.md</code>.</p>
-          <div class="term" data-reveal><div class="bar"><i></i><i></i><i></i><span>osnovanie/</span></div><pre id="e2"><span class="p">$</span> make test  <span class="c"># 79 тестов</span>
+        <li data-reveal><span class="n num">2</span><div><h3>Прогнать тесты и оценки</h3><p><span data-fact="agent.tests">83</span> теста и замеры защиты. Отчёт ложится в <code>evals/report.md</code>.</p>
+          <div class="term" data-reveal><div class="bar"><i></i><i></i><i></i><span>osnovanie/</span></div><pre id="e2"><span class="p">$</span> make test  <span class="c"># 83 теста</span>
 <span class="p">$</span> make eval  <span class="c"># инъекции, дефекты стратегии</span></pre><button class="copy" type="button" data-copy="e2">копировать</button></div></div></li>
         <li data-reveal><span class="n num">3</span><div><h3>Посмотреть эталонный проект</h3><p>Движок собирает проект из 27 цитат без сети и без модели. Точки закрыты каналом <code>demo-seed</code>.</p>
           <div class="term" data-reveal><div class="bar"><i></i><i></i><i></i><span>osnovanie/</span></div><pre id="e3"><span class="p">$</span> bin/osnovanie demo seed

@@ -20,7 +20,7 @@
     <h1 data-split data-split-now>Что измерено,<br>а что ещё нет</h1>
     <p class="lead pf-lead">Каждое число ниже можно получить командой из папки агента. Где замера нет, так и написано: в таблице статусов, в матрице требований и отдельной строкой в каждом разделе.</p>
     <ul class="pf-stats">
-      <li data-reveal><span class="num"><b data-count="79" data-fact="agent.tests">79</b></span><span class="lbl">тестов в <code>make test</code></span><span class="src mono">docs/facts.json · agent.tests</span></li>
+      <li data-reveal><span class="num"><b data-count="83" data-fact="agent.tests">83</b></span><span class="lbl">теста в <code>make test</code></span><span class="src mono">docs/facts.json · agent.tests</span></li>
       <li data-reveal style="--d:.06s"><span class="num"><b data-count="43" data-fact="agent.cli_commands">43</b></span><span class="lbl">команды <code>bin/osnovanie</code></span><span class="src mono">docs/facts.json · agent.cli_commands</span></li>
       <li data-reveal style="--d:.12s"><span class="num"><b data-count="0" data-fact="evals.hidden_leaks">0</b><i>/<span data-fact="evals.attacks">48</span></i></span><span class="lbl">атак скрытым текстом дошли до агента</span><span class="src mono">evals/report.md · раздел 2</span></li>
       <li data-reveal style="--d:.18s"><span class="num"><b data-count="15" data-fact="evals.defects_blocked">15</b><i>/<span data-fact="evals.defects_total">15</span></i></span><span class="lbl">формальных дефектов стратегии блокируют G4</span><span class="src mono">evals/report.md · раздел 3</span></li>
@@ -40,9 +40,10 @@
           <tr><td>Детектор инъекций, слепой корпус <code>test2</code></td><td>19 из 48 атак, 7 ложных срабатываний из 40</td><td><code>make eval</code> → <code>evals/report.md</code></td><td><span class="st ok">измерено</span></td></tr>
           <tr><td>Скрытый текст страниц доходит до агента</td><td>0 из 48</td><td><code>evals/report.md</code>, раздел 2</td><td><span class="st ok">измерено</span></td></tr>
           <tr><td>Формальные дефекты стратегии блокируют G4</td><td>15 из 15; три смысловых скрипт не видит</td><td><code>evals/report.md</code>, раздел 3</td><td><span class="st ok">измерено</span></td></tr>
-          <tr><td>Путь от запроса до решения, точки человека, защита</td><td><span data-fact="agent.tests">79</span> тестов</td><td><code>make test</code></td><td><span class="st ok">проверено тестом</span></td></tr>
+          <tr><td>Путь от запроса до решения, точки человека, защита</td><td><span data-fact="agent.tests">83</span> теста</td><td><code>make test</code></td><td><span class="st ok">проверено тестом</span></td></tr>
           <tr><td>Эталонный проект <code>meganeuroseti-ref</code></td><td>27 цитат, 4 варианта, 8 возражений, индекс обоснованности 85/100 (15 баллов за человека эталон получить не может)</td><td><code>bin/osnovanie demo seed</code>, <code>score</code></td><td><span class="st ok">проверено тестом</span></td></tr>
-          <tr><td>Сравнение с обычным чатом (D13)</td><td>каркас, рубрика и слепой судья готовы; прогона нет</td><td><code>evals/d13/</code></td><td><span class="st no">не измерено</span></td></tr>
+          <tr><td>Сравнение с обычным чатом (D13), честный раунд 1, судья Sonnet</td><td>агент 7,14 против 7,0 у чата без поиска; 6,36 против 8,5 у чата с поиском; 5,5 против 8,36 у чата с теми же материалами. Qwen 3.5 согласен</td><td><code>evals/d13/report.md</code></td><td><span class="st ok">измерено, агент проиграл двум чатам из трёх</span></td></tr>
+          <tr><td>Пересказ против цитат (<code>fidelity</code>)</td><td>на эталоне 0 ошибок; допущение, поданное как факт, блокирует G4</td><td><code>tests/test_fidelity.py</code></td><td><span class="st ok">проверено тестом</span></td></tr>
           <tr><td>Прогон агента на шести новых задачах</td><td>задачи описаны, прогона нет</td><td><code>evals/tasks.toml</code></td><td><span class="st no">не измерено</span></td></tr>
           <tr><td>Цена и время полного прогона с моделью</td><td>на эталоне 0 ₽ потому, что модель там не вызывалась</td><td><code>bin/osnovanie cost</code></td><td><span class="st no">не измерено</span></td></tr>
           <tr><td>Классификатор на модели как второй слой детектора</td><td>только предложен в <code>evals/HISTORY.md</code>; замера на третьем корпусе нет</td><td><code>evals/HISTORY.md</code></td><td><span class="st no">не измерено</span></td></tr>
@@ -141,14 +142,14 @@
       </div>
       <ol class="flow" id="d13flow">
         <li data-reveal><b>1</b><h3>Задача</h3><p>Вопрос из <code>evals/tasks.toml</code>. Тексты — те, что агент собрал сам.</p></li>
-        <li data-reveal style="--d:.08s"><b>2</b><h3>Две работы</h3><p>Агент с инструментами и точками. Чат: один запрос, без правок.</p></li>
+        <li data-reveal style="--d:.08s"><b>2</b><h3>Четыре работы</h3><p>Агент и три чата: без поиска, с поиском, с теми же текстами. Чат — один запрос, без правок.</p></li>
         <li data-reveal style="--d:.16s"><b>3</b><h3>Вслепую</h3><p>Убраны признаки автора; внутренние номера [c012] становятся сносками. Работы получают буквы X и Y.</p></li>
         <li data-reveal style="--d:.24s"><b>4</b><h3>Два порядка</h3><p>Судья читает X, потом Y, и наоборот. Если предпочтение сменилось, оно не считается.</p></li>
         <li data-reveal style="--d:.32s"><b>5</b><h3>Отчёт</h3><p>Баллы по рубрике «Проработанность», цена, время человека, доля чисел, найденных в материалах.</p></li>
       </ol>
       <div class="pf-d13-status">
-        <span class="st no">прогона нет</span>
-        <p>Нужен демо-прогон агента на материалах и вход в Claude Code. До него в отчёте D13 нет ни одной цифры, и мы их не рисуем. Что известно о слабостях замера: числа сверяются механически, и короткое число может совпасть случайно; судья-sonnet из того же семейства, что обе работы, поэтому предусмотрен судья YandexGPT, не проверенный на настоящем ключе; время, которое человек тратит на доработку ответа чата, не измеряется.</p>
+        <span class="st ok">измерено 18.11.2026</span>
+        <p>Агент выигрывает у чата без поиска и проигрывает чату с поиском и чату с теми же материалами — так решили и Sonnet, и Qwen 3.5 другой семьи. YandexGPT-5-Lite привёл меньше половины цитат, которые есть в работах, и в счёт не идёт. Слабости замера: со стороны агента эталонный проект, а не живой прогон; после раунда 1 эталон правили по замечаниям судьи, поэтому честный счёт — раунд 1; числа сверяются механически; время человека на доработку ответа чата не измеряется.</p>
         <p class="mono src">evals/d13/README.md, <code>tests/test_d13.py</code> проверяет только механику</p>
       </div>
     </div>
@@ -193,7 +194,7 @@
           <tr data-s="ok"><td>D10</td><td>База знаний; память не превращает ответ в факт; отзыв устаревшего</td><td><code>search</code>, <code>kb/</code>, <code>claim retract</code></td><td><code>make eval</code>, раздел 3</td><td><span class="st ok">проверено</span></td></tr>
           <tr data-s="ok"><td>D11</td><td>Устойчивость к сбоям без незаметного повтора</td><td><code>step</code>, <code>doctor --repair</code></td><td><code>test_path.py::test_export_import_continues</code></td><td><span class="st ok">проверено</span></td></tr>
           <tr data-s="no"><td>D12</td><td>Переносимость в другую среду</td><td><code>.cursor/</code>, <code>.codex/</code>, <code>export</code>/<code>import</code></td><td>нет</td><td><span class="st no">Cursor и Codex не установлены</span></td></tr>
-          <tr data-s="no"><td>D13</td><td>Сравнение с обычным чатом</td><td><code>evals/d13/</code></td><td><code>python3 evals/d13/d13.py score</code></td><td><span class="st no">каркас есть, прогона нет</span></td></tr>
+          <tr data-s="ok"><td>D13</td><td>Сравнение с обычным чатом</td><td><code>evals/d13/</code></td><td><code>python3 evals/d13/d13.py score</code></td><td><span class="st ok">измерено: агент проиграл двум чатам из трёх</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -251,7 +252,7 @@
       <div class="term" data-reveal>
         <div class="bar"><i></i><i></i><i></i><span>osnovanie/</span></div>
         <pre id="reproCmd"><span class="p">$</span> make doctor <span class="c"># окружение, хуки, навыки, хеши правил</span>
-<span class="p">$</span> make test   <span class="c"># <span data-fact="agent.tests">79</span> тестов</span>
+<span class="p">$</span> make test   <span class="c"># <span data-fact="agent.tests">83</span> теста</span>
 <span class="p">$</span> make eval   <span class="c"># оценки → evals/report.md</span></pre>
         <button class="copy" type="button" data-copy="reproCmd">копировать</button>
       </div>
