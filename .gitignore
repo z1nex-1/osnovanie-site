@@ -5,3 +5,5 @@ dist/
 .ai-score-*.json
 design/film/raw/
 *.aep Logs/
+design/map/
+design/lineup/
