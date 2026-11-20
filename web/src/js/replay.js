@@ -392,9 +392,12 @@ function wire() {
 
 (async () => {
   boot();
-  const src = new URLSearchParams(location.search).get("run") || "/data/ref/replay.json";
-  try { R = await loadJSON(src.startsWith("/data/") ? src : "/data/ref/replay.json"); }
-  catch { $("#feed").innerHTML = '<p class="mono mute">Файл реплея не загрузился.</p>'; return; }
+  const src = new URLSearchParams(location.search).get("run") || "/data/live/replay.json";
+  try { R = await loadJSON(src.startsWith("/data/") ? src : "/data/live/replay.json"); }
+  catch {
+    try { R = await loadJSON("/data/ref/replay.json"); }
+    catch { $("#feed").innerHTML = '<p class="mono mute">Файл реплея не загрузился.</p>'; return; }
+  }
   E = R.events; N = E.length; MSG = E.filter((e) => e.k === "user" || e.k === "agent" || (e.k === "gate" && e.op === "open")).map((e) => e.i); T = R.t_axes?.play_ms?.[1] || (E[N - 1]?.p ?? 1);
   claims = R.claims || {}; sources = R.sources || {}; options = R.options || {};
   $("#rpTitle").textContent = R.title || "Прогон";
@@ -402,7 +405,11 @@ function wire() {
   const ref = R.run?.mode === "reference";
   $("#rpMode").textContent = ref ? "эталонный проект · не прогон модели" : `живой прогон · ${R.run?.model || "модель"} · $${(R.totals?.usd ?? 0).toFixed(2)}`;
   $("#rpMode").classList.toggle("ref", ref);
-  if (R.run?.note) { $("#rpNote").textContent = R.run.note; $("#rpNote").hidden = false; }
+  if (ref) {
+    $("#rpOther").href = "/replay/"; $("#rpOther").textContent = "живой прогон по брифу →";
+    $("#rpWhat").textContent = "Это эталонный проект. Его собрал детерминированный движок «Основания» из 27 открытых цитат, чтобы показать механику без модели, а ответы в точках дала демо-команда. Шкала — порядок событий, а не секунды. Живой прогон по брифу МегаФона записан в том же формате и открывается по ссылке вверху.";
+  }
+  $("#rpNote").textContent = R.run?.note || ""; $("#rpNote").hidden = !R.run?.note;
   if (R.source_hash) $("#rpHash").textContent = `отпечаток журналов: ${R.source_hash.slice(0, 23)}…`;
   $("#memoBtn").disabled = !R.docs || !Object.keys(R.docs).length;
   buildGraph();

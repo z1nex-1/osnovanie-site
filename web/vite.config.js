@@ -41,7 +41,7 @@ function preloadFonts(html) {
 function prefill(html) {
   const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   const put = (id, text) => { if (text) html = html.replace(new RegExp(`(id="${id}"[^>]*>)[^<]*(</[a-z0-9]+>)`), `$1${text}$2`); };
-  const read = (f) => { try { return JSON.parse(readFileSync(resolve(__dirname, "public/data/ref", f), "utf8")); } catch { return null; } };
+  const read = (f, dir = "ref") => { try { return JSON.parse(readFileSync(resolve(__dirname, "public/data", dir, f), "utf8")); } catch { return null; } };
   if (html.includes('id="ptQ"')) {
     const P = read("pult.json")?.project;
     if (P) {
@@ -50,8 +50,9 @@ function prefill(html) {
     }
   }
   if (html.includes('id="rpQ"')) {
-    const R = read("replay.json");
+    const R = read("replay.json", "live") || read("replay.json");
     if (R) { put("rpTitle", esc(R.title || "Прогон")); if (R.run?.question) put("rpQ", `«${esc(R.run.question)}»`);
+      if (R.run?.mode !== "reference") { put("rpMode", `живой прогон · ${esc(R.run?.model || "модель")} · $${(R.totals?.usd ?? 0).toFixed(2)}`); html = html.replace('class="badge ref" id="rpMode"', 'class="badge" id="rpMode"'); }
       if (R.run?.note) { put("rpNote", esc(R.run.note)); html = html.replace(/(id="rpNote") hidden/, "$1"); } }
   }
   return html;
