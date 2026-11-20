@@ -127,7 +127,7 @@ def matrix():
                 continue
             code, req, where, check = r[0], r[1], r[2], r[3]
             status = r[4] if len(r) > 4 else ""
-            bad = "не " in status.lower() or "нет" == status.lower()
+            bad = bool(re.search(r"(?<!\w)не\s", status.lower())) or "нет" == status.lower()
             STATS["total"] += 1
             STATS["bad"] += bad
             out.append(
